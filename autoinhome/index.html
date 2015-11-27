@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>AUTOINHOME 智在家</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/index.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+	<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script>
+		$(window).load(function() {
+
+		});
+
+	</script>
+	<script>
+$(function(){
+	$('#slides').fullpage({
+		navigation: !0,
+		sectionsColor: ['#ffffff', '#eeeeee', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#fff000', '#ffffff', '#ffffff'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+		normalScrollElements: '',
+		afterLoad: function(anchorLink, index){
+			if(index == 3){
+				$('.sec3').find('img').delay(0).animate({
+					opacity: '1'
+				}, 500, 'easeOutExpo');
+				$('.sec3').find('.bg_cover').delay(500).animate({
+					bottom: '0'
+				}, 500, 'easeOutExpo');
+			}
+			if(index == 5){
+				$('.sec5').find('.bg_cover_left').delay(0).animate({
+					left: '0'
+				}, 500, 'easeOutExpo');
+				$('.sec5').find('.bg_cover_right').delay(400).animate({
+					right: '0'
+				}, 500, 'easeOutExpo');
+			}
+			if(index == 7){
+				$('.sec7').find('.sec71TB').delay(0).animate({
+					opacity: '1'
+				}, 400, 'easeOutExpo');
+				$('.sec7').find('.sec72TB').delay(400).animate({
+					opacity: '1'
+				}, 400, 'easeOutExpo');
+				$('.sec7').find('.sec7mengban').delay(800).animate({
+					left: '0'
+				}, 500, 'easeOutExpo');
+			}
+			if(index == 9){
+				$('.sec9').find('.sec9left').delay(0).animate({
+					opacity: '1'
+				}, 500, 'easeOutExpo');
+				$('.sec9').find('.sec9right').delay(500).animate({
+					opacity: '1'
+				}, 500, 'easeOutExpo');
+			}
+
+		},
+		onLeave: function(index, direction){
+			if(index == '3'){
+				$('.sec3').find('img').delay(0).animate({
+					opacity: '0'
+				}, 500, 'easeOutExpo');
+				$('.sec3').find('.bg_cover').delay(0).animate({
+					bottom: '-22%'
+				}, 500, 'easeOutExpo');
+			}
+			if(index == '5'){
+				$('.sec5').find('.bg_cover_left').delay(0).animate({
+					left: '-45%'
+				}, 500, 'easeOutExpo');
+				$('.sec5').find('.bg_cover_right').delay(0).animate({
+					right: '-55%'
+				}, 500, 'easeOutExpo');
+			}
+			if(index == '7'){
+				$('.sec7').find('.sec71TB').delay(0).animate({
+					opacity: '0'
+				}, 200, 'easeOutExpo');
+				$('.sec7').find('.sec72TB').delay(200).animate({
+					opacity: '0'
+				}, 200, 'easeOutExpo');
+				$('.sec7').find('.sec7mengban').delay(400).animate({
+					left: '-65%'
+				}, 500, 'easeOutExpo');
+			}
+			if(index == '9'){
+				$('.sec9').find('.sec9left').delay(0).animate({
+					opacity: '0'
+				}, 500, 'easeOutExpo');
+				$('.sec9').find('.sec9right').delay(500).animate({
+					opacity: '0'
+				}, 500, 'easeOutExpo');
+			}
+
+		}
+	});
+});
+</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery and easing.js for footer easing
+			var tag = 1;
+			var footer = $('#footer');
+			$('.aboutus').click(function(){
+				if (tag==1) {
+					tag = 0;
+					footer.removeClass('beforeclick');
+					footer.addClass('afterclick');
+				} else{
+					tag = 1;
+					footer.addClass('beforeclick');
+					footer.removeClass('afterclick');
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+<nav>
+	<!--<div class="nav_part nav_top">-->
+
+	<!--</div>-->
+	<!--<div class="nav_part nav_bottom">-->
+
+	<!--</div>-->
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="#"></a></li>
+		<li><a class="panel solution" href="../quetionare/solution/index1.html｀"></a>
+			<!--<ul>-->
+				<!--<li><a href="#">Sub Cat 2-1</a></li>-->
+				<!--<li><a href="#">Sub Cat 2-2</a></li>-->
+				<!--<li><a href="#">Sub Cat 2-3</a></li>-->
+				<!--<li><a href="#">Sub Cat 2-4</a></li>-->
+				<!--<li><a href="#">Sub Cat 2-5</a></li>-->
+			<!--</ul>-->
+			<!--<div class="clear"></div>-->
+		</li>
+		<li><a class="panel theater" href="#"></a>
+			<!--<ul>-->
+				<!--<li><a href="#">Sub Cat 3-1</a></li>-->
+				<!--<li><a href="#">Sub Cat 3-2</a></li>-->
+				<!--<li><a href="#">Sub Cat 3-3</a></li>-->
+				<!--<li><a href="#">Sub Cat 3-4</a></li>-->
+				<!--<li><a href="#">Sub Cat 3-5</a></li>-->
+				<!--<li><a href="#">Sub Cat 3-6</a></li>-->
+				<!--<li><a href="#">Sub Cat 3-7</a></li>-->
+			<!--</ul>-->
+			<!--<div class="clear"></div>-->
+		</li>
+		<li><a class="panel safety" href="#"></a></li>
+		<li><a class="panel environment" href="#"></a></li>
+		<li><a class="panel network" href="#"></a></li>
+		<li><a class="panel contact" href="#"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+<div id="slides">
+	<div class="section sec1">
+		<img src="./img/wifiLogo.png" alt="wifi_img"/>
+		<h3>网络布局.稳定兼容超快</h3>
+	</div>
+	<div class="section sec2">
+		<h4>智在家网络解决方案优势</h4>
+		<img class="sec2_top_pic" src="./img/double.png" alt=""/>
+		<div class="sec2_types_title"><h4>普通网络</h4><h4>智在家网络</h4><div class="clear"></div></div>
+		<div class="sec2_types_features">
+			<div class="row">
+				<p class="row_pic"><img src="./img/speed.png" alt=""/></p>
+				<p class="row_left">普通家庭网络带宽最高100Mbps</p>
+				<p class="row_right">最高10Gbps，最低1Gbps，双频双网，同时提供了USB3.0的公用存储接口，满足家庭所有成员未来的信息发展需求</p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/capability.png" alt=""/></p>
+				<p class="row_left">只考虑网线的布局，没有多媒体、智能家居方面的考虑，网络适应能力差</p>
+				<p class="row_right">从全局思考，指定包含电视、网线、WIFI、高清视频、智能家居等各个方面，让您的网络布局适应未来需要</p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/stable.png" alt=""/></p>
+				<p class="row_left">经常掉线、卡顿，WIFI负载量小，容易被挤下线</p>
+				<p class="row_right">智能上网不惧掉线，运用顶配路由器提供多至百点接入能力，高速、低速、有线、无线合理分配带宽资源，家中设备再多也不怕被挤下线了</p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/beauty.png" alt=""/></p>
+				<p class="row_left">通常家用信息箱都很小，导致家中网线、视频线等凌乱不堪</p>
+				<p class="row_right">从信息箱布置到设备电源供电都有全套合理方案，让您的家中看不到一条电源线和网线，整齐干净，美观大方</p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/quality.png" alt=""/></p>
+				<p class="row_left">接线点不规范，造成掉线、接触不实等导致网络中断，带宽减小等问题</p>
+				<p class="row_right">选用一流材料，按照福碌克测试标准接线，自有施工标准，每一个节点都有良好的传输能力，确保带宽速度和系统稳定性</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="section sec3">
+		<h3>网络布局.双频双网</h3>
+		<p class="intro">主客分离，就是说您家里会有两个 wifi 信号，如果朋友来你家可以给访客帐号，家人则用家庭帐号，确保网络安全。</p>
+		<img src="./img/doubleWifiLogo.png" alt="double wifi is better"/>
+		<div class="bg_cover">
+			<div class="bg_content_wraper">
+				<div class="sub_bg_cover">
+					<h4>1-10Gbps</h4>
+					<p>1-10Gps局域网带宽</p>
+					<p>比普通方案快10-100倍</p>
+				</div>
+				<div class="sub_bg_cover">
+					<h4>-45dbm</h4>
+					<p>WIFI信号满格分布</p>
+					<p>全屋无阻碍漫游切换</p>
+				</div>
+				<div class="sub_bg_cover">
+					<h4>双网双频</h4>
+					<p>WIFI信号满格分布</p>
+					<p>全屋无阻碍漫游切换</p>
+				</div>
+				<div class="sub_bg_cover">
+					<h4>2TB USB3.0</h4>
+					<p>2TB家庭存储安全备份</p>
+					<p>USB3.0高速共享分享</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section sec4">
+		<img class="trend_logo" src="./img/trend_01.png" alt="auto in home logo"/>
+		<p>2015家庭网络技术最新发展趋势</p>
+		<img class="features" src="./img/trend_02.png" alt="features"/>
+	</div>
+	<div class="section sec5">
+		<div class="bg_cover_set bg_cover_left">
+			<h4>1-10Gbps</h4>
+		</div>
+		<div class="bg_cover_set bg_cover_right">
+			<p>速度 人类的每一次进步都源于速度上的飞跃</p>
+			<p>网络，最重要的就是速度。2014，光纤开始普及，100Mbps带宽进入家庭。然而不少家庭装修之时只预留了100Mbps的带宽。完全不能满足互联网+的发展需要。不仅在于网线，路由器、接线面板等等都有可能称为速度的瓶颈，拥挤的WIFI信号也有可能让你抓狂。</p>
+			<p>智在家网络布局方案，采用超六类线布局，提供家庭1-10Gbps带宽，满足十年内的带宽需求；WIFI双频双网、随意漫游方案，让您在家中任何区域都享有高强度WIFI信号和高速度。</p>
+		</div>
+	</div>
+	<div class="section sec6">
+		<img class="trend_logo" src="./img/trend_01.png" alt="auto in home logo"/>
+		<p>兼容 万物互联兼容是首要条件</p>
+		<p id="smaller_font">智能家具时代，网络更是所有设备良好运行的基础。智在家网络方案，为客户准备了一个能兼容绝大部分设备的互联网络，无论是开关、插座、冰箱、空调还是电视、手机，都将运行在一个稳定兼容的网络系统之中，将极大简化布线和降低网络建设成本，也避免了网络升级造成的浪费。</p>
+		<img class="jianrong" src="./img/jianrong.png" alt="jianrong"/>
+	</div>
+	<div class="section sec7">
+		<img class="sec7logo" src="./img/logo_white.png" alt="logo"/>
+		<img class="sec71TB" src="./img/1TB.png" alt="1TB"/>
+		<img class="sec72TB" src="./img/2TB.png" alt="2TB"/>
+		<img class="sec7luyou" src="./img/luyou.png" alt="luyou"/>
+		<div class="bg_cover_set sec7mengban">
+			<h4>稳定 稳定是每一次速度飞跃的前提</h4>
+			<p>不少人都有被挤下线的经历，那是因为选用的路由器负载过多，或运行不够稳定。智在家与智能路由器厂家合作，选用顶配路由器并从底层优化路由，同时让您的设备均衡分布在各个频段之中，使紧缺的频段资源得到有效运用，保证网络的稳定与顺行。</p>
+		</div>
+	</div>
+	<div class="section sec8">
+		<img class="trend_logo" src="./img/trend_01.png" alt="auto in home logo"/>
+		<h4>真正的精致 在别人看不见的地方</h4>
+		<div class="sec8panel">
+			<div class="sec8left">
+				<p>智在家选好料，抓细节，在你看得见的地方与看不见的地方同样用心，让网络自始至终保持高速、稳定、兼容</p>
+				<img class="pic1" src="./img/wangxiantou.png" alt=""/>
+				<p>头部展示：<br/>采用磷青铜，镀金接头，保证网络传输性能优越</p>
+				<img class="pic2" src="./img/dianlan.png" alt=""/>
+			</div>
+			<div class="sec8right">
+				<p>选好线，看屏蔽！真材实料，6A双屏蔽千兆网线
+					<br/>
+					什么是双屏蔽？
+					<br/>
+					四对线外用金属编织网包裹，每对线用铝箔，外加金属编织网包裹
+					<br/>
+					这两种的结合一般称为双屏蔽双绞线，铝箔是防高频干扰，金属网是防低频干扰的。
+				</p>
+				<img class="pic3" src="./img/mao.png" alt=""/>
+				<p>ABOX lite 家用顶级微型服务器
+					<br/>
+					主频88MHz，512MB 3DDR内存
+					<br/>
+					2G/5G AC双拼 WIFI网络
+					<br/>
+					全千兆LAN接口，USB3.0输出
+					<br/>
+					Zigbee智能家居专用网络
+					<br/>
+					满足所有家庭信息需求
+				</p>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="section sec9">
+		<div class="sec9wrapper">
+			<div class="sec9left">
+				<h4>都是一个良心的工程</h4>
+				<p>家庭网络如同城市排水系统
+					<br/>
+					都是一个良心的工程
+					<br/>
+					未经规划的网络系统，不兼容新设备、易堵塞，或是遭遇网络攻击时会变得不堪一击，一旦崩溃就是一场混乱
+				</p>
+			</div>
+			<div class="sec9right">
+				<h4>精心设计的网络系统</h4>
+				<p>精心设计的网络系统，每处都会精心考虑，不仅是看不到一根线，而且要在高带宽的配置和兼容智能家居的无线布局下做到高速、稳定，让人放心</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="section sec10">
+
+		<div class="higher_sec">
+			<img src="./img/trend_01.png" alt="logo"/>
+			<h4>智能家装 服务流程
+				<br/><br/>
+				专业的服务专业的流程。
+			</h4>
+		</div>
+		<div class="lower_sec">
+			<div class="sec10_sec sec10_sec1">
+				<div class="top_part">
+					<div class="top_left"><img src="./img/bglogo1.png" alt=""/><p>上门体验</p></div>
+					<div class="top_right"><img src="./img/bglogo2.png" alt=""/><p>设计师沟通</p></div>
+					<div class="clear"></div>
+				</div>
+				<div class="bot_part">
+					<h4>1. 询问阶段</h4>
+					<p>中国第一网络供应商联通
+						<br/>
+						跨界合作，完美搭配出
+						<br/>
+						智能体验馆
+						<br/>
+						楚汉路万达御湖世家
+						<br/>
+						顶尖的设计师团队
+					</p>
+				</div>
+			</div>
+			<div class="sec10_sec sec10_sec2">
+				<div class="top_part">
+					<div class="top_left"><img src="./img/bglogo3.png" alt=""/><p>填写需求问卷</p></div>
+					<div class="top_right"><img src="./img/bglogo4.png" alt=""/><p>确认方案</p></div>
+					<div class="clear"></div>
+				</div>
+				<div class="bot_part">
+					<h4>2. 方案阶段</h4>
+					<p>你的智能需求大声说出来。
+						<br/>
+						简单而且快捷的方法。
+						<br/>
+						把你的需求变成专业的智能方案。
+					</p>
+				</div>
+			</div>
+			<div class="sec10_sec sec10_sec3">
+				<div class="top_part">
+					<div class="top_left"><img src="./img/bglogo5.png" alt=""/><p>交定金</p></div>
+					<div class="top_right"><img src="./img/bglogo6.png" alt=""/><p>上门施工</p></div>
+					<div class="clear"></div>
+				</div>
+				<div class="bot_part">
+					<h4>3. 施工阶段</h4>
+					<p>不费心。
+						<br/>
+						专业的施工团队
+						<br/>
+						设定你要的智能生活。
+					</p>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+
+		<div id="footer" class="beforeclick">
+			<img class="forbeauty" src="./img/footer/forbeauty.png" alt=""/>
+			<div class="aboutus">关于我们</div>
+			<div class="top">
+				<div class="subtop first">
+					<h4>公司简介
+						<br/>
+						AUTOINHOME
+					</h4>
+					<p>企业文化 COMPANY CULTURE
+						<br/>
+						品牌合作 BRAND
+						<br/>
+						合作伙伴 PARTNERS
+						<br/>
+						公司资质 COMPANY QUANTIFICATION
+					</p>
+				</div>
+				<div class="subtop second">
+					<h4>人才招聘
+						<br/>
+						CAREERS
+					</h4>
+					<p>加入我们 JOIN US</p>
+				</div>
+				<div class="subtop third">
+					<h4>联系我们
+						<br/>
+						CONTACT
+					</h4>
+					<p>copyright 2012-15 武汉XX智能科技有限公司
+						<br/>
+						QQ： 1951057570	59519434
+						<br/>
+						咨询热线 6538 7897（CHINA）
+						<br/>
+						UPC：13010724
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+			<div class="bot">
+				<img class="left_bot" src="./img/logo_white.png" alt=""/>
+				<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+				<div class="right_bot">
+					<a href=""><img src="./img/footer/wechat.png" alt=""/></a>
+					<a href=""><img src="./img/footer/QQ.png" alt=""/></a>
+					<a href=""><img src="./img/footer/weibo.png" alt=""/></a>
+					<a href=""><img src="./img/footer/facebook.png" alt=""/></a>
+					<a href=""><img src="./img/footer/twitter.png" alt=""/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+</html>

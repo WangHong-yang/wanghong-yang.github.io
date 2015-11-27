@@ -1,0 +1,4 @@
+nav, footer, section {display: block}
+*, body {margin: 0; padding: 0;}
+body {font-family: "Helvetica", "Microsoft Yahei", "Raleway"}
+.section { text-align: center; font-size: 50px; color: #fff;}
