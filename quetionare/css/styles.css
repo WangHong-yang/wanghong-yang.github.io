@@ -3055,7 +3055,7 @@ button:hover {
 }
 .question-header p {
   max-width: 700px;
-  margin: 0 auto 2em;
+  margin: 0 auto 1em;
   font-size: .8em;
 }
 @media (min-width: 768px) {
@@ -3108,8 +3108,8 @@ button:hover {
   outline: none;
 }
 .icon-button img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   outline: none;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -4203,5 +4203,11 @@ button:hover {
     max-width:100px;
     margin-left: 100px!important;
     margin-top: -100px!important;
+  }
+  .corner--b-l {
+    margin-left: -109px!important;
+  }
+  .corner--b-l .logohref img {
+    max-height: 40px !important;
   }
 }
