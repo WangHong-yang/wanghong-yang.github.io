@@ -268,7 +268,7 @@ nav {
     position: absolute;
     top: 30%;
     width: 45%;
-    left: -45%; //FIXME
+    left: -55%; //FIXME
 }
 .bg_cover_left h4 {
     text-align: right;
@@ -277,7 +277,7 @@ nav {
 .bg_cover_right {
     position: absolute;
     bottom: 5%;
-    right: -55%;
+    right: -75%;
     width: 55%;
 }
 .bg_cover_right p {
