@@ -1,5 +1,6 @@
 /* navigation style sheet */
 .nav_mobile_place_holder {
+    display: none;
     width: 100%;
     height: 100px;
     background-color: #56a9b7;

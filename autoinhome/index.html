@@ -102,6 +102,7 @@ $(function(){
     function responsive(){
         var $ww = $(window).width();
         if($ww < 1024){
+        	$('.nav_mobile_place_holder').css('display', 'block');
         	$('.nav_mobile').css('display', 'block');
         	$('nav').css('display', 'none');
             $('.section').css('font-size', 100);
