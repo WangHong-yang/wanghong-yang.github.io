@@ -165,7 +165,7 @@ $(function(){
 			);
 
 			//jquery for mobile navigator
-			var nav_tag = 1;
+			var nav_tag = 1; //not shown
 			$('.nav_mobile_btn').click(function(){
 				if (nav_tag==1) {
 					nav_tag = 0;
@@ -174,7 +174,23 @@ $(function(){
 					nav_tag = 1;
 					$('.nav_mobile_class').css('display', 'none');
 				}
-				
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
 			})
 
 			//jquery and easing.js for footer easing
@@ -196,14 +212,17 @@ $(function(){
 </head>
 
 <body>
+<div class="nav_mobile_place_holder"></div>
 <div class="nav_mobile" style="display:none">
 	<div class="nav_mobile_btn"></div>
-	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0002.PNG')"></div>
-	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0003.PNG')"></div>
-	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0004.PNG')"></div>
-	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0005.PNG')"></div>
-	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0006.PNG')"></div>
-	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0007.PNG')"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../quetionare/solution/index1.html"><div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../quetionare/solution/index1.html"><div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../quetionare/solution/index1.html"><div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../quetionare/solution/index1.html"><div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../quetionare/solution/index1.html"><div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../quetionare/solution/index1.html"><div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0007.PNG')"></div></a>
+	</div>
 </div>
 <nav>
 	<ul class="navigation">
