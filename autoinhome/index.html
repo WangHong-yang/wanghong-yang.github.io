@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <title>AUTOINHOME 智在家</title>
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 	<link rel="stylesheet" href="css/common.css"/>
@@ -101,6 +102,8 @@ $(function(){
     function responsive(){
         var $ww = $(window).width();
         if($ww < 1024){
+        	$('.nav_mobile').css('display', 'block');
+        	$('nav').css('display', 'none');
             $('.section').css('font-size', 100);
             $('.sec1 img').css('width', '30%');
             $('.row').css({'height': 120, 'width': 750});
@@ -161,6 +164,19 @@ $(function(){
 					}
 			);
 
+			//jquery for mobile navigator
+			var nav_tag = 1;
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+				
+			})
+
 			//jquery and easing.js for footer easing
 			var tag = 1;
 			var footer = $('#footer');
@@ -169,7 +185,7 @@ $(function(){
 					tag = 0;
 					footer.removeClass('beforeclick');
 					footer.addClass('afterclick');
-				} else{
+				} else {
 					tag = 1;
 					footer.addClass('beforeclick');
 					footer.removeClass('afterclick');
@@ -180,37 +196,20 @@ $(function(){
 </head>
 
 <body>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0002.PNG')"></div>
+	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0003.PNG')"></div>
+	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0004.PNG')"></div>
+	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0005.PNG')"></div>
+	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0006.PNG')"></div>
+	<div class="nav_mobile_class" style="background-image: url('./img/navpic/Untitled-1_0007.PNG')"></div>
+</div>
 <nav>
-	<!--<div class="nav_part nav_top">-->
-
-	<!--</div>-->
-	<!--<div class="nav_part nav_bottom">-->
-
-	<!--</div>-->
 	<ul class="navigation">
 		<li id="logo_list"><a class="panel logo" href="#"></a></li>
-		<li><a class="panel solution" href="../quetionare/solution/index1.html"></a>
-			<!--<ul>-->
-				<!--<li><a href="#">Sub Cat 2-1</a></li>-->
-				<!--<li><a href="#">Sub Cat 2-2</a></li>-->
-				<!--<li><a href="#">Sub Cat 2-3</a></li>-->
-				<!--<li><a href="#">Sub Cat 2-4</a></li>-->
-				<!--<li><a href="#">Sub Cat 2-5</a></li>-->
-			<!--</ul>-->
-			<!--<div class="clear"></div>-->
-		</li>
-		<li><a class="panel theater" href="#"></a>
-			<!--<ul>-->
-				<!--<li><a href="#">Sub Cat 3-1</a></li>-->
-				<!--<li><a href="#">Sub Cat 3-2</a></li>-->
-				<!--<li><a href="#">Sub Cat 3-3</a></li>-->
-				<!--<li><a href="#">Sub Cat 3-4</a></li>-->
-				<!--<li><a href="#">Sub Cat 3-5</a></li>-->
-				<!--<li><a href="#">Sub Cat 3-6</a></li>-->
-				<!--<li><a href="#">Sub Cat 3-7</a></li>-->
-			<!--</ul>-->
-			<!--<div class="clear"></div>-->
-		</li>
+		<li><a class="panel solution" href="../quetionare/solution/index1.html"></a></li>
+		<li><a class="panel theater" href="#"></a></li>
 		<li><a class="panel safety" href="#"></a></li>
 		<li><a class="panel environment" href="#"></a></li>
 		<li><a class="panel network" href="#"></a></li>
