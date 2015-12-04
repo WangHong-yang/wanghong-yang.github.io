@@ -4181,6 +4181,12 @@ button:hover {
   margin-top: -70px;
 }
 
+@media screen and (min-width: 33.75em) {
+  .corner--b-l {
+    margin-left: -99px!important;
+  }
+}
+
 @media screen and (min-width: 33.75em) and (max-width: 65.3125em) {
   
   .head_pic {
@@ -4205,7 +4211,7 @@ button:hover {
     margin-top: -100px!important;
   }
   .corner--b-l {
-    margin-left: -109px!important;
+    margin-left: -77px!important;
   }
   .corner--b-l .logohref img {
     max-height: 40px !important;
