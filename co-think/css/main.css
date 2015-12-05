@@ -1,0 +1,279 @@
+*, html, body {margin: 0; padding: 0;}
+body {background-color: #fefefe; font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;}
+nav, footer, header, article, section {display: block;}
+ul, li, a {text-decoration: none; list-style: none; color: black}
+
+/* font face */
+@font-face { 
+	font-family: ChaparralPro; 
+	src: url('../fonts/ChaparralPro-Regular.otf'); 
+} 
+
+/* media control */
+@media screen  and (max-width: 65.3125em){
+	.nav_top ul {
+		top: 62px !important;
+		right: 0 !important;
+		background-color: white;
+	}
+	.nav_top ul li {
+		display: block !important;
+		border-bottom: 1px solid black;
+	}
+	.mobile_btn {
+		display: block!important;
+	}
+	.intro h3, .intro p {
+		padding-left: 350px!important;
+	}
+	.intro p {
+		width: 400px!important;
+	}
+}
+@media screen and (max-width: 33.75em) {
+	
+	.nav_name {
+		height: 36px!important;
+		margin-top: 10px;
+	}
+	.nav_sec {
+		padding-left: 0!important;
+		margin-left: 90px!important;
+	}
+	.banner1_btn {
+		top: 30px!important;
+	}
+	.select_btn_group {
+		top: 68px !important;
+	}
+	.intro {
+		height: 600px!important;
+	}
+	.intro h3 {
+		padding-left: 0!important;
+		width: 100% !important;
+		top: 380px !important;
+		text-align: center;
+	}
+	.intro p {
+		padding-left: 0!important;
+		width: 90% !important;
+		text-align: left;
+		margin: 0 auto;
+		top: 408px!important;
+	}
+}
+
+/* navigator style */
+nav {
+	height: 60px;
+	background-image: url('../img/navlogo.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: 2px;
+}
+.nav_sec {
+	margin-left: 101px;
+	padding-left: 20px;
+	
+}
+.nav_top {
+	height: 46px;
+}
+.nav_bot {
+	height: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #222222;
+	background-color: #ACCE22;
+}
+.nav_name {
+	height: 46px;
+}
+.nav_top ul {
+	position: absolute;
+	display: inline-block;
+	z-index: 999;
+}
+.nav_top ul li {
+	display: inline-block;
+	
+	height: 40px;
+	padding: 6px 20px 0 20px;
+
+}
+.nav_top ul li img {
+	max-height: 27px;
+	padding-right: 10px;
+	/*padding: 0 10px 10px 30px;*/
+}
+.nav_top ul li span {
+	display: inline-block;
+}
+.mobile_btn {
+	width: 46px;
+	height: 46px;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); 	/* IE 9 */
+	-moz-transform:rotate(0deg); 	/* Firefox */
+	-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+	-o-transform:rotate(0deg); 	/* Opera */
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+.rot90 {
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+
+/* banner's style */
+.banner {
+	position: relative;
+}
+.banner_1st {
+	width: 100%;
+	height: 460px;
+	background-image: url('../img/bannerbg1.png');
+	background-position: center;
+	background-size: cover;
+}
+.banner1_tag {
+	font-family: ChaparralPro;
+	width: 50px;
+	color: #fbfffe;
+	background-color: #ff3529;
+	box-shadow: 5px 5px 1px #c22216;
+	padding: 19px 11px 15px 18px;
+	position: absolute;
+    left: -8px;
+    top: 15px;
+}
+
+.banner_1st p {
+	font-family: ChaparralPro;
+	color: #fbfffe;
+	font-size: 2em;
+	font-weight: 900;
+	max-width: 555px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 120px;
+}
+.banner_1st a {
+	color: #fbfffe;
+    font-weight: 100;
+    padding: 5px 35px;
+    border: 2px solid white;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    margin-left: -99px;
+    transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+.banner_1st a:hover {
+	color: #4e4e50;
+	background-color: #fbfffe;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+.select_btn_group {
+	position: relative;
+	width: 115px;
+	height: 10px;
+	margin: 0 auto;
+	top: 120px;
+}
+.select_btn {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	background-color: white;
+	border: 3px solid white;
+	margin: 0 3px;
+}
+.selected_btn {
+	background-color: #ef3924;
+}
+
+/* color bar style */
+.color_bar {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: #ACCE22;
+}
+
+/* intro */
+.intro {
+	width: 100%;
+	height: 480px;
+	position: relative;
+	background-image: url('../img/cross.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.intro h3 {
+	position: relative;
+	top: 180px;
+	font-size: 2em;
+	font-weight: 100;
+	width: 400px;
+	padding-left: 550px;
+}
+.intro p {
+	position: relative;
+	top: 200px;
+	width: 600px;
+	padding-left: 550px;
+	line-height: 1.5em;
+}
+
+/* five steps */
+.five_steps {
+	position: relative;
+	height: 460px;
+	width: 100%;
+	font-size: 0;
+	-webkit-text-size-adjust: none;
+}
+.steps {
+	font-size: 14px;
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+}
+.st1 {
+	background-color: #bfe8fa;
+}
+.st2 {
+	background-color: #99daf6;
+}
+.st3 {
+	background-color: #7ed1f3;
+}
+.st4 {
+	background-color: #40b9f0;
+}
+.st5{
+	background-color: #00a2ea;
+}

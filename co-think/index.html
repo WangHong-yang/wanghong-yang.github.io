@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="跨界创新设计思维">
+	<!-- android add to homescreen -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#ACCE22">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="跨界. 设计思维">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ACCE22">
+	<!-- title -->
+	<title>跨界. 设计思维</title>
+	<!-- icon -->
+	<link rel="icon" sizes="192x192" href="./img/page1largeicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="./img/page1smallicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="./img/page1smallicon.png">
+	<link rel="apple-touch-startup-image" href="./img/page1smallicon.png">
+	<!-- css -->
+	<link rel="stylesheet" href="css/main.css"/>
+	<!-- jquery -->
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<nav>
+		<div class="nav_sec nav_top">
+			<img class="nav_name" src="./img/navname.png">
+			<ul>
+				<a href="#"><li><img src="./img/navpics_01.png"><span>TOOLS<br />思维工具</span></li></a>
+				<a href="#"><li><img src="./img/navpics_02.png"><span>SHOWCASE<br />展示学生作品</span></li></a>
+				<a href="#"><li><img src="./img/navpics_03.png"><span>NEW TECH<br />跨界技术</span></li></a>
+				<a href="#"><li><img src="./img/navpics_04.png"><span>BLOG<br />网上论坛</span></li></a>
+
+			</ul>
+		</div>
+		<div class="nav_sec nav_bot">MULTI-DISCIPLINARY DESIGN THINKING</div>
+		<div class="mobile_btn"><img src="./img/mobile-btn.png"></div>
+	</nav>
+	<div class="banner">
+		<div class="banner_1st">
+			<div class="banner1_tag"><span>FIND<br>YOUR<br>TOOL</span></div>
+			<p>The DIY Toolkit has been especially designed for development practitioners to invent, adopt or adapt ideas that can deliver better results.</p>
+			<a class="banner1_btn" href="">FIND OUT MORE</a>
+			<div class="select_btn_group">
+				<span class="select_btn selected_btn sb1"></span>
+				<span class="select_btn sb2"></span>
+				<span class="select_btn sb3"></span>
+				<span class="select_btn sb4"></span>
+				<span class="select_btn sb5"></span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="color_bar"></div>
+
+	<div class="intro">
+		<h3>MULTI-DISCIPLINARY</h3>
+		<p>将学生按照不同专业背景交叉组合成若干个学习小组，每个小组里的学生专业尽可能涉及软件、硬件、艺术、人文等不同类别。各小组均指定一名课程学习指导教师，对课程所涉及的调研、研讨、产品开发等进行指导。</p>
+	</div>
+
+	<div class="five_steps">
+		<div class="steps st1"></div>
+		<div class="steps st2"></div>
+		<div class="steps st3"></div>
+		<div class="steps st4"></div>
+		<div class="steps st5"></div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			//jquery for mobile navigator
+			var nav_tag = 0; //not shown
+			if($(window).width()<1045) {$('.nav_top ul').css({'display':'none'});}
+			$('.mobile_btn').click(function(){
+				if(nav_tag == 0) {
+					nav_tag = 1;
+					$('.nav_top ul').css({'display':'block'});
+					$('.mobile_btn').addClass('rot90');
+				} else {
+					nav_tag = 0;
+					$('.nav_top ul').css({'display':'none'});
+					$('.mobile_btn').removeClass('rot90');
+				}
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>
