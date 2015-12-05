@@ -43,6 +43,9 @@ ul, li, a {text-decoration: none; list-style: none; color: black}
 	.banner1_btn {
 		top: 30px!important;
 	}
+	.banner_1st p {
+		font-size: 1.7em !important;
+	}
 	.select_btn_group {
 		top: 68px !important;
 	}
