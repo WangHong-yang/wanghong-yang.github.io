@@ -264,6 +264,25 @@ nav {
 	display: inline-block;
 	width: 20%;
 	height: 100%;
+	vertical-align:top;
+}
+.steps h3 {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin: 150px auto 0 auto;
+	color: white;
+	font-size: 2em;
+	font-weight: 100;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 50% 50%;
+}
+.steps h4 {
+	font-size: 1.5em;
+	font-weight: 100;
+	text-align: center;
+	margin-top: 10px;
 }
 .st1 {
 	background-color: #bfe8fa;

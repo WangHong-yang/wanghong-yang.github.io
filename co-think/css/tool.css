@@ -1,0 +1,140 @@
+*, html, body {margin: 0; padding: 0;}
+body {background-color: #fefefe; font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;}
+nav, footer, header, article, section {display: block;}
+ul, li, a {text-decoration: none; list-style: none; color: black}
+
+/* font face */
+@font-face { 
+	font-family: ChaparralPro; 
+	src: url('../fonts/ChaparralPro-Regular.otf'); 
+} 
+
+/* media control */
+@media screen  and (max-width: 65.3125em){
+	.nav_top ul {
+		top: 62px !important;
+		right: 0 !important;
+		background-color: white;
+	}
+	.nav_top ul li {
+		display: block !important;
+		border-bottom: 1px solid black;
+	}
+	.mobile_btn {
+		display: block!important;
+	}
+}
+@media screen and (max-width: 33.75em) {
+	
+	.nav_name {
+		height: 36px!important;
+		margin-top: 10px;
+	}
+	.nav_sec {
+		padding-left: 0!important;
+		margin-left: 90px!important;
+	}
+	.banner1_btn {
+		top: 30px!important;
+	}
+	.banner_1st p {
+		font-size: 1.7em !important;
+	}
+	.select_btn_group {
+		top: 68px !important;
+	}
+	.tools img {
+		width: 90% !important;
+		margin: 0 auto!important;
+		
+	}
+}
+
+/* navigator style */
+nav {
+	height: 60px;
+	background-image: url('../img/navlogo2.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: 2px;
+}
+.nav_sec {
+	margin-left: 101px;
+	padding-left: 20px;
+	
+}
+.nav_top {
+	height: 46px;
+}
+.nav_bot {
+	height: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #222222;
+	background-color: #ff3529;
+	opacity: 0.9
+}
+.nav_name {
+	height: 46px;
+}
+.nav_top ul {
+	position: absolute;
+	display: inline-block;
+	z-index: 999;
+}
+.nav_top ul li {
+	display: inline-block;
+	
+	height: 40px;
+	padding: 6px 20px 0 20px;
+
+}
+.nav_top ul li img {
+	max-height: 27px;
+	padding-right: 10px;
+	/*padding: 0 10px 10px 30px;*/
+}
+.nav_top ul li span {
+	display: inline-block;
+}
+.mobile_btn {
+	width: 46px;
+	height: 46px;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); 	/* IE 9 */
+	-moz-transform:rotate(0deg); 	/* Firefox */
+	-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+	-o-transform:rotate(0deg); 	/* Opera */
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+.rot90 {
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+
+/* tool's style */
+.tools {
+	width: 100%;
+	background-color: white;
+}
+.tools img {
+	display: block;
+	width: 500px;
+	margin-left: 240px;
+	padding: 50px 0;
+}
