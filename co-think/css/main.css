@@ -65,6 +65,19 @@ ul, li, a {text-decoration: none; list-style: none; color: black}
 		margin: 0 auto;
 		top: 408px!important;
 	}
+	.five_steps {
+		height: auto!important;
+	}
+	.steps {
+		display: block!important;
+		width: 100%!important;
+		height: 360px!important;
+		padding-top: 50px!important;
+	}
+	.steps h3 {
+		margin-top: 0!important;
+
+	}
 }
 
 /* navigator style */
@@ -299,3 +312,6 @@ nav {
 .st5{
 	background-color: #00a2ea;
 }
+
+/* footer */
+
