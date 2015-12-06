@@ -116,9 +116,25 @@
     vertical-align: top;
     margin: 20px 25px 20px 25px;
 }
+.speaker_intro a:hover {
+    border-bottom: 2px solid transparent!important;
+}
+
+.speaker_intro a img:hover {
+    border-radius: 25%;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari 和 Chrome */
+    -o-transition: all 0.3s; /* Opera */
+
+}
 .speaker_intro a img {
     width: 90px;
     border-radius: 50%;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari 和 Chrome */
+    -o-transition: all 0.3s; /* Opera */
 }
 .speaker_intro p {
     text-align: center;
@@ -134,4 +150,35 @@
 .links a:hover {
     border-bottom: none!important;
 
+}
+
+/* return top */
+.return_top {
+    text-align: center;
+    font-size: 1.4em;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    color: rgb(228,182,49);
+    border: 2px solid rgb(228,182,49);
+    border-radius: 5px;
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 10px;
+    cursor: hand;
+    background-color: white;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari 和 Chrome */
+    -o-transition: all 0.3s; /* Opera */
+}
+.return_top:hover {
+    background-color: rgb(228,182,49);
+    color: white;
+    border-radius: 50% 50%;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari 和 Chrome */
+    -o-transition: all 0.3s; /* Opera */
 }
