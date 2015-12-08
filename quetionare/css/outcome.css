@@ -1,0 +1,207 @@
+*, html, body {margin: 0; padding: 0; font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;}
+body {
+  background-image: url('../img/outcome_background.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+}
+
+/* media control */
+@media screen and (max-width: 65.3125em) {
+
+}
+@media screen and (max-width: 33.75em) {
+  .content {
+    width: 100%!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    border-left: none!important;
+    border-right: none!important;
+  }
+  .single_left {
+    margin-left: 20px;
+  }
+  .login_signup .cancel {
+    margin-left: -52px!important;
+  }
+}
+
+.content {
+  width: 600px;
+  background-color: rgba(255,255,255,0.8);
+  margin: 5em auto;
+  padding: 40px;
+  border: 1px solid #e1e1e1;
+}
+.price_container {
+  color: #424956;
+  text-align: center;
+}
+.price_container>h1 {
+  font-size: 50px;
+  margin: 0.67em auto 0 auto;
+}
+.price_container>h2 {
+  color: #e2276f;
+  font-size: 50px;
+}
+.price_container>a:hover {
+  color: #0083b7;
+  transition: all 0.1s ease-in;
+}
+.price_container a {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  color: #00a8ea;
+  text-decoration: none;
+  
+  line-height: 1.5em;
+  padding: 5px 0;
+}
+.list_container {
+  display: none;
+  transition: all 0.1s ease-in;
+}
+.list_link_hide {
+  display: none;  
+}
+.single {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 20px 0;
+  color: #697377;
+  font-size: 0
+
+}
+.single_left {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #efeeed;
+
+}
+.single_left img {
+  display: block;
+  padding-top: 10px;
+  margin: 0 auto;
+  max-width: 40px;
+  max-height: 40px;
+}
+.single_right {
+  margin-left: 25px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 1.2em;
+}
+.question {
+  line-height: 24px;
+  padding-top: 7px;
+}
+.answer a:hover {
+  color: #0083b7;
+  transition: all 0.1s ease-in;
+}
+.answer a {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  color: #00a8ea;
+  font-size: 0.8em;
+  font-weight: 100;
+  text-decoration: none;  
+}
+.answer span {
+  color: #424956;
+  padding-left: 18px;
+  padding-right: 5px;
+}
+
+/* generate button */
+.gen_btn_container {
+  position: relative;
+  margin: 60px 0 20px;
+}
+.gen_btn:hover {
+  background-color: #bd1958;
+  transition: all 0.1s ease-in;
+}
+.gen_btn {
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  margin-left: -115px;
+  font-size: 1.3em;
+  font-weight: 200;
+  color: #ffffff !important;
+  background-color: #e2276f;
+  border: none;
+  text-decoration: none;
+  padding: 14px 60px 18px;
+  border-radius: 5px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+/* SIGNUP and LOGIN style */
+.login_signup_container {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+.login_signup {
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #d1d1d1;
+}
+.form_list input {
+  width: 270px;
+  height: 30px;
+  padding: 5px 15px;
+  font-size: 1em;
+  font-weight: 100;
+  margin-bottom: 20px;
+  border: 1px solid #56a9b7;
+  border-radius: 5px;
+  outline-color: #56a9b7;
+}
+.login_signup button:hover {
+  background-color: white;
+  color: #56a9b7;
+  transition: all 0.1s ease-in;
+}
+.login_signup button {
+  width: 86px;
+  height: 30px;
+  font-weight: 100;
+  background-color: #56a9b7;
+  border: 1px solid #56a9b7;
+  border-radius: 5px;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.login_signup label {
+  font-size: 12px;
+  color: #56a9b7;
+  outline-color: #56a9b7;
+  font-weight: 100;
+}
+.login_signup .cancel {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-top: -203px;
+  margin-left: 332px;
+  cursor: pointer;
+  color: #56a9b7;
+}
