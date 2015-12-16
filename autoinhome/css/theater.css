@@ -8,7 +8,7 @@
     z-index: 998;
 }
 .nav_mobile {
-    //width: 100%;
+//width: 100%;
     position: fixed;
     z-index: 999;
     background-color: transparent;
@@ -142,11 +142,15 @@ nav {
 .contact {
     background-image: url("../img/network_img/navpic/navpic_12.png");
 }
+.trend_logo {
+    width: 15%;
+    min-width: 170px;
+    max-width: 400px;
+}
 
 /* section1 style sheet */
 .sec1 {
-
-    background-image: url("../img/network_img/bg1.jpg");
+    background-image: url("../img/theater_img/bg-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,12 +168,32 @@ nav {
 }
 
 /* section2 style sheet */
+.sec2 {
+    background-image: url("../img/theater_img/bg-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec2 .trend_logo {
+    margin-top: 88px;
+    width: 15%;
+    min-width: 200px;
+    max-width: 400px;
+}
+.sec2 .theater_features {
+    width: 55%;
+    margin-top: 30px;
+}
 .sec2 h4 {
-    font-size: 0.5em;
+    font-size: 2em;
     font-weight: 100;
     color: #000000;
     padding-bottom: 20px;
-    //margin-top: 20px;
+}
+.sec2 p {
+    margin-top: 50px;
+    color: #333;
+    font-size: 0.7em;
 }
 .sec2_top_pic {
     width: 40%;
@@ -187,7 +211,6 @@ nav {
 .row {
     width: 711px;
     height: 60px;
-    //background-color: lightpink;
     margin: 0 auto;
 
 }
@@ -216,7 +239,7 @@ nav {
 /* section3 style sheet */
 .sec3 {
 
-    background-image: url("../img/network_img/bg3.jpg");
+    background-image: url("../img/theater_img/bg-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -227,7 +250,16 @@ nav {
     min-width: 200px;
     max-width: 400px;
     margin: 30px auto 0 auto;
-    opacity: 0; //FIXME
+}
+.sec3 .filmpic {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    width: 25%;
+    min-width: 200px;
+    max-width: 400px;
+    padding-left: 600px;
+    padding-top: 90px;
 }
 .sec3 h3 {
     letter-spacing: 0.2em;
@@ -243,41 +275,71 @@ nav {
 }
 .bg_cover {
     width: 100%;
-    height: 22%;
+    height: 32%;
     position: absolute;
-    bottom: -22%; //FIXME//;
+    bottom: -32%; //FIXME//;
     background-color: rgba(0,0,0,0.5);
 }
 .bg_content_wraper {
-    width: 664px;
+    width: 90%;
     margin: 0 auto;
 }
 .sub_bg_cover {
     text-align: left;
     position: relative;
-    width: 145px;
+    width: 33%;
     height: auto;
     float: left;
     font-size: 0.5em;
     padding: 0 10px;
     margin-top: 3%;
-    border-left: 1px solid white;
+}
+.sub_bg_cover>img {
+    margin-left: 0;
 }
 .sub_bg_cover>h4 {
-    margin: 0 0 20px 0;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+.sub_bg_cover>p {
+    letter-spacing: 0.1em;
+    font-weight: 100;
+    font-size: 0.7em;
 }
 
 /* section4 style sheet */
-.sec4 p {
-    font-size: 0.5em;
-    position: relative;
-    color: #000000;
+.sec4 {
+    background-image: url("../img/theater_img/bg-4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.trend_logo {
-    margin-top: 70px;
+.sec4 h4 {
+    text-align: left;
+    color: #00a1e9;
+    margin-left: 10%;
+    font-weight:300;
+}
+.sec4 p {
+    font-size: 0.4em;
+    position: relative;
+    text-align: left;
+    color: #00a1e9;
+    margin-top: 50px;
+    margin-left: 10%;
+    font-weight: 100;
+}
+.sec4 .trend_logo {
+    margin: 50px 0;
     width: 15%;
-    min-width: 200px;
+    min-width: 170px;
     max-width: 400px;
+}
+.sec4 .trend_logo {
+    position: absolute;
+    left: 10%;
 }
 .features {
     width: 55%;
@@ -286,253 +348,355 @@ nav {
 
 /* section5 style sheet */
 .sec5 {
-
-    background-image: url("../img/network_img/bg5.png");
+    background-image: url("../img/theater_img/bg-5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.sec5 h4 {
+    position: absolute;
+    bottom: 114px;
+    text-align: left;
+    color: white;
+    margin-left: 30%;
+    font-weight:300;
+}
 .sec5 p {
-    font-size: 0.3em;
-}
-.bg_cover_set {
-    background-color: rgba(0,0,0,0.5);
-}
-.bg_cover_left {
     position: absolute;
-    top: 30%;
-    width: 45%;
-    left: -55%; //FIXME
+    bottom: 50px;
+    font-size: 0.4em;
+    text-align: left;
+    color: white;
+    margin-top: 50px;
+    margin-left: 40%;
+    font-weight: 100;
 }
-.bg_cover_left h4 {
-    text-align: right;
-    padding: 30px 10px 30px 0;
-}
-.bg_cover_right {
+.sec5 .trend_logo {
     position: absolute;
-    bottom: 5%;
-    right: -75%;
-    width: 55%;
-}
-.bg_cover_right p {
-    width: 70%;
-    text-align: left;
-    padding: 10px;
-}
-
-/* section6 style sheet */
-.sec6 p {
-    font-size: 0.5em;
-    position: relative;
-    color: #000000;
-}
-#smaller_font {
-    text-align: left;
-    width: 45%;
-    margin: 30px auto 0 auto;
-    font-size: 0.2em;
-}
-.trend_logo {
-    margin-top: 70px;
+    bottom: 100px;
+    left: 10%;
     width: 15%;
-    min-width: 200px;
+    min-width: 170px;
     max-width: 400px;
 }
-.jianrong {
-    position: relative;
-    bottom: 0;
-    max-width: 90%;
-    margin-top: 30px;
+
+
+/* section6 style sheet */
+.sec6 {
+    background-image: url("../img/theater_img/bg-6.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec6 .sec6_wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5% 2%;
+    background-color: rgba(134, 92, 55, 0.5);
+    height: 100%;
+    width: 30%;
+}
+.sec6 .trend_logo {
+    display: block;
+    margin-top: 90px;
+}
+.sec6 h4 {
+    text-align: left;
+    color: white;
+    font-weight:300;
+    margin-top: 50px;
+}
+.sec6 p {
+    font-size: 0.4em;
+    text-align: left;
+    color: white;
+    margin-top: 50px;
+    font-weight: 100;
+}
+.sec6_product {
+    position: absolute;
+    width: 25%;
+    min-width: 200px;
+    max-width: 600px;
+    bottom: 3%;
+    right: 15%;
 }
 
 /* section7 style sheet */
 .sec7 {
-    background-image: url("../img/network_img/bg7.jpg");
+    background-image: url("../img/theater_img/bg-7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sec7mengban {
-    width: 65%;
-    height: 25%;
+.sec7 .sec7_wrapper {
     position: absolute;
-    top: 62%;
-    left: -65%; //FIXME
+    left: 0;
+    top: 0;
+    padding: 5% 2%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 30%;
 }
-.sec7mengban h4 {
-    font-size: 0.5em;
-    font-weight: 100;
-    text-align: right;
-    margin: 2% 15% 3% 15%;
-}
-.sec7mengban p {
-    font-size: 0.2em;
-    text-align: left;
-    margin: 2% 15% 2% 35%;
-}
-.sec7 img {
+.sec7 .trend_logo {
+    bottom: 100px;
     display: block;
-    position: absolute;
+    margin-top: 90px;
 }
-.sec7logo {
-    max-width: 10%;
-    top: 100px;
-    left: 35%;
+.sec7 h4 {
+    text-align: left;
+    color: #222;
+    font-weight:300;
+    margin-top: 50px;
 }
-.sec71TB {
-    max-width: 5%;
-    top: 190px;
-    left: 35%;
-    opacity: 0; //FIXME
-}
-.sec72TB {
-    max-width: 10%;
-    top: 220px;
-    left: 25%;
-    opacity: 0; //FIXME
-}
-.sec7luyou {
-    width: 40%;
-    right: 0;
-    top: 25%;
+.sec7 p {
+    font-size: 0.4em;
+    text-align: left;
+    color: #222;
+    margin-top: 50px;
+    font-weight: 100;
 }
 
 /* section8 style sheet */
+.sec8 {
+    background-image: url("../img/theater_img/bg-8.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec8 .sec8_wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5% 2%;
+    height: 100%;
+    width: 30%;
+}
+.sec8 .trend_logo {
+    bottom: 100px;
+    display: block;
+    margin-top: 90px;
+}
 .sec8 h4 {
-    font-size: 0.5em;
-    position: relative;
-    color: #000000;
+    text-align: left;
+    color: white;
+    font-weight:300;
+    margin-top: 50px;
 }
 .sec8 p {
+    font-size: 0.4em;
     text-align: left;
-    //width: 45%;
-    //margin: 30px auto 0 auto;
-    font-size: 0.2em;
-    color: #000000;
+    color: white;
+    margin-top: 50px;
+    font-weight: 100;
 }
-.pic1, .pic2, .pic3 {
-
-}
-.trend_logo {
-    margin-top: 70px;
-    width: 15%;
-    min-width: 200px;
-    max-width: 400px;
-}
-.sec8panel {
-    width: 700px;
-    margin: 70px auto 0 auto;
-}
-.sec8left, .sec8right {
-    width: 330px;
-    height: 95%;
-    margin-left: 10px;
-    margin-right: 10px;
-    float: left;
-}
-.sec8right p {
-    text-align: center;
+.sec8_product {
+    position: absolute;
+    width: 50%;
+    top: 45%;
+    left: 7%;
+    min-width: 300px;
+    max-width: 700px;
 }
 
 /* section9 style sheet */
 .sec9 {
-    background-image: url("../img/network_img/bg9.jpg");
+    background-image: url("../img/theater_img/bg-9.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sec9wrapper {
-    width: 700px;
-    margin: 0 auto;
-    padding-left: 10%;
-}
-.sec9left, .sec9right {
+.sec9 .sec9_wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5% 2%;
+    background-color: rgba(111, 90, 70, 0.5);
     height: 100%;
-    position: relative;
-    float: left;
-    opacity: 0;//FIXME
+    width: 30%;
 }
-.sec9left {
-    margin-top: 35%;
-    margin-left: -20%;
+.sec9 .trend_logo {
+    bottom: 100px;
+    display: block;
+    margin-top: 90px;
 }
-.sec9right {
-    margin-top: 20%;
-    margin-left: 20%;
-}
-.sec9left>h4, .sec9right>h4 {
-    font-size: 0.5em;
-    width: 320px;
-    margin-bottom: 30px;
-}
-.sec9left>p, .sec9right>p {
-    font-size: 0.2em;
-    width: 310px;
-}
-.sec9left>h4, .sec9left>p {
+.sec9 h4 {
     text-align: left;
+    color: white;
+    font-weight:300;
+    margin-top: 50px;
 }
-.sec9right>h4, .sec9right>p {
+.sec9 p {
+    font-size: 0.4em;
     text-align: left;
+    color: white;
+    margin-top: 50px;
+    font-weight: 100;
+    max-width: 80%;
 }
 
 /* section10 style sheet */
 .sec10 {
-    background-image: url("../img/network_img/bg10.jpg");
+    background-image: url("../img/theater_img/bg-10.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .sec10 h4 {
-    font-size: 0.5em;
-    font-weight: 100;
-    color: #000000;
-    padding-bottom: 10%;
+    text-align: left;
+    margin-left: 10%;
+    font-weight:300;
+    margin-top: 50px;
+    position: absolute;
+    top: 100px;
 }
 .sec10 p {
-    font-size: 0.2em;
-    color: #000000;
+    font-size: 0.4em;
+    text-align: center;
+    color: white;
+    font-weight: 100;
 }
-.higher_sec {
-    position: absolute;
-    margin-top: 0;
-    height: 0;
+.sec10_wrapper {
     width: 100%;
+
+    background-color: rgba(130,75,44,0.5);
+    position: absolute;
+    bottom: 0;
 }
-.higher_sec>img {
-    width: 15%;
-    min-width: 200px;
-    max-width: 400px;
-    margin: 120px auto 0 auto;
+.sec10_wrapper .sec10_subset {
+    display: inline-block;
+    width: 30%;
+    padding: 3% 0;
 }
-.lower_sec {
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
+.sec10_subset img {
+    max-width: 50%;
 }
-.sec10_sec {
-    width: 32%;
-    height: 100%;
-    background-image: url("../img/network_img/bg10_1.png");
+
+/* section11 style sheet */
+.sec11 {
+    background-image: url("../img/theater_img/bg-11.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    float: left;
-    margin-left: 1px;
-    margin-right: 1px;
 }
-.top_part {
-    margin-top: 127%;
+.sec11 .sec11_wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5% 2%;
+    height: 100%;
+    width: 30%;
+    background-color: rgba(182,192,240,0.6);
 }
-.top_left, .top_right {
-    width: 50%;
-    float: left;
-    margin-bottom: 20%;
+.sec11 .trend_logo {
+    bottom: 100px;
+    display: block;
+    margin-top: 90px;
 }
-.top_left>img, .top_right>img {
-    max-width: 65%;
+.sec11 h4 {
+    text-align: left;
+    color: white;
+    font-weight:300;
+    margin-top: 50px;
+}
+.sec11 p {
+    font-size: 0.4em;
+    text-align: left;
+    color: white;
+    margin-top: 50px;
+    font-weight: 100;
+    max-width: 80%;
 }
 
+
+/* section12 style sheet */
+.sec12 {
+    background-image: url("../img/theater_img/bg-12.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec12 .sec12_wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5% 2%;
+    background-color: rgba(111, 90, 70, 0.6);
+    height: 100%;
+    width: 30%;
+}
+.sec12 .trend_logo {
+    bottom: 100px;
+    display: block;
+    margin-top: 90px;
+}
+.sec12 h4 {
+    text-align: left;
+    color: white;
+    font-weight:300;
+    margin-top: 50px;
+}
+.sec12 p {
+    font-size: 0.4em;
+    text-align: left;
+    color: white;
+    margin-top: 50px;
+    font-weight: 100;
+    max-width: 80%;
+}
+
+/* section13 style sheet */
+.sec13 {
+    background-image: url("../img/theater_img/bg-13.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec13_wrapper {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.sec13_subset {
+    display: inline-block;
+    width: 49%;
+}
+.sec13_subset2 {
+    padding-top: 20px;
+}
+.sec13_logo {
+    max-height: 20%;
+    left: 20px;
+    top: 20px;
+    position: absolute;
+
+}
+.sec13_process {
+    position: absolute;
+    max-height: 70px;
+    bottom: 40px;
+    left: 120px;
+}
+.sec13 h5 {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 0.7em;
+    width: 20%;
+    font-weight: 300;
+}
+.sec13_subset p {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 0.2em;
+    width: 68%;
+    text-align: left;
+    font-weight: 100;
+}
+
+/* footer style */
 #footer {
     display: block;
     position: absolute;
