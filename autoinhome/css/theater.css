@@ -154,6 +154,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-shadow: 0 0 15px #000;
 }
 .sec1 img {
     display: block;
@@ -246,7 +247,7 @@ nav {
 }
 .sec3 img {
     display: block;
-    width: 15%;
+    width: 19%;
     min-width: 200px;
     max-width: 400px;
     margin: 30px auto 0 auto;
@@ -587,7 +588,7 @@ nav {
     padding: 5% 2%;
     height: 100%;
     width: 30%;
-    background-color: rgba(182,192,240,0.6);
+    background-color: rgba(182,192,240,0.85);
 }
 .sec11 .trend_logo {
     bottom: 100px;
