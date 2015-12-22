@@ -20,89 +20,27 @@
 
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
-<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
 <script>
 $(function(){
 	$('#slides').fullpage({
 		navigation: !0,
-		sectionsColor: ['#ffffff', '#eeeeee', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#fff000', '#ffffff', '#ffffff'],
+		sectionsColor: ['#ffffff', '#eeeeee', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#fff000', '#b6d34a', '#ffffff'],
+		normalScrollElements: '.higher_sec',
 		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
-		normalScrollElements: '',
 		afterLoad: function(anchorLink, index){
-			if(index == 3){
-				$('.sec3').find('img').delay(0).animate({
-					opacity: '1'
-				}, 500, 'easeOutExpo');
-				$('.sec3').find('.bg_cover').delay(500).animate({
-					bottom: '0'
-				}, 500, 'easeOutExpo');
-			}
-			if(index == 5){
-				$('.sec5').find('.bg_cover_left').delay(0).animate({
-					left: '0'
-				}, 500, 'easeOutExpo');
-				$('.sec5').find('.bg_cover_right').delay(400).animate({
-					right: '0'
-				}, 500, 'easeOutExpo');
-			}
 			if(index == 7){
-				$('.sec7').find('.sec71TB').delay(0).animate({
-					opacity: '1'
-				}, 400, 'easeOutExpo');
-				$('.sec7').find('.sec72TB').delay(400).animate({
-					opacity: '1'
-				}, 400, 'easeOutExpo');
-				$('.sec7').find('.sec7mengban').delay(800).animate({
+				$('.sec7').find('.sec7mengban').delay(0).animate({
 					left: '0'
 				}, 500, 'easeOutExpo');
 			}
-			if(index == 9){
-				$('.sec9').find('.sec9left').delay(0).animate({
-					opacity: '1'
-				}, 500, 'easeOutExpo');
-				$('.sec9').find('.sec9right').delay(500).animate({
-					opacity: '1'
-				}, 500, 'easeOutExpo');
-			}
-
 		},
 		onLeave: function(index, direction){
-			if(index == '3'){
-				$('.sec3').find('img').delay(0).animate({
-					opacity: '0'
-				}, 500, 'easeOutExpo');
-				$('.sec3').find('.bg_cover').delay(0).animate({
-					bottom: '-22%'
-				}, 500, 'easeOutExpo');
-			}
-			if(index == '5'){
-				$('.sec5').find('.bg_cover_left').delay(0).animate({
-					left: '-55%'
-				}, 500, 'easeOutExpo');
-				$('.sec5').find('.bg_cover_right').delay(0).animate({
-					right: '-75%'
-				}, 500, 'easeOutExpo');
-			}
 			if(index == '7'){
-				$('.sec7').find('.sec71TB').delay(0).animate({
-					opacity: '0'
-				}, 200, 'easeOutExpo');
-				$('.sec7').find('.sec72TB').delay(200).animate({
-					opacity: '0'
-				}, 200, 'easeOutExpo');
-				$('.sec7').find('.sec7mengban').delay(400).animate({
+				$('.sec7').find('.sec7mengban').delay(0).animate({
 					left: '-65%'
 				}, 500, 'easeOutExpo');
 			}
-			if(index == '9'){
-				$('.sec9').find('.sec9left').delay(0).animate({
-					opacity: '0'
-				}, 500, 'easeOutExpo');
-				$('.sec9').find('.sec9right').delay(500).animate({
-					opacity: '0'
-				}, 500, 'easeOutExpo');
-			}
-
 		}
 	});
 
@@ -250,13 +188,14 @@ $(function(){
 </nav>
 <div id="slides">
 	<div class="section sec1">
-		<img src="./img/network_img/wifiLogo.png" alt="wifi_img"/>
-		<h3>网络布局. 稳定兼容超快</h3>
+		<img class="sec1logo" src="./img/environment_img/1-1.png" alt=""/>
+		<h3>环境管理. 节能 环保 健康</h3>
+		<div class="sec1bot"><img src="./img/environment_img/1-2.png" alt=""/></div>
 	</div>
 	<div class="section sec2">
-		<h4>智在家网络解决方案优势</h4>
+		<h4>智在家环境管理方案优势</h4>
 		<img class="sec2_top_pic" src="./img/network_img/double.png" alt=""/>
-		<div class="sec2_types_title"><h4>普通网络</h4><h4>智在家网络</h4><div class="clear"></div></div>
+		<div class="sec2_types_title"><h4>普通环境管理</h4><h4>智在家环境管理系统</h4><div class="clear"></div></div>
 		<div class="sec2_types_features">
 			<div class="row">
 				<p class="row_pic"><img src="./img/network_img/speed.png" alt=""/></p>
@@ -291,185 +230,91 @@ $(function(){
 		</div>
 	</div>
 	<div class="section sec3">
-		<h3>网络布局.双频双网</h3>
-		<p class="intro">主客分离，就是说您家里会有两个 wifi 信号，如果朋友来你家可以给访客帐号，家人则用家庭帐号，确保网络安全。</p>
-		<img src="./img/network_img/doubleWifiLogo.png" alt="double wifi is better"/>
-		<div class="bg_cover">
-			<div class="bg_content_wraper">
-				<div class="sub_bg_cover">
-					<h4>1-10Gbps</h4>
-					<p>1-10Gps局域网带宽</p>
-					<p>比普通方案快10-100倍</p>
-				</div>
-				<div class="sub_bg_cover">
-					<h4>-45dbm</h4>
-					<p>WIFI信号满格分布</p>
-					<p>全屋无阻碍漫游切换</p>
-				</div>
-				<div class="sub_bg_cover">
-					<h4>双网双频</h4>
-					<p>WIFI信号满格分布</p>
-					<p>全屋无阻碍漫游切换</p>
-				</div>
-				<div class="sub_bg_cover">
-					<h4>2TB USB3.0</h4>
-					<p>2TB家庭存储安全备份</p>
-					<p>USB3.0高速共享分享</p>
-				</div>
-			</div>
-		</div>
+		<h3>深度监控环境PM2.5参数</h3>
+		<p class="intro">智在家环境管理，及时自生环境处理，还您一个绿色健康的家庭。</p>
+		<img src="./img/environment_img/3-1.png" alt="PM2.5"/>
+		<p class="sec3intro">PM2.5对人体危害极大，10μm直径的颗粒物通常沉积在上呼吸道，2μm以下的可深入到细支气管和肺泡，细颗粒进入人体到肺泡后，直接影响肺的通气功能，使机体容易处在缺氧状态。</p>
 	</div>
 	<div class="section sec4">
-		<img class="trend_logo" src="./img/network_img/trend_01.png" alt="auto in home logo"/>
-		<p>2015家庭网络技术最新发展趋势</p>
-		<img class="features" src="./img/network_img/trend_02.png" alt="features"/>
+		<img class="sec4inlineblock" src="./img/environment_img/4-1.png" alt=""/>
+		<p class="sec4inlineblock"><span style="color:rgb(211,230,69);font-size:2.5em;">30</span>℃最佳环境
+			<br/><br/><br/>
+			<span style="color:rgb(205,101,52);font-size:2.5em;">41</span>℃老人和体弱多病者容易休克
+			<br/><br/>
+			相对湿度<span style="color:rgb(222,90,35)">></span><span style="color:rgb(222,90,35);font-size:2.5em;">65%</span>或者<span style="color:rgb(223,161,33)"><</span><span style="color:rgb(223,161,33);font-size:2.5em;">40%</span>病菌繁殖滋生最快
+			<br/>
+			相对湿度<span style="color:rgb(193,230,30);font-size:2.5em;">45-55%</span>病菌死亡较快
+		</p>
+		<p class="sec4intro">智在家环境管理系统，采用DHT高精度温湿度传感器，精准检测睡眠高度的温湿度值，能够有效管理房间局部温湿度。</p>
 	</div>
 	<div class="section sec5">
-		<div class="bg_cover_set bg_cover_left">
-			<h4>1-10Gbps</h4>
-		</div>
-		<div class="bg_cover_set bg_cover_right">
-			<p>速度 人类的每一次进步都源于速度上的飞跃</p>
-			<p>网络，最重要的就是速度。2014，光纤开始普及，100Mbps带宽进入家庭。然而不少家庭装修之时只预留了100Mbps的带宽。完全不能满足互联网+的发展需要。不仅在于网线，路由器、接线面板等等都有可能称为速度的瓶颈，拥挤的WIFI信号也有可能让你抓狂。</p>
-			<p>智在家网络布局方案，采用超六类线布局，提供家庭1-10Gbps带宽，满足十年内的带宽需求；WIFI双频双网、随意漫游方案，让您在家中任何区域都享有高强度WIFI信号和高速度。</p>
-		</div>
+		<img class="sec5png" src="./img/environment_img/5-1.png" alt=""/>
+		<p>智在家环境管理系统，采集内外光强，主动管理灯光，环保节能。</p>
 	</div>
 	<div class="section sec6">
-		<img class="trend_logo" src="./img/network_img/trend_01.png" alt="auto in home logo"/>
-		<p>兼容 万物互联兼容是首要条件</p>
-		<p id="smaller_font">智能家具时代，网络更是所有设备良好运行的基础。智在家网络方案，为客户准备了一个能兼容绝大部分设备的互联网络，无论是开关、插座、冰箱、空调还是电视、手机，都将运行在一个稳定兼容的网络系统之中，将极大简化布线和降低网络建设成本，也避免了网络升级造成的浪费。</p>
-		<img class="jianrong" src="./img/network_img/jianrong.png" alt="jianrong"/>
+		<img class="sec6pic" src="./img/environment_img/6-1.png" alt=""/>
+		<p class="sec6p">智在家环境管理系统，主动比对室内外环境差别及天气趋势，再也不必担心晚上空调过冷，湿度过大，关于环境的一切，交由我们处理。</p>
 	</div>
 	<div class="section sec7">
-		<img class="sec7logo" src="./img/network_img/logo_white.png" alt="logo"/>
-		<img class="sec71TB" src="./img/network_img/1TB.png" alt="1TB"/>
-		<img class="sec72TB" src="./img/network_img/2TB.png" alt="2TB"/>
-		<img class="sec7luyou" src="./img/network_img/luyou.png" alt="luyou"/>
+		<img class="sec7luyou" src="./img/environment_img/7-1.png" alt="luyou"/>
 		<div class="bg_cover_set sec7mengban">
-			<h4>稳定 稳定是每一次速度飞跃的前提</h4>
-			<p>不少人都有被挤下线的经历，那是因为选用的路由器负载过多，或运行不够稳定。智在家与智能路由器厂家合作，选用顶配路由器并从底层优化路由，同时让您的设备均衡分布在各个频段之中，使紧缺的频段资源得到有效运用，保证网络的稳定与顺行。</p>
+			<p>智在家环境管理系统，采用无线控制技术，电动窗帘和窗户都能自动开启关闭，再也不担心下雨忘了关窗。</p>
 		</div>
 	</div>
 	<div class="section sec8">
-		<img class="trend_logo" src="./img/network_img/trend_01.png" alt="auto in home logo"/>
-		<h4>真正的精致 在别人看不见的地方</h4>
-		<div class="sec8panel">
-			<div class="sec8left">
-				<p>智在家选好料，抓细节，在你看得见的地方与看不见的地方同样用心，让网络自始至终保持高速、稳定、兼容</p>
-				<img class="pic1" src="./img/network_img/wangxiantou.png" alt=""/>
-				<p>头部展示：<br/>采用磷青铜，镀金接头，保证网络传输性能优越</p>
-				<img class="pic2" src="./img/network_img/dianlan.png" alt=""/>
-			</div>
-			<div class="sec8right">
-				<p>选好线，看屏蔽！真材实料，6A双屏蔽千兆网线
-					<br/>
-					什么是双屏蔽？
-					<br/>
-					四对线外用金属编织网包裹，每对线用铝箔，外加金属编织网包裹
-					<br/>
-					这两种的结合一般称为双屏蔽双绞线，铝箔是防高频干扰，金属网是防低频干扰的。
-				</p>
-				<img class="pic3" src="./img/network_img/mao.png" alt=""/>
-				<p>ABOX lite 家用顶级微型服务器
-					<br/>
-					主频88MHz 512MB 3DDR内存
-					<br/>
-					2G/5G AC双拼 WIFI网络
-					<br/>
-					全千兆LAN接口，USB3.0输出
-					<br/>
-					Zigbee智能家居专用网络
-					<br/>
-					满足所有家庭信息需求
-				</p>
-			</div>
-
-			<div class="clear"></div>
-		</div>
+		<img src="./img/environment_img/8-1.png" alt=""/>
+		<div class="sec8banner">智在家环境管理系统，集联了WIFI/Zigbee/射频等信息技术，所有设备集成在一个系统网络中运行，空调、净化器、加湿器会依据室内外环境参数的变化，人员状态，以及门窗状态等变量联合协调工作，主动维持家中环境。</div>
 	</div>
 	<div class="section sec9">
-		<div class="sec9wrapper">
-			<div class="sec9left">
-				<h4>都是一个良心的工程</h4>
-				<p>家庭网络如同城市排水系统
-					<br/>
-					都是一个良心的工程
-					<br/>
-					未经规划的网络系统，不兼容新设备、易堵塞，或是遭遇网络攻击时会变得不堪一击，一旦崩溃就是一场混乱
-				</p>
-			</div>
-			<div class="sec9right">
-				<h4>精心设计的网络系统</h4>
-				<p>精心设计的网络系统，每处都会精心考虑，不仅是看不到一根线，而且要在高带宽的配置和兼容智能家居的无线布局下做到高速、稳定，让人放心</p>
-			</div>
-			<div class="clear"></div>
-		</div>
+		<img class="sec9img" src="./img/environment_img/9-1.png" alt=""/>
+
 	</div>
 	<div class="section sec10">
 
 		<div class="higher_sec">
-			<img src="./img/network_img/trend_01.png" alt="logo"/>
+
 			<h4>智能家装 服务流程
 				<br/><br/>
 				专业的服务专业的流程。
 			</h4>
+			<img class="sec10sec" src="img/environment_img/10-1.png" alt=""/>
+			<div class="sec10sec">
+				<h5 style="margin-top: 10px">1. 询问阶段</h5>
+				<p style="margin-top: 80px;">中国第一网络供应商连通
+					<br/>
+					跨界合作，完美搭配出
+					<br/>
+					智能体验馆
+					<br/>
+					楚汉路万达御湖世家
+					<br/>
+					顶尖的设计师团队
+				</p>
+				<h5 style="margin-top: 105px;">2. 方案阶段</h5>
+				<p style="margin-top: 80px">
+					你的智能需求大声说出来。<br/>
+					简单而且快捷的方法。<br/>
+					把你的需求变成专业的智能方案。
+				</p>
+				<h5 style="margin-top: 145px;">3. 施工阶段</h5>
+				<p style="margin-top: 80px">
+					不费心。<br/>
+					专业的施工团队 <br/>
+					设定你要的智能生活。<br/>
+				</p>
+				<h5 style="margin-top: 150px;">4. 4S服务</h5>
+				<p style="margin-top: 20px">
+					方案（Solution）<br/>
+					个性（Special） <br/>
+					服务（Service）<br/>
+					满足（Satisfaction）
+				</p>
+			</div>
 		</div>
-		<div class="lower_sec">
-			<div class="sec10_sec sec10_sec1">
-				<div class="top_part">
-					<div class="top_left"><img src="./img/network_img/bglogo1.png" alt=""/><p>上门体验</p></div>
-					<div class="top_right"><img src="./img/network_img/bglogo2.png" alt=""/><p>设计师沟通</p></div>
-					<div class="clear"></div>
-				</div>
-				<div class="bot_part">
-					<h4>1. 询问阶段</h4>
-					<p>中国第一网络供应商联通
-						<br/>
-						跨界合作，完美搭配出
-						<br/>
-						智能体验馆
-						<br/>
-						楚汉路万达御湖世家
-						<br/>
-						顶尖的设计师团队
-					</p>
-				</div>
-			</div>
-			<div class="sec10_sec sec10_sec2">
-				<div class="top_part">
-					<div class="top_left"><img src="./img/network_img/bglogo3.png" alt=""/><p>填写需求问卷</p></div>
-					<div class="top_right"><img src="./img/network_img/bglogo4.png" alt=""/><p>确认方案</p></div>
-					<div class="clear"></div>
-				</div>
-				<div class="bot_part">
-					<h4>2. 方案阶段</h4>
-					<p>你的智能需求大声说出来。
-						<br/>
-						简单而且快捷的方法。
-						<br/>
-						把你的需求变成专业的智能方案。
-					</p>
-				</div>
-			</div>
-			<div class="sec10_sec sec10_sec3">
-				<div class="top_part">
-					<div class="top_left"><img src="./img/network_img/bglogo5.png" alt=""/><p>交定金</p></div>
-					<div class="top_right"><img src="./img/network_img/bglogo6.png" alt=""/><p>上门施工</p></div>
-					<div class="clear"></div>
-				</div>
-				<div class="bot_part">
-					<h4>3. 施工阶段</h4>
-					<p>不费心。
-						<br/>
-						专业的施工团队
-						<br/>
-						设定你要的智能生活。
-					</p>
-				</div>
-			</div>
 
-			<div class="clear"></div>
-		</div>
+
+		<div class="clear"></div>
+
 
 		<div id="footer" class="beforeclick">
 			<img class="forbeauty" src="./img/network_img/footer/forbeauty.png" alt=""/>
