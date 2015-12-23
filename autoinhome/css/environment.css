@@ -196,7 +196,7 @@ nav {
     font-size: 0.3em;
 }
 .row {
-    width: 711px;
+    width: 770px;
     height: 60px;
     //background-color: lightpink;
     margin: 0 auto;
@@ -208,14 +208,14 @@ nav {
     font-size: 0.2em;
     color: #000000;
     float: left;
-
 }
 .row p img {
     height: 100%;
     display: block;
+    margin: 0 auto;
 }
 .row_pic {
-    width: 50px;
+    width: 60px;
 }
 .row_left, .row_right {
     width: 300px;

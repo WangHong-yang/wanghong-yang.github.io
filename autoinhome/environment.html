@@ -56,15 +56,30 @@ $(function(){
         	$('nav').css('display', 'none');
             $('.section').css('font-size', 100);
             $('.sec1 img').css('width', '30%');
-            $('.row').css({'height': 120, 'width': 750});
-            $('.row_pic').css('width', 75);
+			$('.sec1bot img').css({'width':'90%','margin-top':'25px'});
+			$('.sec1logo').css({'width':'20%'});
+            $('.row').css({'height': 150, 'width': 790});
             $('.row_right').css('width', 305);
-            $('.sec2_types_title').css('margin-bottom', 50);
-            $('.intro').css({'width': '80%', 'margin': '20px auto', 'font-size': '0.3em'});
+			$('.row_pic').css({'height':'100','width':'100','margin-top':'30px'});
+			$('.sec2_types_features').css({'margin-left':'-60px'});
+            $('.sec2_types_title').css({'margin-bottom':'80px','width':'50%','padding-left':'98px'});
+            $('.sec2t1').css({'width':'40%'});
+			$('.sec2t2').css({'width':'60%'});
+			$('.intro').css({'width': '80%', 'margin': '20px auto', 'font-size': '0.3em'});
             $('.sec3 h3').css('font-size', '0.9em');
             $('.sec3 img').css('width', '30%');
             $('.sec3 p').css('font-size', '0.3em');
-            $('.sub_bg_cover').css('width', 188);
+			$('.sec3 .intro').css({'width':'50%'});
+			$('.sec3intro').css({'width':'61%'});
+			$('.sec4inlineblock').css({'line-height':'60px','display':'block'});
+			$('.sec4intro').css({'width':'65%','margin-left':'-32.5%','bottom':'70px'});
+            $('.sec4pic').css({'margin':'70px auto','width':'40%'});
+			$('.sec5png').css({'width':'60%','bottom':'20%'});
+			$('.sec5 p').css({'width':'60%','bottom':'70px','right':'70px'});
+			$('.sec6').css({'background-position':'left top','background-size':'cover'});
+			$('.sec6pic').css({'position':'relative','left':'0','width':'200px'});
+			$('.sec6p').css({'margin':'70px auto 0 auto','width':'60%'});
+			$('.sub_bg_cover').css('width', 188);
             $('.sub_bg_cover>h4').css('font-size', '0.8em');
             $('.bg_content_wraper').css('width', 840);
             $('.features').css('width', '95%');
@@ -76,19 +91,31 @@ $(function(){
             $('.sec71TB').css({'max-width': '15%', 'top': '30%'});
             $('.sec72TB').css({'max-width': '20%', 'top': '40%', 'left': '15%'});
             $('.sec7luyou').css({'width': '60%', 'top': '70%'});
-            $('.sec7mengban').css({'height':'35%'});
-            $('.sec7mengban>p').css({'font-size':'0.3em', 'margin':'2% 1% 5% 6%'});
+            $('.sec7mengban').css({'height':'15%','top':'50%','padding':'20px 50px 0 50px'});
+			$('.sec8banner').css({'width':'55%','padding':'120% 50px 0 50px'});
+			$('.sec8 img').css({'width':'80%','position':'relative','z-index':'2'});
+            $('.sec7mengban>p').css({'font-size':'0.3em', 'margin':'10% 1% 5% 6%'});
             $('.sec8 p').css({'font-size':'0.3em'});
             $('.sec8panel').css({'width':'800px'});
             $('.sec8right').css({'width':'425px'});
-            $('.sec9left').css('margin-top', '61%');
-            $('.sec9right').css({'margin-left':'28%', 'margin-top':'41%'});
-            $('.sec9left>p,.sec9right>p').css({'font-size':'0.3em'});
+			$('.sec9img').css({'display':'none'});
+			$('.sec9mobimg').css({'display':'block','width':'90%','margin':'0 auto'});
+			$('.sec9 p').css({'display':'block','font-size':'0.4em','font-weight':'100','width':'65%','margin':'90px auto 0 auto'});
             $('.higher_sec>img').css('margin-top', '25%');
+			$('.sec10sec').css({'margin-top':'0'});
             $('.top_part').css('margin-top', '200%');
             $('.lower_sec').css('width', '90%');
             $('.sec10 p').css({'line-height':'1.5em', 'font-size':'0.24em'});
             $('.sec10_sec').css({'width':'33%'});
+			$('.sec10_1').css({'margin-top':'0'});
+			$('.sec10_2').css({'margin-top':'30px'});
+			$('.sec10_3').css({'margin-top':'35px'});
+			$('.sec10_4').css({'margin-top':'40px'});
+			$('.sec10_5').css({'margin-top':'60px'});
+			$('.sec10_6').css({'margin-top':'50px'});
+			$('.sec10_7').css({'margin-top':'100px'});
+			$('.sec10_8').css({'margin-top':'30px'});
+			
         } else {
             
         }
@@ -194,37 +221,31 @@ $(function(){
 	</div>
 	<div class="section sec2">
 		<h4>智在家环境管理方案优势</h4>
-		<img class="sec2_top_pic" src="./img/network_img/double.png" alt=""/>
-		<div class="sec2_types_title"><h4>普通环境管理</h4><h4>智在家环境管理系统</h4><div class="clear"></div></div>
+		<img class="sec2_top_pic" src="./img/environment_img/smart_environment.png" alt=""/>
+		<div class="sec2_types_title"><h4 class="sec2t1">普通环境管理</h4><h4 class="sec2t2">智在家环境管理系统</h4><div class="clear"></div></div>
 		<div class="sec2_types_features">
 			<div class="row">
-				<p class="row_pic"><img src="./img/network_img/speed.png" alt=""/></p>
-				<p class="row_left">普通家庭网络带宽最高100Mbps</p>
-				<p class="row_right">最高10Gbps，最低1Gbps，双频双网，同时提供了USB3.0的公用存储接口，满足家庭所有成员未来的信息发展需求</p>
+				<p class="row_pic"><img src="./img/environment_img/2-1_01.png" alt=""/></p>
+				<p class="row_left">普通空调、净化器、加湿器只能由人开关、调节参数</p>
+				<p class="row_right">智在家环境管理系统采用智能主动控制系统，通过判断有人无人、环境参数、变化趋势等因素主动开启或关闭空调、净化器、加湿器等设备</p>
 				<div class="clear"></div>
 			</div>
 			<div class="row">
-				<p class="row_pic"><img src="./img/network_img/capability.png" alt=""/></p>
-				<p class="row_left">只考虑网线的布局，没有多媒体、智能家居方面的考虑，网络适应能力差</p>
-				<p class="row_right">从全局思考，指定包含电视、网线、WIFI、高清视频、智能家居等各个方面，让您的网络布局适应未来需要</p>
+				<p class="row_pic"><img src="./img/environment_img/2-1_02.png" alt=""/></p>
+				<p class="row_left">环境管理在于健康，当温度过低或过高时对人体都是有害的，普通空调、加湿器只能简单运行在一种模式，无法应对微观的环境变化，常期运行可能使人患上空调病或感冒</p>
+				<p class="row_right"><span style="background-color: red">这个地方的文字不对呀</span></p>
 				<div class="clear"></div>
 			</div>
 			<div class="row">
-				<p class="row_pic"><img src="./img/network_img/stable.png" alt=""/></p>
-				<p class="row_left">经常掉线、卡顿，WIFI负载量小，容易被挤下线</p>
-				<p class="row_right">智能上网不惧掉线，用顶配路由器提供多至百点接入能力，高速、低速、有线、无线合理分配带宽资源，家中设备再多也不怕被挤下线</p>
+				<p class="row_pic"><img src="./img/environment_img/2-1_03.png" alt=""/></p>
+				<p class="row_left">任何局部环境的调节都需要多种设备的协调工作，传统的空调、净化器、加湿器各自为政，无法联动工作，调节好环境参数</p>
+				<p class="row_right">智在家环境管理系统，综合了温湿度、光照、PM2.5等参数，协调空调、净化器、加湿器、门窗的工作，主动维持家中环境在人体最舒适的状态</p>
 				<div class="clear"></div>
 			</div>
 			<div class="row">
-				<p class="row_pic"><img src="./img/network_img/beauty.png" alt=""/></p>
-				<p class="row_left">通常家用信息箱都很小，导致家中网线、视频线等凌乱不堪</p>
-				<p class="row_right">从信息箱布置到设备电源供电都有全套合理方案，让您的家中看不到一条电源线和网线，整齐干净，美观大方</p>
-				<div class="clear"></div>
-			</div>
-			<div class="row">
-				<p class="row_pic"><img src="./img/network_img/quality.png" alt=""/></p>
-				<p class="row_left">接线点不规范，造成掉线、接触不实等导致网络中断，带宽减小等问题</p>
-				<p class="row_right">选用一流材料，按照福碌克测试标准接线，自有施工标准，每一个节点都有良好的传输能力，确保带宽速度和系统稳定性</p>
+				<p class="row_pic"><img src="./img/environment_img/2-1_04.png" alt=""/></p>
+				<p class="row_left">家电环境设备无法主动开关，也无法主动根据环境调整功率，能耗大、不环保、也不健康</p>
+				<p class="row_right">智在家环境管理系统，只在需要的时候让相关设备运行，并且实时根据相应环境参数调整设备功率，达到环保节能的目的</p>
 				<div class="clear"></div>
 			</div>
 		</div>
@@ -236,7 +257,7 @@ $(function(){
 		<p class="sec3intro">PM2.5对人体危害极大，10μm直径的颗粒物通常沉积在上呼吸道，2μm以下的可深入到细支气管和肺泡，细颗粒进入人体到肺泡后，直接影响肺的通气功能，使机体容易处在缺氧状态。</p>
 	</div>
 	<div class="section sec4">
-		<img class="sec4inlineblock" src="./img/environment_img/4-1.png" alt=""/>
+		<img class="sec4inlineblock sec4pic" src="./img/environment_img/4-1.png" alt=""/>
 		<p class="sec4inlineblock"><span style="color:rgb(211,230,69);font-size:2.5em;">30</span>℃最佳环境
 			<br/><br/><br/>
 			<span style="color:rgb(205,101,52);font-size:2.5em;">41</span>℃老人和体弱多病者容易休克
@@ -267,7 +288,8 @@ $(function(){
 	</div>
 	<div class="section sec9">
 		<img class="sec9img" src="./img/environment_img/9-1.png" alt=""/>
-
+		<img class="sec9mobimg" style="display: none" src="./img/environment_img/9-2.png" alt=""/>
+		<p style="display: none">只在需要的时候让相关设备运行，并且实时根据相应环境参数调整设备功率，达到环保节能的目的</p>
 	</div>
 	<div class="section sec10">
 
@@ -279,8 +301,8 @@ $(function(){
 			</h4>
 			<img class="sec10sec" src="img/environment_img/10-1.png" alt=""/>
 			<div class="sec10sec">
-				<h5 style="margin-top: 10px">1. 询问阶段</h5>
-				<p style="margin-top: 80px;">中国第一网络供应商连通
+				<h5 class="sec10_1" style="margin-top: 10px">1. 询问阶段</h5>
+				<p class="sec10_2" style="margin-top: 80px;">中国第一网络供应商连通
 					<br/>
 					跨界合作，完美搭配出
 					<br/>
@@ -290,20 +312,20 @@ $(function(){
 					<br/>
 					顶尖的设计师团队
 				</p>
-				<h5 style="margin-top: 105px;">2. 方案阶段</h5>
-				<p style="margin-top: 80px">
+				<h5 class="sec10_3" style="margin-top: 105px;">2. 方案阶段</h5>
+				<p class="sec10_4" style="margin-top: 80px">
 					你的智能需求大声说出来。<br/>
 					简单而且快捷的方法。<br/>
 					把你的需求变成专业的智能方案。
 				</p>
-				<h5 style="margin-top: 145px;">3. 施工阶段</h5>
-				<p style="margin-top: 80px">
+				<h5 class="sec10_5" style="margin-top: 145px;">3. 施工阶段</h5>
+				<p class="sec10_6" style="margin-top: 80px">
 					不费心。<br/>
 					专业的施工团队 <br/>
 					设定你要的智能生活。<br/>
 				</p>
-				<h5 style="margin-top: 150px;">4. 4S服务</h5>
-				<p style="margin-top: 20px">
+				<h5 class="sec10_7" style="margin-top: 150px;">4. 4S服务</h5>
+				<p class="sec10_8" style="margin-top: 20px">
 					方案（Solution）<br/>
 					个性（Special） <br/>
 					服务（Service）<br/>
@@ -346,7 +368,7 @@ $(function(){
 						<br/>
 						CONTACT
 					</h4>
-					<p>copyright 2012-15 武汉XX智能科技有限公司
+					<p>copyright 2012-15 武汉智在家智能科技有限公司
 						<br/>
 						QQ： 1951057570	59519434
 						<br/>
