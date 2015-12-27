@@ -16,17 +16,22 @@
 		width: 100%!important;
 		margin-left: 0!important;
 	}
-	#sign-up-methods form #poster, #sign-up-methods form #demo, #sign-up-methods form #hotel_yes, #sign-up-methods form #hotel_no {
+	#sign-up-methods form #has_poster, #sign-up-methods form #has_demo, #sign-up-methods form #need_book_hotel, #sign-up-methods form #hotel_no {
 		width: auto!important;
 	}
 	textarea {
 		width: 100%!important;
 		margin-left: 0!important;
 	}
-	.form-btn .button {
+	.form-btn #submit {
+		height: 50px!important;
 		position: relative;
-		left: 50%!important;
-		margin-left: -76px;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		background-color: white;
+		border: 2px solid rgb(228,182,49);
+		color: rgb(228,182,49);
 	}
 }
 
@@ -125,7 +130,7 @@ fieldset {
 .form-btn {
 	margin-top: 50px;
 }
-.form-btn a {
+.form-btn input {
 	text-decoration: none;
 	padding: 8px 50px;
 	font-size: 1.3em;
@@ -139,7 +144,7 @@ fieldset {
 	border: 2px solid rgb(228,182,49);
 }
 
-.form-btn a:hover {
+.form-btn input:hover {
 	background: rgb(228,182,49);
 	color: white;
 	text-decoration: none;
@@ -151,12 +156,12 @@ fieldset {
 	line-height: 1.7em;
 	color: #999;
 }
-#poster, #demo {
+#has_poster, #has_demo {
 	width: auto!important;
 	height: auto!important;
 	margin-top: 25px;
 }
-#hotel_yes, #hotel_no {
+#need_book_hotel, #hotel_no {
 	width: auto!important;
 	height: auto!important;
 	margin-top: 15px;
