@@ -12,13 +12,46 @@
 		<link rel="icon" href="./favicon.ico">
 		<link rel="bookmark" href="./favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/committees.css" />
 		<link rel="stylesheet" type="text/css" href="css/nav.css" />
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
         <link rel="stylesheet" type="text/css" href="css/registration.css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
         <script src="js/modernizr.custom.js"></script>
 		<script src="js/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var poster = false;
+                var demo = false;
+                var hotel = false;
+
+                $('#poster').click(function(){
+                    if(!poster) {
+                        poster = true;
+                        $('#poster_intro').css({'display':'block'});
+                    } else {
+                        poster = false;
+                        $('#poster_intro').css({'display':'none'});
+                    }
+                });
+                $('#demo').click(function(){
+                    if(!demo) {
+                        demo = true;
+                        $('#demo_intro').css({'display':'block'});
+                    } else {
+                        demo = false;
+                        $('#demo_intro').css({'display':'none'});
+                    }
+                });
+                $('#hotel_yes').click(function(){
+                    hotel = true;
+                    $('.hotel_time').css({'display':'block'});
+                });
+                $('#hotel_no').click(function(){
+                    hotel = false;
+                    $('.hotel_time').css({'display':'none'});
+                })
+            });
+        </script>
 	</head>
 	<body>
 		<div class="nav htmleaf-content bgcolor-3">
@@ -74,6 +107,181 @@
                 <div class="clearfix"></div>
             </div>
         </div>
+
+        <div class="sec sec3">
+            <div class="secwraper">
+                <h2 class="panel_title">在线注册</h2>
+                <div class="panel_all" id="sign-up-methods">
+                    <form>
+                        <div class="form-list">
+                            <fieldset class="user_type">
+                                <label class="list_sub">注册类型</label>
+                                <select>
+                                    <option value="speaker">特邀讲者</option>
+                                    <option value="teacher">教师</option>
+                                    <option value="employee">企业员工</option>
+                                    <option value="student">学生</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_name">
+                                <label class="list_sub">姓名</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_org">
+                                <label class="list_sub">单位</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_email">
+                                <label class="list_sub">电子邮件</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                            <p class="message">单个邮箱只能注册一次</p>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_addr">
+                                <label class="list_sub">通信地址</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_title">
+                                <label class="list_sub">职称（对非学生）</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                            <p class="message">仅需非学生填写</p>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_supervisor">
+                                <label class="list_sub">导师（对学生）</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                            <p class="message">仅需学生填写</p>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_mobiphone">
+                                <label class="list_sub">移动电话</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_code">
+                                <label class="list_sub">邮编</label>
+                                <input class="list_sub" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_poster_demo">
+                                <label class="list_sub">是否有Poster/Demo</label>
+                                <input id="poster" name="poster" type="checkbox"><label for="poster"> Poster</label>
+                                <input id="demo" name="demo" type="checkbox"><label for="demo"> Demo</label>
+                                <textarea id="poster_intro" style="display: none" placeholder="Poster简短介绍"></textarea>
+                                <textarea id="demo_intro" style="display: none" placeholder="Demo简短介绍及场地设施要求"></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_hotel">
+                                <label class="list_sub">是否需要预定酒店</label>
+                                <input id="hotel_yes" name="hotel" value="yes" type="radio"><label for="hotel_yes"> 需要</label>
+                                <input id="hotel_no" name="hotel" value="no" type="radio"><label for="hotel_no"> 不需要</label>
+                            </fieldset>
+                        </div>
+                        <div class="form-list hotel_time" style="display: none">
+                            <fieldset class="user_type">
+                                <label class="list_sub">到店时间</label>
+                                <span style="padding: 18px 10px 0 10px">
+                                    2016年 4月
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                    日
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="form-list hotel_time" style="display: none">
+                            <fieldset class="user_type">
+                                <label class="list_sub">离店时间</label>
+                                <span style="padding: 18px 10px 0 10px">
+                                    2016年 4月
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                    日
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="form-btn">
+                            <a class="button" href="">注 册</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
 
 		<div class="transparent"></div>
 
