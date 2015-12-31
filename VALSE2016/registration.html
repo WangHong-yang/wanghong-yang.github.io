@@ -31,23 +31,30 @@
                         $('.for_tutor').css({'display':'block'});
                         $('.for_student').css({'display':'none'});
                     }
+                    if($("#register_type").find("option:selected").text()=='特邀讲者'){
+                        $('.if_invited').css({'display':'block'});
+                        $('.hotel_time').css({'display':'block'});
+                    } else {
+                        $('.if_invited').css({'display':'none'});
+                        $('.hotel_time').css({'display':'none'});
+                    }
                 });
                 $('#has_poster').click(function(){
-                    if(!poster) {
+                    if($('#has_poster').is(':checked')) {
                         poster = true;
-                        $('#post_or_demo_info').css({'display':'block'});
+                        $('.poster_info').css({'display':'block'});
                     } else {
                         poster = false;
-                        $('#post_or_demo_info').css({'display':'none'});
+                        $('.poster_info').css({'display':'none'});
                     }
                 });
                 $('#has_demo').click(function(){
-                    if(!demo) {
+                    if($('#has_demo').is(':checked')) {
                         demo = true;
-                        $('#demo_requirements').css({'display':'block'});
+                        $('.demo_info').css({'display':'block'});
                     } else {
                         demo = false;
-                        $('#demo_requirements').css({'display':'none'});
+                        $('.demo_info').css({'display':'none'});
                     }
                 });
                 $('#need_book_hotel').click(function(){
@@ -57,6 +64,75 @@
                 $('#hotel_no').click(function(){
                     hotel = false;
                     $('.hotel_time').css({'display':'none'});
+                });
+                $('.closeBtn').click(function(){
+                    $('.preview').css({'display':'none'});
+                });
+                $('.previewbtn').click(function(){
+                    // show preview panel
+                    $('.preview').css({'display':'block'});
+
+                    // add info into preview
+                    $('.reg_type').text($('#register_type').find('option:selected').text());
+                    $('.reg_name').text($('#name').val());
+                    $('.reg_org').text($('#unit').val());
+                    $('.reg_email').text($('#email').val());
+                    $('.reg_addr').text($('#address').val());
+                    $('.reg_stat').text($('#academic_title').val());
+                    $('.reg_supervisor').text($('#tutor').val());
+                    $('.reg_phone').text($('#phone_num').val());
+                    $('.reg_poster_author').text($('#poster_author').val());
+                    $('.reg_poster_title').text($('#poster_title').val());
+                    $('.reg_poster_journal').text($('#poster_journal').val());
+                    $('.reg_poster_time').text($('#poster_time').val());
+                    $('.reg_demo_author').text($('#demo_author').val());
+                    $('.reg_demo_title').text($('#demo_title').val());
+                    $('.reg_demo_intro').text($('#demo_intro').val());
+                    $('.reg_arrive_time').text($('#arrival_time').find('option:selected').text());
+                    $('.reg_leave_time').text($('#leaving_time').find('option:selected').text());
+
+                    // hide info of inproper group
+                    if($("#register_type").find("option:selected").text()=='学生'){
+                        $('.reg_info6').css({'display':'none'});
+                        $('.reg_info7').css({'display':'block'});
+                    } else {
+                        $('.reg_info6').css({'display':'block'});
+                        $('.reg_info7').css({'display':'none'});
+                    }
+                    if($("#register_type").find("option:selected").text()=='特邀讲者'){
+                        $('.reg_info16').css({'display':'block'});
+                    } else {
+                        $('.reg_info16').css({'display':'none'});
+                    }
+
+                    // hide info of poster/demo if not chosen
+                    if($('#has_poster').is(':checked')==false) {
+                        $('.reg_info9').css({'display':'none'});
+                        $('.reg_info10').css({'display':'none'});
+                        $('.reg_info11').css({'display':'none'});
+                        $('.reg_info12').css({'display':'none'});
+                    } else {
+                        $('.reg_info9').css({'display':'block'});
+                        $('.reg_info10').css({'display':'block'});
+                        $('.reg_info11').css({'display':'block'});
+                        $('.reg_info12').css({'display':'block'});
+                    }
+                    if($('#has_demo').is(':checked')==false) {
+                        $('.reg_info13').css({'display':'none'});
+                        $('.reg_info14').css({'display':'none'});
+                        $('.reg_info15').css({'display':'none'});
+                    } else {
+                        $('.reg_info13').css({'display':'block'});
+                        $('.reg_info14').css({'display':'block'});
+                        $('.reg_info15').css({'display':'block'});
+                    }
+
+                    // no need hotel case
+                    if($('#hotel_no').is(':checked')==true) {
+                        $('.reg_info16').css({'display':'none'});
+                    } else {
+                        $('.reg_info16').css({'display':'block'});
+                    }
                 })
             });
         </script>
@@ -91,30 +167,7 @@
         	</div>
         </div>
 
-        <div class="sec sec1">
-            <div class="secwraper">
-                <h2 class="panel_title">VALSE 2016 参会须知（待定）</h2>
-                <div class="panel_all">
-                    <p class="panel_list">VALSE 2016 会议须知请 <a href=""> <i class="icon-book"></i>点击阅读 </a>（暂未发布）</p>
-                    <p class="panel_list">VALSE 2016 注册请 <a href=""> <i class="icon-download-alt"></i>下载会议注册表</a>（暂未发布）并e-mail至邮箱：<a href="mailto:hust.aaa@hust.edu.cn"><i class="icon-mail-forward"></i>XXXX@xxxx.edu.cn</a></p>
-                    <p class="panel_list">有任何疑问欢迎致电 <a href="tel:13071234567"> <i class="icon-phone"></i>xxxxxxxxxxx </a> 或e-mail至邮箱：<a href="mailto:questions@hust.edu.cn"><i class="icon-mail-forward"></i>xxxx@xxxx.edu.cn</a></p>
 
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="sec sec2">
-            <div class="secwraper">
-                <h2 class="panel_title">注意事项（待定）</h2>
-                <div class="panel_all">
-                    <p class="panel_list">VALSE 2016 会议费用问题</p>
-                    <p class="panel_list">请参加 VALSE 2016 的人员在前往开会地点时注意旅途安全。届时，若您准备前往武汉周边旅游，请规划好您的行程，选择安全可靠的出行工具，游玩过程中请注意安全。</p>
-
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
 
         <div class="sec sec3">
             <div class="secwraper">
@@ -178,12 +231,6 @@
                             </fieldset>
                         </div>
                         <div class="form-list">
-                            <fieldset class="user_code">
-                                <label class="list_sub">邮编</label>
-                                <input class="list_sub" id="postcode" name="postcode" type="text"/>
-                            </fieldset>
-                        </div>
-                        <div class="form-list">
                             <fieldset class="user_poster_demo">
                                 <label class="list_sub">是否有Poster/Demo</label>
                                 <input id="has_poster" name="has_poster" type="checkbox"><label for="has_poster"> Poster</label>
@@ -191,8 +238,33 @@
                                 <textarea id="post_or_demo_info" name="post_or_demo_info" style="display: none" placeholder="Poster简短介绍"></textarea>
                                 <textarea id="demo_requirements" name="demo_requirements" style="display: none" placeholder="Demo简短介绍及场地设施要求"></textarea>
                             </fieldset>
+                            <p class="message">
+                                1. Poster所涉论文需为2014年以来发表或录用于以下会议或期刊、且与视觉与学习相关的论文： <br/>
+                                　　会议：ICCV, CVPR, ECCV, NIPS, ICML, IJCAI, AAAI, ACM MM(限长文) <br/>
+                                　　期刊：IEEE T PAMI/IP/NNLS/CSVT/MM, IJCV, JMLR, PR, CVIU, AI <br/>
+                                2. Demo可来自学术界或企业界，展示内容应与计算机视觉或机器学习相关。 <br/>
+                                3. VALSE 2016 鼓励参会者踊跃报名，以加强学术交流。<br/>
+                                　若Poster和Demo的数量超过场地限制，Poster和Demo的最终选取将由VALSE组委会决定。 <br/>
+                            </p>
                         </div>
-                        <div class="form-list">
+                        <div class="form-list poster_info" style="display: none">
+                            <fieldset class="user_poster">
+                                <label class="list_sub">Poster简短介绍</label>
+                                <input id="poster_author" name="poster_author" type="text" placeholder="作者"/>
+                                <input id="poster_title" name="poster_title" type="text" placeholder="题目" style="margin-left: 168px"/>
+                                <input id="poster_journal" name="poster_journal" type="text" placeholder="会议/期刊名" style="margin-left: 168px"/>
+                                <input id="poster_time" name="poster_time" type="text" placeholder="发表/录用时间" style="margin-left: 168px"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list demo_info" style="display: none">
+                            <fieldset class="user_demo">
+                                <label class="list_sub">Demo简短介绍</label>
+                                <input id="demo_author" type="text" placeholder="作者"/>
+                                <input id="demo_title" type="text" placeholder="题目" style="margin-left: 168px"/>
+                                <textarea id="demo_intro" type="text" placeholder="系统简介(3-5句话即可)"/></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="form-list if_invited">
                             <fieldset class="user_hotel">
                                 <label class="list_sub">是否需要预定酒店</label>
                                 <input id="need_book_hotel" name="need_book_hotel" value="yes" type="radio"><label for="need_book_hotel"> 需要</label>
@@ -282,7 +354,7 @@
                             </fieldset>
                         </div>
                         <div class="form-btn">
-                            <input id="submit" name="submit" class="button" value="注 册" type="submit">
+                            <div class="previewbtn">预 览</div>
                         </div>
                     </form>
                 </div>
@@ -290,6 +362,55 @@
             </div>
         </div>
 
+        <div class="preview">
+            <div class="closeBtn">✕</div>
+            <div class="previewwraper">
+                <h4>注册信息预览</h4>
+                <p class="reg_info1">注册类型：<span class="reg_type"></span></p>
+                <p class="reg_info2">姓名：<span class="reg_name"></span></p>
+                <p class="reg_info3">单位：<span class="reg_org"></span></p>
+                <p class="reg_info4">电子邮件：<span class="reg_email"></span></p>
+                <p class="reg_info5">通信地址：<span class="reg_addr"></span></p>
+                <p class="reg_info6">职称：<span class="reg_stat"></span></p>
+                <p class="reg_info7">导师：<span class="reg_supervisor"></span></p>
+                <p class="reg_info8">移动电话：<span class="reg_phone"></span></p>
+                <p class="reg_info9">Poster作者：<span class="reg_poster_author"></span></p>
+                <p class="reg_info10">Poster题目：<span class="reg_poster_title"></span></p>
+                <p class="reg_info11">Poster会议/期刊名：<span class="reg_poster_journal"></span></p>
+                <p class="reg_info12">Poster发表/录用时间：<span class="reg_poster_time"></span></p>
+                <p class="reg_info13">Demo作者：<span class="reg_demo_author"></span></p>
+                <p class="reg_info14">Demo题目：<span class="reg_demo_title"></span></p>
+                <p class="reg_info15">Demo简介：<span class="reg_demo_intro"></span></p>
+                <p class="reg_info16">预订酒店时间：2016.4.<span class="reg_arrive_time"></span> ~ 2016.4.<span class="reg_leave_time"></span></p>
+                
+                <input id="submit" class="button previewbtn" value="注 册" type="submit">
+            </div>
+        </div>
+
+        <!--<div class="sec sec1">-->
+            <!--<div class="secwraper">-->
+                <!--<h2 class="panel_title">VALSE 2016 参会须知（待定）</h2>-->
+                <!--<div class="panel_all">-->
+                    <!--<p class="panel_list">VALSE 2016 会议须知请 <a href=""> <i class="icon-book"></i>点击阅读 </a>（暂未发布）</p>-->
+                    <!--<p class="panel_list">VALSE 2016 注册请 <a href=""> <i class="icon-download-alt"></i>下载会议注册表</a>（暂未发布）并e-mail至邮箱：<a href="mailto:hust.aaa@hust.edu.cn"><i class="icon-mail-forward"></i>XXXX@xxxx.edu.cn</a></p>-->
+                    <!--<p class="panel_list">有任何疑问欢迎致电 <a href="tel:13071234567"> <i class="icon-phone"></i>xxxxxxxxxxx </a> 或e-mail至邮箱：<a href="mailto:questions@hust.edu.cn"><i class="icon-mail-forward"></i>xxxx@xxxx.edu.cn</a></p>-->
+
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="sec sec2">
+            <div class="secwraper">
+                <h2 class="panel_title">注意事项</h2>
+                <div class="panel_all">
+                    <p class="panel_list">VALSE 2016 不收取注册费，也不负责安排食宿等。研讨会特邀讲者和指导委员会成员如需要，组委会可代为预定酒店，但费用仍需自理。</p>
+                    <p class="panel_list">请参加 VALSE 2016 的人员在前往开会地点时注意旅途安全。届时，若您准备前往武汉周边旅游，请规划好您的行程，选择安全可靠的出行工具，游玩过程中请注意安全。</p>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
 
 		<div class="transparent"></div>
 
