@@ -68,7 +68,23 @@
                 $('.closeBtn').click(function(){
                     $('.preview').css({'display':'none'});
                 });
-                $('.previewbtn').click(function(){
+                $('#previewonlybtn').click(function(){
+                    // if needed hasn't been filled
+                    if($('#name').val()=='' || $('#unit').val()=='' || $('#email').val()=='' || $('#phone_num').val()==''){
+                        $('.hidden_info').css({'display':'block'});
+                        if($('#name').val()==''){$('#name').addClass('not_finished')}
+                        if($('#unit').val()==''){$('#unit').addClass('not_finished')}
+                        if($('#email').val()==''){$('#email').addClass('not_finished')}
+                        if($('#phone_num').val()==''){$('#phone_num').addClass('not_finished')}
+                        return;
+                    } else {
+                        $('.hidden_info').css({'display':'none'});
+                        $('#name').removeClass('not_finished');
+                        $('#unit').removeClass('not_finished');
+                        $('#email').removeClass('not_finished');
+                        $('#phone_num').removeClass('not_finished');
+                    }
+
                     // show preview panel
                     $('.preview').css({'display':'block'});
 
@@ -171,12 +187,12 @@
 
         <div class="sec sec3">
             <div class="secwraper">
-                <h2 class="panel_title">在线注册</h2>
+                <h2 class="panel_title">在线注册<span style="font-size: 0.6em;color: #999999; font-weight:100;"> 带 ☆ 为必填项</span></h2>
                 <div class="panel_all" id="sign-up-methods">
                     <form method="post" action="/">
                         <div class="form-list">
                             <fieldset class="user_type">
-                                <label class="list_sub">注册类型</label>
+                                <label class="list_sub">☆ 注册类型</label>
                                 <select class id="register_type" name="register_type">
                                     <option value="speaker">特邀讲者</option>
                                     <option value="teacher">教师</option>
@@ -187,19 +203,28 @@
                         </div>
                         <div class="form-list">
                             <fieldset class="user_name">
-                                <label class="list_sub">姓名</label>
+                                <label class="list_sub">☆ 姓名</label>
                                 <input class="list_sub" id="name" name="name" type="text"/>
                             </fieldset>
                         </div>
                         <div class="form-list">
+                            <fieldset class="user_photo">
+                                <label class="list_sub">照片</label>
+                                <div id="photo" onclick="file.click()">
+                                    <p>点击上传照片<br/>用于人脸识别签到</p>
+                                </div>
+                                <input style="display: none;" id="file" type="file" name="file" onchange=" handle_files(this.files); ">
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
                             <fieldset class="user_org">
-                                <label class="list_sub">单位</label>
+                                <label class="list_sub">☆ 单位</label>
                                 <input class="list_sub" id="unit" name="unit" type="text"/>
                             </fieldset>
                         </div>
                         <div class="form-list">
                             <fieldset class="user_email">
-                                <label class="list_sub">电子邮件</label>
+                                <label class="list_sub">☆ 电子邮件</label>
                                 <input class="list_sub" id="email" name="email" type="text"/>
                             </fieldset>
                             <p class="message">单个邮箱只能注册一次</p>
@@ -226,7 +251,7 @@
                         </div>
                         <div class="form-list">
                             <fieldset class="user_mobiphone">
-                                <label class="list_sub">移动电话</label>
+                                <label class="list_sub">☆ 移动电话</label>
                                 <input class="list_sub" id="phone_num" name="phone_num" type="text"/>
                             </fieldset>
                         </div>
@@ -354,7 +379,8 @@
                             </fieldset>
                         </div>
                         <div class="form-btn">
-                            <div class="previewbtn">预 览</div>
+                            <div id="previewonlybtn" class="previewbtn">预览并提交</div>
+                            <div class="hidden_info" style="display: none;">请完成必填项</div>
                         </div>
                     </form>
                 </div>
@@ -383,7 +409,7 @@
                 <p class="reg_info15">Demo简介：<span class="reg_demo_intro"></span></p>
                 <p class="reg_info16">预订酒店时间：2016.4.<span class="reg_arrive_time"></span> ~ 2016.4.<span class="reg_leave_time"></span></p>
                 
-                <input id="submit" class="button previewbtn" value="注 册" type="submit">
+                <input id="submit" class="button previewbtn" value="提 交" type="submit">
             </div>
         </div>
 
