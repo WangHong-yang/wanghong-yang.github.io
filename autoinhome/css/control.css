@@ -559,7 +559,7 @@ nav {
 }
 .sec17_sec {
     width: 32%;
-    height: 150%;
+    height: 100%;
     background-image: url("../img/network_img/bg10_1.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -581,10 +581,10 @@ nav {
     max-width: 65%;
 }
 .sec17_sec2 .top_part {
-    padding-top: 55%;
+    /*padding-top: 55%;*/
 }
 .sec17_sec3 .top_part {
-    padding-top: 110%;
+    /*padding-top: 110%;*/
 }
 
 #footer {
