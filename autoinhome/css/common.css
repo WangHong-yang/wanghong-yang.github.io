@@ -2,3 +2,27 @@ nav, footer, section {display: block}
 *, body {margin: 0; padding: 0;}
 body {font-family: "Helvetica", "Microsoft Yahei", "Raleway";}
 .section { text-align: center; font-size: 50px; color: #fff;}
+/* float button */
+.fb {
+    width: 50px;
+    height: 55px;
+    text-align: center;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s; /* Firefox 4 */
+    -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+    -o-transition: all 0.5s; /* Opera */
+}
+/*.fb:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.9);
+    transition: all 0.5s;
+    -moz-transition: all 0.5s; /* Firefox 4 */
+    /*-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+    /*-o-transition: all 0.5s; /* Opera */
+/*}*/

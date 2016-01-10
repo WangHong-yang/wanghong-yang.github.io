@@ -148,7 +148,7 @@ nav {
     background-image: url("../img/control_img/bg-1.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: auto 91%;
+    background-size: cover;
 }
 .sec1sub {
     display: inline-block;
@@ -675,3 +675,4 @@ nav {
     float: right;
     font-size: 20px;
 }
+

@@ -70,6 +70,7 @@ nav {
 
 /* Playing with Main Categories */
 .navigation  li a {
+
     height: 70px;
     display:block;  	/* Making sure a element covers whole li area */
     text-decoration:none; /* No underline */
@@ -144,7 +145,7 @@ nav {
 
 /* section1 style sheet */
 .sec1 {
-    background-image: url("../img/environment_img/bg-1.jpg");
+    background-image: url("../img/safety_img/bg-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,258 +175,171 @@ nav {
 }
 
 /* section2 style sheet */
-.sec2 h4 {
-    font-size: 0.5em;
-    font-weight: 100;
-    color: #000000;
-    padding-bottom: 20px;
-    //margin-top: 20px;
+.sec2 {
+    background-image: url("../img/safety_img/bg-2.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% calc(100% - 70px);
 }
-.sec2_top_pic {
-    width: 40%;
+.botbanner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255,255,255,0.5);
+    font-size: 15px;
 }
-.sec2_types_title {
-    width: 40%;
-    margin: 0 auto;
-    height: 42px;
+.botbanner p {
+    color: #222222;
+    margin: 2% 20% 1% 45%;
+    text-align: left;
 }
-.sec2_types_title h4 {
+.sec2 .leftbanner {
+    background-image: url('../img/safety_img/2-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.leftbanner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+}
+.leftbanner p {
+    position: absolute;
     width: 50%;
-    float: left;
-    font-size: 0.3em;
+    top: 35%;
+    left: 43%;
+    font-size: 20px;
 }
-.row {
-    width: 770px;
-    height: 60px;
-    //background-color: lightpink;
-    margin: 0 auto;
-
-}
-.row p {
-    display: inline-block;
-    height: 100%;
-    font-size: 0.2em;
-    color: #000000;
-    float: left;
-}
-.row p img {
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-}
-.row_pic {
-    width: 60px;
-}
-.row_left, .row_right {
-    width: 300px;
-    height: 100%;
-    padding: 15px 15px 0 15px;
-    border-bottom: 1px solid #333333;
+.imgbanner {
+    position: absolute;
+    max-width: 300px;
+    bottom: 0;
+    left: 20%;
 }
 
 /* section3 style sheet */
 .sec3 {
-
-    background-image: url("../img/environment_img/bg-3.jpg");
+    background-image: url("../img/safety_img/bg-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sec3 img {
-    display: block;
-    width: 10%;
-    min-width: 150px;
-    max-width: 400px;
-    margin: 30px auto 0 auto;
+.sec3 .rightbanner {
+    background-image: url('../img/safety_img/3-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
-.sec3 h3 {
-    letter-spacing: 0.2em;
-    font-weight: 100;
-    color: #ffffff;
-    font-size: 0.9em;
-}
-.intro {
-    color: #ffffff;
-    margin-top: 10px;
-}
-.sec3 p {
-    font-size: 0.2em;
-}
-.sec3intro {
-    width: 40%;
-    margin: 40px auto 0 auto;
-    font-size: 0.35em!important;
-}
-.bg_cover {
-    width: 100%;
-    height: 22%;
+.rightbanner {
     position: absolute;
-
-    background-color: rgba(0,0,0,0.5);
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
 }
-.bg_content_wraper {
-    width: 664px;
-    margin: 0 auto;
+.rightbanner p {
+    position: absolute;
+    width: 50%;
+    top: 35%;
+    left: 7%;
+    font-size: 20px;
 }
-.sub_bg_cover {
-    text-align: left;
-    position: relative;
-    width: 145px;
-    height: auto;
-    float: left;
-    font-size: 0.5em;
-    padding: 0 10px;
-    margin-top: 3%;
-    border-left: 1px solid white;
+.sec3 .imgbanner {
+    position: absolute;
+    max-width: 300px;
+    bottom: 0;
+    right: 20%;
+    left: auto;
 }
-.sub_bg_cover>h4 {
-    margin: 0 0 20px 0;
+.sec3 .botbanner p {
+    color: #222222;
+    margin: 2% 45% 1% 20%;
+    text-align: right;
 }
 
 /* section4 style sheet */
 .sec4 {
-    background-image: url("../img/environment_img/bg-4.jpg");
+    background-image: url("../img/safety_img/bg-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sec4 img {
-    width: 30%;
-    margin-left: -300px;
-}
-.sec4inlineblock {
-    display: inline-block;
-    vertical-align: bottom;
-    color: black;
-    font-size: 0.3em;
-    line-height: 40px;
-}
-.sec4intro {
-    color: white;
-    width: 45%;
-    font-size: 0.35em;
-    left: 50%;
-    margin-left: -22.5%;
-    position: absolute;
-    bottom: 30px;
+.sec4 .leftbanner {
+    background-image: url('../img/safety_img/4-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* section5 style sheet */
 .sec5 {
-    background-image: url("../img/environment_img/bg-5.jpg");
-    background-position: center;
+    background-image: url("../img/safety_img/bg-5.jpg");
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% calc(100% - 70px);
 }
-.sec5png {
-    width: 40%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.halfintro {
+    width: 50%;
+    font-size: 20px;
+    margin-left: 50%;
 }
-.sec5 p {
-    position: absolute;
-    bottom: 30px;
-    right: 20px;
-    font-size: 0.35em;
+.halfintro p {
+    margin-top: 30px;
+}
+.halfintro img {
+    max-height: 80px;
 }
 
 /* section6 style sheet */
 .sec6 {
-    background-image: url("../img/environment_img/bg-6.jpg");
-    background-position: right bottom;
+    background-image: url("../img/safety_img/bg-6.jpg");
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: auto 91%;
+    background-size: 100% calc(100% - 70px);
 }
-.sec6 p {
-    font-size: 0.35em;
-    color: #ffffff;
+.sec6 .halfintro {
+    margin-left: 0;
 }
-.sec6pic {
-    width: 120px;
-    left: 30px;
-    position: absolute;
-}
-.sec6p {
-    font-size: 0.35em;
-    width: 25%;
-    margin-left: 30px;
-    margin-top: 230px;
-}
+
 
 /* section7 style sheet */
 .sec7 {
-    background-image: url("../img/environment_img/bg-7.jpg");
-    background-position: center;
+    background-image: url("../img/safety_img/bg-7.jpg");
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-.sec7mengban {
-    width: 65%;
-    height: 25%;
-    position: absolute;
-    top: 62%;
-    background-color: rgba(0,0,0,0.5);
-    left: -65%; //FIXME//
+    background-size: 100% calc(100% - 70px);
 }
 
-.sec7mengban h4 {
-    font-size: 0.5em;
-    font-weight: 100;
-    text-align: right;
-    margin: 2% 15% 3% 15%;
-}
-.sec7mengban p {
-    font-size: 0.35em;
-    text-align: left;
-    margin: 7% 15% 2% 15%;
-}
-.sec7 img {
-    display: block;
-    position: absolute;
-}
 
-.sec7luyou {
-    width: 20%;
-    bottom: 0;
-    right: 100px;
-}
 
 /* section8 style sheet */
-.sec8 {
-    background-image: url("../img/environment_img/bg-8.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.sec8 h4 {
+    color: #222222;
+    padding-top: 120px;
+    font-weight: 200;
 }
-.sec8 img {
-    width: 40%;
+.left_long_pic {
+    left: 10%;
+    height: 1000px;
+    padding-bottom: 300px;
 }
-.sec8banner {
-    position: absolute;
+.center_fixed_pic {
+    position: fixed;
+    max-width: 250px;
+    margin-left: 70px;
+}
+.right_long_pic {
     right: 0;
-    top: 0;
-    font-size: 0.35em;
-    height: 100%;
-    width: 15%;
-    padding: 250px 50px;
-    background-color: rgba(255,255,255,0.5);
-    color: black;
-    text-align: justify;
+    height: 1400px;
+    margin-left:7%;
+    padding-bottom: 50px;
 }
+
 
 /* section9 style sheet */
 .sec9 {
-    background-color: rgb(168,204,58);
-}
-.sec9img {
-    width: 80%;
-    padding-top: 100px;
-}
-
-/* section10 style sheet */
-.sec10 {
-    background-image: url("../img/environment_img/bg-10.jpg");
+    background-image: url("../img/safety_img/bg-9.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -435,7 +349,8 @@ nav {
     height: 100%;
     overflow: auto;
     background-image: url('../img/environment_img/10_1.png');
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin-left: 50px;
     background-size: cover;
 }
 .higher_sec h4 {
@@ -447,19 +362,18 @@ nav {
 }
 .higher_sec img {
     width: 150px;
-    margin-left: 50px;
-    margin-left: 0;
+
 }
-.sec10sec {
+.sec9sec {
     width: 300px;
     display: inline-block;
     vertical-align: top;
 }
-.sec10sec h5 {
+.sec9sec h5 {
     font-size: 0.35em;
     color: #000000;
 }
-.sec10sec p {
+.sec9sec p {
     font-size: 0.2em;
     color: #000000;
 }
