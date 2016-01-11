@@ -24,7 +24,7 @@
                 var demo = false;
                 var hotel = false;
                 $('#register_type').change(function(){
-                    if($("#register_type").find("option:selected").text()=='学生'){
+                    if($("#register_type").find("option:selected").text()=='博士生' || $("#register_type").find("option:selected").text()=='硕士生' || $("#register_type").find("option:selected").text()=='本科生'){
                         $('.for_tutor').css({'display':'none'});
                         $('.for_student').css({'display':'block'});
                     } else {
@@ -98,17 +98,19 @@
                     $('.reg_supervisor').text($('#tutor').val());
                     $('.reg_phone').text($('#phone_num').val());
                     $('.reg_poster_author').text($('#poster_author').val());
+                    $('.reg_poster_unit').text($('#poster_unit').val());
                     $('.reg_poster_title').text($('#poster_title').val());
                     $('.reg_poster_journal').text($('#poster_journal').val());
                     $('.reg_poster_time').text($('#poster_time').val());
                     $('.reg_demo_author').text($('#demo_author').val());
+                    $('.reg_demo_unit').text($('#demo_unit').val());
                     $('.reg_demo_title').text($('#demo_title').val());
                     $('.reg_demo_intro').text($('#demo_intro').val());
                     $('.reg_arrive_time').text($('#arrival_time').find('option:selected').text());
                     $('.reg_leave_time').text($('#leaving_time').find('option:selected').text());
 
                     // hide info of inproper group
-                    if($("#register_type").find("option:selected").text()=='学生'){
+                    if($("#register_type").find("option:selected").text()=='博士生' || $("#register_type").find("option:selected").text()=='硕士生' || $("#register_type").find("option:selected").text()=='本科生'){
                         $('.reg_info6').css({'display':'none'});
                         $('.reg_info7').css({'display':'block'});
                     } else {
@@ -197,7 +199,9 @@
                                     <option value="speaker">特邀讲者</option>
                                     <option value="teacher">教师</option>
                                     <option value="employee">企业员工</option>
-                                    <option value="student">学生</option>
+                                    <option value="student">博士生</option>
+                                    <option value="student">硕士生</option>
+                                    <option value="student">本科生</option>
                                 </select>
                             </fieldset>
                         </div>
@@ -209,9 +213,11 @@
                         </div>
                         <div class="form-list">
                             <fieldset class="user_photo">
-                                <label class="list_sub">照片</label>
+                                <label class="list_sub">☆ 照片</label>
                                 <div id="photo" onclick="file.click()">
-                                    <p>点击上传照片<br/>用于人脸识别签到</p>
+                                    <p>1. 照片用于签到，签到现场的人脸识别系统可以自动识别您，从而获得您到注册台领取资料的编号，大大加快签到过程；<br /><br />
+                                        2. 照片要求：近期、免冠、正面、彩色证件照，要求照片不小于宽300x高400像素；<br /><br />
+                                        3. 没有正确上传照片者可能需要排长队领取会议资料。</p>
                                 </div>
                                 <input style="display: none;" id="file" type="file" name="file" onchange=" handle_files(this.files); ">
                             </fieldset>
@@ -237,7 +243,7 @@
                         </div>
                         <div class="form-list for_tutor">
                             <fieldset class="user_title">
-                                <label class="list_sub">职称</label>
+                                <label class="list_sub">职称或职务</label>
                                 <input class="list_sub" id="academic_title" name="academic_title" type="text"/>
                             </fieldset>
 
@@ -257,7 +263,7 @@
                         </div>
                         <div class="form-list">
                             <fieldset class="user_poster_demo">
-                                <label class="list_sub">是否有Poster/Demo</label>
+                                <label class="list_sub">是否要报名Poster/Demo</label>
                                 <input id="has_poster" name="has_poster" type="checkbox"><label for="has_poster"> Poster</label>
                                 <input id="has_demo" name="has_demo" type="checkbox"><label for="has_demo"> Demo</label>
                                 <textarea id="post_or_demo_info" name="post_or_demo_info" style="display: none" placeholder="Poster简短介绍"></textarea>
@@ -275,7 +281,8 @@
                         <div class="form-list poster_info" style="display: none">
                             <fieldset class="user_poster">
                                 <label class="list_sub">Poster简短介绍</label>
-                                <input id="poster_author" name="poster_author" type="text" placeholder="作者"/>
+                                <input id="poster_author" name="poster_author" type="text" placeholder="全部作者"/>
+                                <input id="poster_unit" name="poster_unit" type="text" placeholder="作者单位" style="margin-left: 168px"/>
                                 <input id="poster_title" name="poster_title" type="text" placeholder="题目" style="margin-left: 168px"/>
                                 <input id="poster_journal" name="poster_journal" type="text" placeholder="会议/期刊名" style="margin-left: 168px"/>
                                 <input id="poster_time" name="poster_time" type="text" placeholder="发表/录用时间" style="margin-left: 168px"/>
@@ -285,6 +292,7 @@
                             <fieldset class="user_demo">
                                 <label class="list_sub">Demo简短介绍</label>
                                 <input id="demo_author" type="text" placeholder="作者"/>
+                                <input id="demo_unit" name="poster_unit" type="text" placeholder="作者单位" style="margin-left: 168px"/>
                                 <input id="demo_title" type="text" placeholder="题目" style="margin-left: 168px"/>
                                 <textarea id="demo_intro" type="text" placeholder="系统简介(3-5句话即可)"/></textarea>
                             </fieldset>
@@ -294,7 +302,9 @@
                                 <label class="list_sub">是否需要预定酒店</label>
                                 <input id="need_book_hotel" name="need_book_hotel" value="yes" type="radio"><label for="need_book_hotel"> 需要</label>
                                 <input id="hotel_no" name="need_book_hotel" value="no" type="radio" checked="checked"><label for="hotel_no"> 不需要</label>
+                                <br><br>
                             </fieldset>
+                            <p class="message">仅限历届VALSE大会讲者或Panel嘉宾、历届VALSE大会主要组织者、VALSE指导委员会委员、<br>VALSE在线理事会VODB理事、VALSE在线组委会VOOC委员填写</p>
                         </div>
                         <div class="form-list hotel_time" style="display: none">
                             <fieldset class="user_type">
@@ -400,16 +410,18 @@
                 <p class="reg_info6">职称：<span class="reg_stat"></span></p>
                 <p class="reg_info7">导师：<span class="reg_supervisor"></span></p>
                 <p class="reg_info8">移动电话：<span class="reg_phone"></span></p>
-                <p class="reg_info9">Poster作者：<span class="reg_poster_author"></span></p>
+                <p class="reg_info9">Poster全部作者：<span class="reg_poster_author"></span></p>
+                <p class="reg_info9_1">Poster作者单位：<span class="reg_poster_unit"></span></p>
                 <p class="reg_info10">Poster题目：<span class="reg_poster_title"></span></p>
                 <p class="reg_info11">Poster会议/期刊名：<span class="reg_poster_journal"></span></p>
                 <p class="reg_info12">Poster发表/录用时间：<span class="reg_poster_time"></span></p>
                 <p class="reg_info13">Demo作者：<span class="reg_demo_author"></span></p>
+                <p class="reg_info13_1">Demo作者单位：<span class="reg_demo_unit"></span></p>
                 <p class="reg_info14">Demo题目：<span class="reg_demo_title"></span></p>
                 <p class="reg_info15">Demo简介：<span class="reg_demo_intro"></span></p>
                 <p class="reg_info16">预订酒店时间：2016.4.<span class="reg_arrive_time"></span> ~ 2016.4.<span class="reg_leave_time"></span></p>
                 
-                <input id="submit" class="button previewbtn" value="提 交" type="submit">
+                <input id="submit" class="button previewbtn" value="确认并提交" type="submit">
             </div>
         </div>
 
@@ -430,8 +442,9 @@
             <div class="secwraper">
                 <h2 class="panel_title">注意事项</h2>
                 <div class="panel_all">
-                    <p class="panel_list">VALSE 2016 不收取注册费，也不负责安排食宿等。研讨会特邀讲者和指导委员会成员如需要，组委会可代为预定酒店，但费用仍需自理。</p>
-                    <p class="panel_list">请参加 VALSE 2016 的人员在前往开会地点时注意旅途安全。届时，若您准备前往武汉周边旅游，请规划好您的行程，选择安全可靠的出行工具，游玩过程中请注意安全。</p>
+                    <p class="panel_list">1. 如需要修改注册信息，请重新注册。注册信息将以邮箱为唯一注册ID，组委会将筛选最新的注册信息。如需咨询，请发邮件至：<a href="mailto:valse2016@qq.com">valse2016@qq.com</a></p>
+                    <p class="panel_list">2. VALSE 2016 不收取注册费，也不负责安排食宿等。研讨会特邀讲者和指导委员会成员如需要，组委会可代为预定酒店，但费用仍需自理。</p>
+                    <p class="panel_list">3. 请参加 VALSE 2016 的人员在前往开会地点时注意旅途安全。届时，若您准备前往武汉周边旅游，请规划好您的行程，选择安全可靠的出行工具，游玩过程中请注意安全。</p>
 
                 </div>
                 <div class="clearfix"></div>

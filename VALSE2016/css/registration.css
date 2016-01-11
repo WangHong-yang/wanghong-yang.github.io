@@ -50,6 +50,9 @@
 		width: 100%!important;
 		padding: 8px!important;
 	}
+	#photo p {
+		margin-top: 40px !important;
+	}
 	.hidden_info {
 		text-align: center;
 		margin-left: 0!important;
@@ -119,8 +122,9 @@
 #photo p {
 	font-size: 11px;
 	color: #999;
-	text-align: center;
-	margin: 110px 0;
+	text-align: justify;
+	margin: 70px 30px;
+
 }
 fieldset {
 	border: none;
