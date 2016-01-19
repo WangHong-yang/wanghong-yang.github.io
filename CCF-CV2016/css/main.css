@@ -309,7 +309,14 @@ tr {
     height: 200px;
 }
 
-
+a {
+    color: royalblue;
+    transition: 0.2s all;
+}
+a:hover {
+    color: darkorange;
+    transition: 0.2s all;
+}
 
 
 
