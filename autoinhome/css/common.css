@@ -4,15 +4,25 @@ body {font-family: "Helvetica", "Microsoft Yahei", "Raleway";}
 .section { text-align: center; font-size: 50px; color: #fff;}
 /* float button */
 .fb {
-    width: 50px;
-    height: 55px;
+    width: 80px;
+    height: 80px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 0;
+    background-color: #ffffff;
+    opacity: 0.7;
+    border-radius: 50%;
     position: fixed;
     z-index: 999;
-    bottom: 30px;
     right: 30px;
+    top: 100px;
     cursor: pointer;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s; /* Firefox 4 */
+    -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+    -o-transition: all 0.5s; /* Opera */
+}
+.fb:hover {
+    opacity: 1;
     transition: all 0.5s;
     -moz-transition: all 0.5s; /* Firefox 4 */
     -webkit-transition: all 0.5s; /* Safari 和 Chrome */
