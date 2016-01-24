@@ -60,11 +60,14 @@ body {
   padding: 5px 0;
 }
 .list_container {
-  display: none;
+  display: block;
   transition: all 0.1s ease-in;
 }
 .list_link_hide {
-  display: none;  
+  display: block;
+}
+.list_link_show{
+  display: none;
 }
 .single {
   border-bottom: 1px solid #d1d1d1;

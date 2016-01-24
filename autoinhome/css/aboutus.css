@@ -254,3 +254,8 @@ nav {
 .contact1 .comp {
     position: relative;
 }
+
+body::selection {
+    color: white;
+    background-color: #00a1e9;
+}
