@@ -177,7 +177,7 @@ body a:hover{
 }
 .banner-left h1{
 	font-size:2em;
-	color:#fff;
+	color:#f60c3e;
 	margin:0;
 	text-transform:capitalize;
 }
@@ -276,8 +276,9 @@ ul li a.in:hover{
 }
 .banner-right-hov h2{
 	font-size:2.5em;
-	color:#fff;
+	color:#f60c3e;
 	margin:0;
+	opacity: 0.7;
 }
 .banner-right-hov .news_content {
 	overflow: scroll;
@@ -286,7 +287,7 @@ ul li a.in:hover{
 .banner-right-hov p {
 	color: white;
 	margin-top: 10px;
-	text-shadow: 5px 5px 20px #000;
+	text-shadow: 0px 0px 5px #000;
 }
 .banner-right-hov input[type="text"]{
 	outline: none;
@@ -331,7 +332,7 @@ ul li a.in:hover{
 p.eveniet{
 	font-family: dosislight;
 	font-size:21px;
-	color:#999;
+	color:#222;
 	margin:.5em 0 0;
 	line-height:1.8em;
 }
@@ -538,12 +539,13 @@ ul.wmuSliderPagination {
 }
 .what-we-do-grid-right1 h4{
 	text-transform:capitalize;
-	color:#BDBDBD;
+	color:#222;
 	font-size:1.3em;
 	margin:0;
+	border-bottom: 1px solid #f60c3e;
 }
 .what-we-do-grid-right1 p{
-	color:#999;
+	color:#222;
 	font-size:14px;
 	line-height:1.8em;
 	margin:1em 0 3em;
