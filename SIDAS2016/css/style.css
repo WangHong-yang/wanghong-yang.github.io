@@ -167,7 +167,7 @@ body a:hover{
 }
 .banner-right1-text p{
 	font-size:14px;
-	color:#fff;
+	color:#222;
 	margin:0;
 	line-height:1.8em;
 	width: 66%;
@@ -211,8 +211,8 @@ body a:hover{
 .banner-right1-text a {
 	padding: 12px 30px;
 	font-size: 16px;
-	color: white;
-	border: 1px solid white;
+	color: #f60c3e;
+	border: 1px solid #f60c3e;
 	top: 20px; 
 	position: relative;
 	transition:.5s all;
@@ -224,6 +224,7 @@ body a:hover{
 .banner-right1-text a:hover {
 	background-color: #f60c3e;
 	border: 1px solid #f60c3e;
+	color: white;
 }
 .banner-right1-text ul li{
 	display:inline-block;
@@ -285,9 +286,9 @@ ul li a.in:hover{
 	max-height: 180px;
 }
 .banner-right-hov p {
-	color: white;
+	color: #222;
 	margin-top: 10px;
-	text-shadow: 0px 0px 5px #000;
+	/* text-shadow: 0px 0px 5px #000; */
 }
 .banner-right-hov input[type="text"]{
 	outline: none;
