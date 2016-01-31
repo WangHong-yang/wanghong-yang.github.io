@@ -163,7 +163,7 @@ body a:hover{
 .banner-right1-text{
 	position:absolute;
 	top:25%;
-	left:3%;
+	left:12%;
 }
 .banner-right1-text p{
 	font-size:14px;
@@ -272,7 +272,7 @@ ul li a.in:hover{
 .banner-right-hov{
 	position:absolute;
 	top:17%;
-	left:3%;
+	left:12%;
 	width: 60%;
 }
 .banner-right-hov h2{
