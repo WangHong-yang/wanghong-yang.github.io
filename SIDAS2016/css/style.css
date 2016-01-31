@@ -1332,7 +1332,15 @@ p.est {
 }
 /*--/footer--*/
 /*-----start-responsive-design------*/
+@media (max-width:1921px) {
+	.banner-right-hov .news_content {
+		max-height: 280px;
+	}
+}
 @media (max-width:1680px){
+	.banner-right-hov .news_content {
+		max-height: 180px;
+	}
 	.banner-left,.banner-left:hover {
 		min-height: 664px;
 	}
