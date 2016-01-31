@@ -141,7 +141,7 @@ body a:hover{
 	float:left;
 	width:60%;
 	background:url(../images/bg1-.jpg) no-repeat 0px 0px;
-	min-height:767px;
+	min-height:760px;
 	transition:.5s all;
 	-webkit-transition:.5s all;
 	-moz-transition:.5s all;
@@ -151,7 +151,7 @@ body a:hover{
 }
 .banner-left:hover{
 	background:url(../images/bg1.jpg) no-repeat 0px 0px;
-	min-height:767px;
+	min-height:760px;
 }
 .banner-right{
 	float:right;
