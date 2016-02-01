@@ -1716,10 +1716,11 @@ p.est {
 		margin: 0;
 	}
 	.traveller-info-right {
-		width: 25%;
+		width: -10%;
 	}
 	.traveller-info-left {
-		width: 70%;
+		width: 100%;
+		border-right: transparent;
 	}
 	p.velit {
 		width: 85%;
