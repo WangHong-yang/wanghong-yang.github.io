@@ -1,0 +1,117 @@
+*, html, body {margin: 0; padding: 0;}
+body {background-color: #fefefe; font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;}
+nav, footer, header, article, section {display: block;}
+ul, li, a {text-decoration: none; list-style: none; color: black}
+
+/* font face */
+@font-face { 
+	font-family: ChaparralPro; 
+	src: url('../../fonts/ChaparralPro-Regular.otf');
+}
+
+.tool_intro {
+	padding-right: 5%;
+	padding-top: 20px;
+}
+.tool_intro_sec {
+	float: right;
+
+}
+.right_intro {
+	width: 20%;
+	padding-left: 2%;
+}
+.mid_video {
+	width: 50%;
+}
+
+/*//////////////////////////////////////*/
+/* media control */
+@media screen  and (max-width: 65.3125em){
+	.nav_top ul {
+		top: 62px !important;
+		right: 0 !important;
+		background-color: white;
+	}
+	.nav_top ul li {
+		display: block !important;
+		border-bottom: 1px solid black;
+	}
+	.mobile_btn {
+		display: block!important;
+	}
+	.intro h3, .intro p {
+		padding-left: 350px!important;
+	}
+	.intro p {
+		width: 400px!important;
+	}
+
+	.five_steps {
+		height: auto!important;
+	}
+	.steps {
+		display: block!important;
+		width: 100%!important;
+		height: 360px!important;
+		padding-top: 50px!important;
+	}
+	.steps h3 {
+		margin-top: 0!important;
+	}
+	.steps p {
+		width: 60%!important;
+	}
+	.five_steps>h3, .five_steps>h4 {
+		position: relative!important;
+		background-color: rgba(179,155,119,0.2);
+		color: #222!important;
+	}
+	.five_steps>h4 {
+		padding-top: 15px!important;
+		background-color: rgba(179,155,119,0.2);
+	}
+	.steps_background {
+		display: none;
+	}
+}
+@media screen and (max-width: 33.75em) {
+
+	.nav_name {
+		height: 36px!important;
+		margin-top: 10px;
+	}
+	.nav_sec {
+		padding-left: 0!important;
+		margin-left: 90px!important;
+	}
+	.banner1_btn {
+		top: 30px!important;
+	}
+	.banner_1st p {
+		font-size: 1.7em !important;
+	}
+	.select_btn_group {
+		top: 68px !important;
+	}
+	.intro {
+		height: 600px!important;
+	}
+	.intro h3 {
+		padding-left: 0!important;
+		width: 100% !important;
+		top: 380px !important;
+		text-align: center;
+	}
+	.intro p {
+		padding-left: 0!important;
+		width: 90% !important;
+		text-align: left;
+		margin: 0 auto;
+		top: 408px!important;
+	}
+	.steps p {
+		width: 90%!important;
+	}
+
+}

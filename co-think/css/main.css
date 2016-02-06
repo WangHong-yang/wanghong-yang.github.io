@@ -7,171 +7,6 @@ ul, li, a {text-decoration: none; list-style: none; color: black}
 @font-face { 
 	font-family: ChaparralPro; 
 	src: url('../fonts/ChaparralPro-Regular.otf'); 
-} 
-
-/* media control */
-@media screen  and (max-width: 65.3125em){
-	.nav_top ul {
-		top: 62px !important;
-		right: 0 !important;
-		background-color: white;
-	}
-	.nav_top ul li {
-		display: block !important;
-		border-bottom: 1px solid black;
-	}
-	.mobile_btn {
-		display: block!important;
-	}
-	.intro h3, .intro p {
-		padding-left: 350px!important;
-	}
-	.intro p {
-		width: 400px!important;
-	}
-
-	.five_steps {
-		height: auto!important;
-	}
-	.steps {
-		display: block!important;
-		width: 100%!important;
-		height: 360px!important;
-		padding-top: 50px!important;
-	}
-	.steps h3 {
-		margin-top: 0!important;
-	}
-	.steps p {
-		width: 60%!important;
-	}
-	.five_steps>h3, .five_steps>h4 {
-		position: relative!important;
-		background-color: rgba(179,155,119,0.2);
-		color: #222!important;
-	}
-	.five_steps>h4 {
-		padding-top: 15px!important;
-		background-color: rgba(179,155,119,0.2);
-	}
-	.steps_background {
-		display: none;
-	}
-}
-@media screen and (max-width: 33.75em) {
-	
-	.nav_name {
-		height: 36px!important;
-		margin-top: 10px;
-	}
-	.nav_sec {
-		padding-left: 0!important;
-		margin-left: 90px!important;
-	}
-	.banner1_btn {
-		top: 30px!important;
-	}
-	.banner_1st p {
-		font-size: 1.7em !important;
-	}
-	.select_btn_group {
-		top: 68px !important;
-	}
-	.intro {
-		height: 600px!important;
-	}
-	.intro h3 {
-		padding-left: 0!important;
-		width: 100% !important;
-		top: 380px !important;
-		text-align: center;
-	}
-	.intro p {
-		padding-left: 0!important;
-		width: 90% !important;
-		text-align: left;
-		margin: 0 auto;
-		top: 408px!important;
-	}
-	.steps p {
-		width: 90%!important;
-	}
-}
-
-/* navigator style */
-nav {
-	height: 60px;
-	background-image: url('../img/navlogo.png');
-	background-position: left top;
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin-bottom: 2px;
-}
-.nav_sec {
-	margin-left: 101px;
-	padding-left: 20px;
-	
-}
-.nav_top {
-	height: 46px;
-}
-.nav_bot {
-	height: 14px;
-	font-weight: 500;
-	line-height: 18px;
-	color: #222222;
-	background-color: #ACCE22;
-}
-.nav_name {
-	height: 46px;
-}
-.nav_top ul {
-	position: absolute;
-	display: inline-block;
-	z-index: 999;
-}
-.nav_top ul li {
-	display: inline-block;
-	
-	height: 40px;
-	padding: 6px 20px 0 20px;
-
-}
-.nav_top ul li img {
-	max-height: 27px;
-	padding-right: 10px;
-	/*padding: 0 10px 10px 30px;*/
-}
-.nav_top ul li span {
-	display: inline-block;
-}
-.mobile_btn {
-	width: 46px;
-	height: 46px;
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform:rotate(0deg);
-	-ms-transform:rotate(0deg); 	/* IE 9 */
-	-moz-transform:rotate(0deg); 	/* Firefox */
-	-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
-	-o-transform:rotate(0deg); 	/* Opera */
-	transition: all 0.5s;
-	-moz-transition: all 0.5s; /* Firefox 4 */
-	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
-	-o-transition: all 0.5s; /* Opera */
-}
-.rot90 {
-	transform:rotate(90deg);
-	-ms-transform:rotate(90deg); 	/* IE 9 */
-	-moz-transform:rotate(90deg); 	/* Firefox */
-	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
-	-o-transform:rotate(90deg); 	/* Opera */
-	transition: all 0.5s;
-	-moz-transition: all 0.5s; /* Firefox 4 */
-	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
-	-o-transition: all 0.5s; /* Opera */
 }
 
 /* banner's style */
@@ -373,5 +208,76 @@ nav {
 	background-color: rgba(179,155,119,0.9);
 }
 
-/* footer */
 
+/*//////////////////////////////////////*/
+/* media control */
+@media screen  and (max-width: 65.3125em){
+
+	.intro h3, .intro p {
+		padding-left: 350px!important;
+	}
+	.intro p {
+		width: 400px!important;
+	}
+
+	.five_steps {
+		height: auto!important;
+	}
+	.steps {
+		display: block!important;
+		width: 100%!important;
+		height: 360px!important;
+		padding-top: 50px!important;
+	}
+	.steps h3 {
+		margin-top: 0!important;
+	}
+	.steps p {
+		width: 60%!important;
+	}
+	.five_steps>h3, .five_steps>h4 {
+		position: relative!important;
+		background-color: rgba(179,155,119,0.2);
+		color: #222!important;
+	}
+	.five_steps>h4 {
+		padding-top: 15px!important;
+		background-color: rgba(179,155,119,0.2);
+	}
+	.steps_background {
+		display: none;
+	}
+}
+@media screen and (max-width: 33.75em) {
+
+
+	.banner1_btn {
+		top: 30px!important;
+	}
+	.banner_1st p {
+		font-size: 1.7em !important;
+	}
+	.select_btn_group {
+		top: 68px !important;
+	}
+	.intro {
+		height: 600px!important;
+	}
+	.intro h3 {
+		padding-left: 0!important;
+		width: 100% !important;
+		top: 380px !important;
+		text-align: center;
+	}
+	.intro p {
+		padding-left: 0!important;
+		width: 90% !important;
+		text-align: left;
+		margin: 0 auto;
+		top: 408px!important;
+	}
+	.steps p {
+		width: 90%!important;
+	}
+
+}

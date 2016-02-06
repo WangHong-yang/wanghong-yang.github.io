@@ -1,0 +1,256 @@
+.clear {
+	clear: both;
+}
+
+/* navigator style */
+nav {
+	height: 60px;
+	background-image: url('../img/navlogo.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: 2px;
+}
+.nav_sec {
+	margin-left: 101px;
+	padding-left: 20px;
+
+}
+.nav_top {
+	height: 46px;
+}
+.nav_bot {
+	height: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #222222;
+	background-color: #ACCE22;
+}
+.nav_name {
+	height: 46px;
+}
+.nav_top ul {
+	position: absolute;
+	display: inline-block;
+	z-index: 999;
+}
+.nav_top ul li {
+	display: inline-block;
+
+	height: 40px;
+	padding: 6px 20px 0 20px;
+
+}
+.nav_top ul li img {
+	max-height: 27px;
+	padding-right: 10px;
+	/*padding: 0 10px 10px 30px;*/
+}
+.nav_top ul li span {
+	display: inline-block;
+}
+.mobile_btn {
+	width: 46px;
+	height: 46px;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); 	/* IE 9 */
+	-moz-transform:rotate(0deg); 	/* Firefox */
+	-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+	-o-transform:rotate(0deg); 	/* Opera */
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+.rot90 {
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+
+/* for tool pages */
+.tool_intro .right_intro img {
+	max-width: 90px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.tool_intro .right_intro h4 {
+	font-size: 0.7em;
+	color: #999;
+	text-align: left;
+}
+.tool_intro .right_intro .small_p {
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+/* footer */
+footer {
+	background-image: url("../img/ftr_2.png");
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	height: 300px;
+	margin-top: 100px;
+	//border-top: 4px solid #777;
+}
+.toplinks, .midcont, .midrightcont {
+	position: relative;
+}
+.ftr_logo {
+	position: absolute;
+	height: 300px;
+}
+.toplinks {
+	font-size: 0;
+	padding-top: 50px;
+	padding-left: 20%;
+}
+.toplinks a {
+	text-align: center;
+	font-size: 16px;
+	display: inline-block;
+	width: 15%;
+}
+.midcont {
+	padding-left: 25%;
+}
+.midseccont {
+	color: white;
+	display: inline-block;
+	width: 48%;
+	padding-top: 70px;
+	line-height: 2em;
+	font-weight: 100;
+	vertical-align: middle;
+}
+.midrightcont h4 {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	font-weight: 100;
+}
+.midrightcont input{
+	border: none;
+	border-radius: 5px;
+	height: 20px;
+	color: #ACCE22;
+	padding-left: 5px;
+	width: 185px;
+}
+.midrightcont input::-webkit-input-placeholder {
+	color: #ACCE22;
+	font-weight: 100;
+}
+.botright {
+	font-size: 0.8em;
+	font-weight: 100;
+	position: absolute;
+	bottom: -62px;
+	color: white;
+	border-top: 1px solid white;
+	width: 90%;
+	left: 5%;
+	text-align: center;
+	padding-top: 5px;
+}
+
+
+/*//////////////////////////////////////*/
+/* media control */
+@media screen  and (max-width: 65.3125em){
+	.nav_top ul {
+		top: 62px !important;
+		right: 0 !important;
+		background-color: white;
+	}
+	.nav_top ul li {
+		display: block !important;
+		border-bottom: 1px solid black;
+	}
+	.mobile_btn {
+		display: block!important;
+	}
+
+	/* for tool page */
+	.tool_intro .mid_video {
+		width: 72%;
+	}
+}
+@media screen and (max-width: 33.75em) {
+	.nav_name {
+		height: 36px!important;
+		margin-top: 10px;
+	}
+	.nav_sec {
+		padding-left: 0!important;
+		margin-left: 90px!important;
+	}
+
+	/* tool pages */
+	.tool_intro_sec {
+		float: none;
+	}
+	.tool_intro {
+		padding: 20px 0;
+	}
+	.tool_intro .right_intro {
+		width: 90%;
+		margin: 20px auto;
+		padding-left: 0;
+	}
+	.tool_intro .right_intro img {
+		display: block;
+		margin: 10px auto;
+	}
+	.tool_intro .right_intro h4 {
+		text-align: center;
+	}
+	.tool_intro .right_intro .large_p {
+		text-align: center;
+	}
+	.tool_intro .right_intro .small_p {
+		text-align: justify;
+	}
+	.tool_intro .mid_video {
+		width: 100%;
+	}
+
+	/* footer */
+	footer {
+		margin-top: 0;
+	}
+	.ftr_logo {
+		height: 115px;
+		margin-top: 27px;
+	}
+	.toplinks {
+		padding-left: 18%;
+		padding-right: 5%;
+	}
+	.toplinks a {
+		width: 16.5%;
+		text-align: right;
+		font-size: 13px;
+	}
+	.midcont {
+		padding-left: 5%;
+		padding-right: 5%;
+		font-size: 0.8em;
+	}
+	.midrightcont input {
+		width: 100%;
+	}
+	.botright {
+		bottom: -81px;
+		letter-spacing: -0.4px;
+	}
+}

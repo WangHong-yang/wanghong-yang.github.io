@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="跨界创新设计思维工具 - INNOVATION FLOWCHART">
+	<meta name="author" content="Hongyang Wang, h.y.wang@outlook.com, Sam Cho, sam_cho@autoinhome.com">
+	<!-- android add to homescreen -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#ACCE22">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="跨界. 设计思维工具 - INNOVATION FLOWCHART">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ACCE22">
+	<!-- title -->
+	<title>跨界. 设计思维工具 - INNOVATION FLOWCHART</title>
+	<!-- icon -->
+	<link rel="icon" sizes="192x192" href="../img/page1largeicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/page1smallicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/page1smallicon.png">
+	<link rel="apple-touch-startup-image" href="../img/page1smallicon.png">
+	<!-- css -->
+	<link rel="stylesheet" href="../css/toolpagecss/innovationflowchart.css"/>
+	<link rel="stylesheet" href="../css/common.css"/>
+	<!-- jquery -->
+	<script src="../js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<nav>
+		<div class="nav_sec nav_top">
+			<a href="../index.html"><img class="nav_name" src="../img/navname.png"></a>
+			<ul>
+				<a href="../tool.html"><li><img src="../img/navpics_01.png"><span>TOOLS<br />思维工具</span></li></a>
+				<a href="#"><li><img src="../img/navpics_02.png"><span>SHOWCASE<br />展示学生作品</span></li></a>
+				<a href="#"><li><img src="../img/navpics_03.png"><span>NEW TECH<br />跨界技术</span></li></a>
+				<a href="#"><li><img src="../img/navpics_04.png"><span>BLOG<br />网上论坛</span></li></a>
+
+			</ul>
+		</div>
+		<div class="nav_sec nav_bot">MULTI-DISCIPLINARY DESIGN THINKING</div>
+		<div class="mobile_btn"><img src="../img/mobile-btn.png"></div>
+	</nav>
+
+	<div class="tool_intro">
+		<div class="tool_intro_sec right_intro">
+			<img src="../img/toolkit_logo/tool_23.png" alt=""/>
+			<h4>INNOVATION FLOWCHART</h4>
+			<p class="large_p">创新流程图</p>
+			<p class="small_p">The innovation flowchart gives a detailed overview of the various stages in an innovation process, listing the activities, requirements and goals for each stage. This includes an overview of the different people, skills, activities and finance that project or an organization might need in order to succeed. The structured overview this tool provides, helps review where you are in the process, and to organize the next steps in your work.</p>
+		</div>
+		<div class="tool_intro_sec mid_video">
+			<iframe height=383 width=100% src="http://player.youku.com/embed/XMTQwNjExNTU3Ng==" frameborder=0 allowfullscreen></iframe>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+
+	<footer>
+		<img class="ftr_logo" src="../img/ftr_1.png" alt="LOGO"/>
+		<div class="toplinks">
+			<a href="">D+</a><a href="">XSJ</a><a href="http://www.meta.cn.com">META</a><a href="http://www.whu.edu.cn/">WHU</a><a href="http://www.hust.edu.cn/">HUST</a><a href="">HINT</a>
+		</div>
+		<div class="midcont">
+			<div class="midseccont midleftcont">
+				合作伙伴 　PARTNERS <br/>
+				品牌合作 　BRAND <br/>
+				加入我们 　JOIN US <br/>
+			</div>
+			<div class="midseccont midrightcont">
+				<h4>联系我们<br>CONTACT</h4>
+				<div class="medias"></div>
+				<input type="text" placeholder="enter email for more information"/>
+			</div>
+			<div class="botright">ALL DESIGN & PRODUCT COLLABORATED WITH AUTOINHOME</div>
+		</div>
+
+	</footer>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			//jquery for mobile navigator
+			var nav_tag = 0; //not shown
+			if($(window).width()<1045) {$('.nav_top ul').css({'display':'none'});}
+			$('.mobile_btn').click(function(){
+				if(nav_tag == 0) {
+					nav_tag = 1;
+					$('.nav_top ul').css({'display':'block'});
+					$('.mobile_btn').addClass('rot90');
+				} else {
+					nav_tag = 0;
+					$('.nav_top ul').css({'display':'none'});
+					$('.mobile_btn').removeClass('rot90');
+				}
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>
