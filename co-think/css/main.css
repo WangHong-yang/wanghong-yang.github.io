@@ -139,7 +139,7 @@ ul, li, a {text-decoration: none; list-style: none; color: black}
 	height: 100%;
 	position: absolute;
 	z-index: -1;
-	background-image: url('../img/stepsbg.png');
+	background-image: url('../img/stepsbg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
