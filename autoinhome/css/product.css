@@ -71,7 +71,7 @@ nav {
 /* Playing with Main Categories */
 .navigation  li a {
 
-    height: 50px;
+    height: 70px;
     display:block;  	/* Making sure a element covers whole li area */
     text-decoration:none; /* No underline */
     text-align:center;
