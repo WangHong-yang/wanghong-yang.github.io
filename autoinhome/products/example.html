@@ -19,35 +19,12 @@
 	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
 
 	<script src="../js/jquery-1.8.3.min.js"></script>
-	<script src="../js/jquery.fullPage.min.js"></script>
 	<script src="../js/jquery.easing.min.js"></script>
 	<script>
-		$(function(){
-			$('#slides').fullpage({
-				navigation: !0,
-				sectionsColor: ['#56a9b7', '#eeeeee', '#ffffff', '#ffffff', '#566792', '#c86056', '#000000', '#000000', '#56a9b7', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
-				normalScrollElements: '',
-				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10','page11','page12','page13','page14','page15','page16','page17'],
-				afterLoad: function(anchorLink, index){
-					if(index == 7) {
-						$('.sec7').find('.sec7mengban').delay(0).animate({
-							left: '0'
-						}, 500, 'easeOutExpo');
-					}
-				},
-				onLeave: function(index, direction){
-					if(index == '7'){
-						$('.sec7').find('.sec7mengban').delay(0).animate({
-							left: '-65%'
-						}, 500, 'easeOutExpo');
-					}
-				}
-			});
-
+		$(document).ready(function () {
 			$(window).resize(function(){
 				responsive();
 			});
-
 			function responsive(){
 				var $ww = $(window).width();
 				if($ww < 1024){
@@ -55,7 +32,7 @@
 					$('.nav_mobile_place_holder').css('display', 'block');
 					$('.nav_mobile').css('display', 'block');
 					$('nav').css('display', 'none');
-					$('body').css({'font-size':'2em'});
+					$('body').css({'font-size':'30px'});
 					$('.content').css('width','900px');
 				} else {
 
@@ -63,7 +40,7 @@
 			}
 
 			responsive();
-		});
+		})
 	</script>
 	<script>
 		// Executes the function when DOM will be loaded fully
