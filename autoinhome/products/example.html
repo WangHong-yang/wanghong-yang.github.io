@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 产品">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+
+	<title>AUTOINHOME PRODUCT</title>
+	<!--<link rel="stylesheet" href="../css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/product.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
+
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.fullPage.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script>
+		$(function(){
+			$('#slides').fullpage({
+				navigation: !0,
+				sectionsColor: ['#56a9b7', '#eeeeee', '#ffffff', '#ffffff', '#566792', '#c86056', '#000000', '#000000', '#56a9b7', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+				normalScrollElements: '',
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10','page11','page12','page13','page14','page15','page16','page17'],
+				afterLoad: function(anchorLink, index){
+					if(index == 7) {
+						$('.sec7').find('.sec7mengban').delay(0).animate({
+							left: '0'
+						}, 500, 'easeOutExpo');
+					}
+				},
+				onLeave: function(index, direction){
+					if(index == '7'){
+						$('.sec7').find('.sec7mengban').delay(0).animate({
+							left: '-65%'
+						}, 500, 'easeOutExpo');
+					}
+				}
+			});
+
+			$(window).resize(function(){
+				responsive();
+			});
+
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+
+				} else {
+
+				}
+			}
+
+			responsive();
+		});
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../index.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../theater.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../safety.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../environment.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../network.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../aboutus.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="../index.html"></a></li>
+		<li><a class="panel solution" href="../index.html"></a></li>
+		<li><a class="panel theater" href="../theater.html"></a></li>
+		<li><a class="panel safety" href="../safety.html"></a></li>
+		<li><a class="panel environment" href="../environment.html"></a></li>
+		<li><a class="panel network" href="../network.html"></a></li>
+		<li><a class="panel contact" href="../aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+
+<div class="content">
+	<h1 class="product_name">REVIEW: Leeo Smart Alert Nightlight</h1>
+	<div class="product_score">★★★★☆</div>
+	<div class="product_edit"><span class="release_time">March 2, 2015</span><span class="view_times">4</span><span class="author">Eric Murret</span></div>
+	<div class="product_img">
+		<img src="./products_img/IMG_5574.JPG" alt=""/>
+	</div>
+	<div class="product_view">
+		<strong>1. Our view:</strong>
+		<br/><br/>
+		Definely this product is a well design product in terms of outlook. The feel is it's a little cute gifts for young couple moving to a new home. Personally it seems to be a competitive product against apple tv, xiaomi etc...
+		<br/><br/>
+		The manufacturer claim the sparo can serve entertainment and work but we feel that there are too little support for gaming and CPU power may be a problem for work more then simple office.
+		<br/><br/>
+	</div>
+	<div class="product_video">
+		<embed src="http://player.youku.com/player.php/sid/XMTQyOTE1MDEwMA==/v.swf" allowFullScreen="true" quality="high" width="100%" height="600" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+	</div>
+	<div class="product_scenario">
+		<strong>2. Possible scenario:</strong>
+		<br/><br/>
+		Home theater as a computer, manufacture claims to work with a app but after testing seems difficult.
+		<br/><br/>
+		We suggest the product to be used in front desk of company for the receptions to do some simple online browsing or office documentation.
+		<br/><br/>
+		For work, it seems possible but surely not possible for 3D modeling or gaming.
+		<br/><br/>
+	</div>
+	<div class="product_test">
+		<strong>3. Tests</strong>
+		<br/><br/>
+		We tested it on a 3D printing software named cura. The machine seems possible for simple operation. The window system
+		<br/><br/>
+		Tag:
+		window 10, PC, home theater, Living room, office
+		<br/><br/>
+		Price: 1000
+		<br/><br/>
+		<br/><br/>
+		<br/><br/>
+		<br/><br/>
+		<br/><br/>
+		
+	</div>
+</div>
+
+</body>
+
+</html>

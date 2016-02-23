@@ -25,11 +25,11 @@
 		$(function(){
 			$('#slides').fullpage({
 				navigation: !0,
-				sectionsColor: ['#56a9b7', '#eeeeee', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#000000', '#000000', '#56a9b7', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+				sectionsColor: ['#56a9b7', '#eeeeee', '#ffffff', '#ffffff', '#566792', '#c86056', '#000000', '#000000', '#56a9b7', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
 				normalScrollElements: '',
 				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10','page11','page12','page13','page14','page15','page16','page17'],
 				afterLoad: function(anchorLink, index){
-					if(index == 7){
+					if(index == 7) {
 						$('.sec7').find('.sec7mengban').delay(0).animate({
 							left: '0'
 						}, 500, 'easeOutExpo');
@@ -86,17 +86,18 @@
 					$('.sec4inlineblock').css({'line-height':'60px','display':'block'});
 					$('.sec4intro').css({'width':'65%','margin-left':'-32.5%','bottom':'70px'});
 					$('.sec4pic').css({'margin':'70px auto','width':'40%'});
-					$('.sec4 h5').css({'padding-left':'40%'});
-					$('.sec4 h4').css({'padding-left':'40%'});
-					$('.sec4 p').css({'padding-left':'40%'});
-					$('.sec4 img').css({'width':'150px','margin-left':'-4%','padding-left':'0'});
+					$('.sec4 .fp-tableCell').css({'position':'absolute', 'top':'140px'});
+					$('.sec4 h5').css({ 'padding-right':'10%'});
+					$('.sec4 h4').css({'padding-right':'10%'});
+					$('.sec4 p').css({});
+					$('.sec4 img').css({'width':'150px','padding-left':'0'});
 					$('.sec5').css({'background-position':'88% center','color':'#eeeeee','background-size':'auto 100%'});
 					$('.sec5png').css({'width':'60%','bottom':'20%'});
 					$('.sec5 p').css({'width':'60%','bottom':'70px','right':'70px'});
 					$('.sec5 img').css({'height':'150px'});
-					$('.sec6 h5').css({'padding-left':'40%'});
-					$('.sec6 h4').css({'padding-left':'40%'});
-					$('.sec6 p').css({'padding-left':'40%'});
+					$('.sec6 h5').css({'padding-left':'30%'});
+					$('.sec6 h4').css({'padding-left':'30%'});
+					$('.sec6 p').css({'padding-left':'30%'});
 					$('.sec6').css({'background-position':'55% 0','background-size':'auto 100%'});
 					$('.sec6pic').css({'position':'relative','left':'0','width':'200px'});
 					$('.sec6p').css({'margin':'70px auto 0 auto','width':'60%'});
@@ -120,10 +121,9 @@
 					$('.sec8 p').css({'font-size':'0.3em'});
 					$('.sec8panel').css({'width':'800px'});
 					$('.sec8right').css({'width':'425px'});
-					$('.sec9').css({'background-size':'auto 100%','background-position':'23% 75px'});
+					$('.sec9').css({'background-size':'auto 100%','background-position':'89% 75px'});
 					$('.sec9img').css({'display':'none'});
 					$('.sec9mobimg').css({'display':'block','width':'90%','margin':'0 auto'});
-					$('.sec9 p').css({'display':'block','font-size':'0.4em','font-weight':'100','width':'60%','margin':'90px auto 0 auto'});
 					$('.higher_sec>img').css('margin-top', '25%');
 					$('.sec10sec').css({'margin-top':'0'});
 					$('.top_part').css('margin-top', '200%');
@@ -147,9 +147,11 @@
 					$('.sec12 h5').css({'padding-left':'40%'});
 					$('.sec12 h4').css({'padding-left':'40%'});
 					$('.sec12 p').css({'padding-left':'40%'});
+					$('.sec12 .sec12trans').css({'display':'none'});
 					$('.sec13').css({'background-position':'94% center'});
 					$('.sec14').css({'background-position':'79% center'});
-					$('.sec15').css({'background-position':'78% center'});
+					$('.sec15').css({'background-position':'40% center'});
+					$('.sec15 .sec15trans').css({'background-position':'40% center'});
 					$('.sec16').css({'background-position':'65% center'});
 					$('.sec17 .sec17_sec').css({'height':'100%'});
 				} else {
@@ -220,7 +222,45 @@
 					footer.removeClass('afterclick');
 				}
 			});
+
+			// change sec12
+			setInterval('changeSec12()',4000);
+			// change sec13
+			setInterval('changeSec13()',4000);
+			// change sec15
+			setInterval('changeSec15()',4000);
+
 		});
+		var ifC = 0;
+		function changeSec12() {
+			if(ifC == 0) {
+				ifC = 1;
+				$('.sec12trans').addClass('sec12aftertrans');
+			} else {
+				ifC = 0;
+				$('.sec12trans').removeClass('sec12aftertrans');
+			}
+		}
+		var ifF = 0;
+		function changeSec13() {
+			if(ifF == 0) {
+				ifF = 1;
+				$('.sec13trans').addClass('sec13aftertrans');
+			} else {
+				ifF = 0;
+				$('.sec13trans').removeClass('sec13aftertrans');
+			}
+		}
+		var ifD = 0;
+		function changeSec15() {
+			if(ifD == 0) {
+				ifD = 1;
+				$('.sec15trans').addClass('sec12aftertrans');
+			} else {
+				ifD = 0;
+				$('.sec15trans').removeClass('sec12aftertrans');
+			}
+		}
 	</script>
 </head>
 
@@ -266,110 +306,91 @@
 		<p>无论绚丽灯光，还是动感的家庭影院；<br/>无论家庭安全，还是环境的管理控制；<br/>我们都为您提供一站式解决方案</p>
 		<img src="./img/control_img/sofa.png" alt=""/>
 	</div>
-	<div class="section sec3">
-		<img class="sec3img1" style="display: none" src="./img/control_img/3-2.png" alt=""/>
-		<img class="sec3img2" style="display: none;" src="./img/control_img/3-1.png" alt=""/>
-	</div>
+
 	<div class="section sec4">
-		<h5>Intelligent Multimedia Terminal</h5>
-		<h4>智能多媒体终端</h4>
+		<h5>Intelligent Multimedia Terminal Control Your Curtain</h5>
+		<h4>智能多媒体终端控制您家窗帘</h4>
 		<p>随心操控 想您所想 <br/>
-			支持自动调光、单灯调光、同时调光
+			支持自动开闭、单窗开闭、同时开闭
 		</p>
 		<img src="./img/control_img/4-1.png" alt=""/>
 	</div>
-	<div class="section sec5">
-		<h5>Intelligent Multimedia Terminal</h5>
-		<h4>智能多媒体终端</h4>
-		<p>无线控制 自在舒心</p>
-		<p class="smaller">独有WiFi、ZigBee、Bluetooth共存全新技术
-			<br/>
-			最大可支持24路可控灯源
-		</p>
-		<img src="./img/control_img/5-1.png" alt=""/>
-	</div>
+	<!--<div class="section sec5">-->
+		<!--<h5>Intelligent Multimedia Terminal</h5>-->
+		<!--<h4>智能多媒体终端</h4>-->
+		<!--<p>无线控制 自在舒心</p>-->
+		<!--<p class="smaller">独有WiFi、ZigBee、Bluetooth共存全新技术-->
+			<!--<br/>-->
+			<!--最大可支持24路可控灯源-->
+		<!--</p>-->
+		<!--<img src="./img/control_img/5-1.png" alt=""/>-->
+	<!--</div>-->
 	<div class="section sec6">
 		<h5>Intelligent Multimedia Terminal</h5>
 		<h4>智能多媒体终端</h4>
 		<p>支持手机 APP 操控</p>
 	</div>
-	<div class="section sec7">
-		<h5>Smart LED Bulb</h5>
-		<h4>智能 LED 灯泡</h4>
-		<p>感知缤纷多彩的时间
-			<br/>
-			领悟内心世界的一片净土
-			<br/>
-			内置高精度 RGB 传感器
-			<br/>
-			拥有它
-			<br/>
-			世界为你改变颜色
-		</p>
-	</div>
-	<div class="section sec8">
+	<!--<div class="section sec7">-->
+		<!--<h5>Smart LED Bulb</h5>-->
+		<!--<h4>智能 LED 灯泡</h4>-->
+		<!--<p>感知缤纷多彩的时间-->
+			<!--<br/>-->
+			<!--领悟内心世界的一片净土-->
+			<!--<br/>-->
+			<!--内置高精度 RGB 传感器-->
+			<!--<br/>-->
+			<!--拥有它-->
+			<!--<br/>-->
+			<!--世界为你改变颜色-->
+		<!--</p>-->
+	<!--</div>-->
+	<!--<div class="section sec8">-->
+
+	<!--</div>-->
+	<div class="section sec9">
+		<h5>Intelligent Multimedia Terminal Control Your Lights</h5>
+		<h4>智能多媒体终端控制您的灯光</h4>
+		<p>一键设定 智能情景<br/>支持情景模式自定义设定</p>
 
 	</div>
-	<div class="section sec9">
-		<p>把灯带放置到电视机后，视觉的空间大大延伸了</p>
-	</div>
-	<div class="section sec10">
-		<p>把灯带放置到床后，柔和的灯光可以渲染到整个房间</p>
-	</div>
-	<div class="section sec11">
-		<h5>Intelligent Multimedia Terminal</h5>
-		<h4>智能多媒体终端</h4>
-		<p>一键设定 智能情景<br/>支持情景模式自定义设定</p>
-	</div>
+
 	<div class="section sec12">
-		<h5>Smart Switch</h5>
-		<h4>智能开关</h4>
+		<div class="sec12trans" style="width: 100%; height: 100%;position: absolute;top:0;left:0;"></div>
+		<h5>Smart Switch Control All Electrical Appliances</h5>
+		<h4>智能开关一键控制所有电器</h4>
 		<p>
 			将原有开关替换成智能开关 <br/>
 			即可享受智能操控的乐趣
 		</p>
 	</div>
 	<div class="section sec13">
-		<h5>Smart Switch</h5>
-		<h4>智能开关</h4>
+		<div class="sec13trans" style="width: 100%; height: 100%;position: absolute;top:0;left:0;"></div>
+		<h5>Movement Detector, linked with lights, automatically turn on lights when detecting movements</h5>
+		<h4>人体移动探测，与灯光联动，在您回家时自动开灯</h4>
 		<p>
-			采用精密的铝合金 CNC 加工工艺 <br/>
-			5毫米超薄设计 <br/>
-			完美融合家居环境 <br/>
-			10万次按键 <br/>
-			超长使用寿命
-		</p>
-	</div>
-	<div class="section sec14">
-		<h5>Light Dimmer</h5>
-		<h4>调光开关</h4>
-		<p>
-			独一无二的全金属超薄设计<br/>
-			采用无接触式旋钮，微小的角度变化都会灵敏地感知 <br/>
-			独特的炫彩光跟踪技术 <br/>
-			实现了旋钮和光的合二为一 <br/>
-			可以实现背景音乐容量控制以及调光功能
+			支持人体移动检测和夜间模式 <br/>
+			可以与灯光进行联动
 		</p>
 	</div>
 	<div class="section sec15">
-		<h5>Mi Stick</h5>
-		<h4>Mi 可贴</h4>
+		<div class="sec15trans" style="width: 100%; height: 100%;position: absolute;top:0;left:0;"></div>
+		<h5>Mi Stick, Replace All Remote Control Devices</h5>
+		<h4>Mi 可贴，替代所有遥控设备</h4>
 		<p>
-			Wifi 远程控制 <br/>
-			继承万能红外码库 <br/>
-			红外智能学习
+			轻松实现家电的自动控制及与其他设备的联动 <br/>
+			控制家电的智能遥控器
 		</p>
 	</div>
-	<div class="section sec16">
-		<h5>Enter Wall Type Intelligent Socket</h5>
-		<h4>入墙式智能插座</h4>
-		<p>
-			人性化的33度设计 <br/>
-			插拔更省力 <br/>
-			让孕妇、身体不便人士使用更方便 <br/>
-			独有的防触电保护功能，有效保护幼童的安全 <br/>
-		</p>
-	</div>
+	<!--<div class="section sec16">-->
+		<!--<h5>Enter Wall Type Intelligent Socket</h5>-->
+		<!--<h4>入墙式智能插座</h4>-->
+		<!--<p>-->
+			<!--人性化的33度设计 <br/>-->
+			<!--插拔更省力 <br/>-->
+			<!--让孕妇、身体不便人士使用更方便 <br/>-->
+			<!--独有的防触电保护功能，有效保护幼童的安全 <br/>-->
+		<!--</p>-->
+	<!--</div>-->
 	<div class="section sec17">
 
 		<div class="lower_sec">

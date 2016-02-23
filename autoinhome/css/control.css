@@ -223,25 +223,29 @@ nav {
     background-size: cover;
 }
 .sec4 h5 {
+    color: #222;
     font-size: 0.4em;
     font-weight: 100;
     text-align: justify;
-    padding-left: 60%;
+    padding-left: 10%;
 }
 .sec4 h4 {
+    color: #222;
     font-size: 0.8em;
     text-align: justify;
-    padding-left: 60%;
+    padding-left: 10%;
 }
 .sec4 p {
+    color: #222;
     font-size: 0.35em;
     text-align: justify;
-    padding-left: 60%;
+    padding-left: 10%;
     padding-top: 50px;
 }
 .sec4 img {
     width: 80px;
-    padding-left: 26.2%;
+    left: 10%;
+    position: absolute;
     padding-top: 90px;
 }
 
@@ -290,19 +294,22 @@ nav {
 .sec6 h5 {
     font-size: 0.4em;
     font-weight: 100;
-    text-align: justify;
+    text-align: left;
     padding-left: 60%;
+    padding-right: 9%;
     margin-top: -200px;
 }
 .sec6 h4 {
     font-size: 0.8em;
     text-align: justify;
     padding-left: 60%;
+    padding-right: 9%;
 }
 .sec6 p {
     font-size: 0.35em;
     text-align: justify;
     padding-left: 60%;
+    padding-right: 9%;
     padding-top: 50px;
 }
 
@@ -348,10 +355,22 @@ nav {
     background-repeat: no-repeat;
     background-size: 100% 91%;
 }
+.sec9 h5 {
+    font-size: 0.4em;
+    font-weight: 100;
+    text-align: right;
+    padding: 0 10%;
+}
+.sec9 h4 {
+    font-size: 0.8em;
+    text-align: right;
+    padding: 0 10%;
+}
 .sec9 p {
-    font-size: 0.5em;
-    margin-top: 3%;
-    font-weight: 300;
+    font-size: 0.35em;
+    text-align: right;
+    padding: 0 10%;
+    padding-top: 50px;
 }
 
 /* section10 style sheet */
@@ -400,23 +419,50 @@ nav {
     background-repeat: no-repeat;
     background-size: 100% calc(100% - 70px);
 }
+.sec12trans {
+    background-image: url("../img/control_img/bg-12-2.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 100% calc(100% - 70px);
+    opacity: 0;
+    transition: all 4s;
+    -moz-transition: all 4s; /* Firefox 4 */
+    -webkit-transition: all 4s; /* Safari 和 Chrome */
+    -o-transition: all 4s; /* Opera */
+}
+.sec12aftertrans {
+    opacity: 0.9!important;
+    transition: all 4s;
+    -moz-transition: all 4s; /* Firefox 4 */
+    -webkit-transition: all 4s; /* Safari 和 Chrome */
+    -o-transition: all 4s; /* Opera */
+}
 .sec12 h5 {
+    position: relative;
     font-size: 0.4em;
     font-weight: 100;
-    text-align: justify;
+    text-align: left;
     padding-left: 60%;
+    padding-right: 10%;
     margin-top: 100px;
+    z-index: 2;
 }
 .sec12 h4 {
+    position: relative;
     font-size: 0.8em;
     text-align: justify;
     padding-left: 60%;
+    padding-right: 10%;
+    z-index: 2;
 }
 .sec12 p {
+    position: relative;
     font-size: 0.35em;
     text-align: justify;
     padding-left: 60%;
+    padding-right: 10%;
     padding-top: 50px;
+    z-index: 2;
 }
 
 /* sec13 */
@@ -425,25 +471,50 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: #ffffff;
+}
+.sec13trans {
+    background-image: url("../img/control_img/bg-13-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #222222;
+    opacity: 0;
+    transition: all 4s;
+    -moz-transition: all 4s; /* Firefox 4 */
+    -webkit-transition: all 4s; /* Safari 和 Chrome */
+    -o-transition: all 4s; /* Opera */
+}
+.sec13aftertrans {
+    opacity: 1!important;
+    transition: all 4s;
+    -moz-transition: all 4s; /* Firefox 4 */
+    -webkit-transition: all 4s; /* Safari 和 Chrome */
+    -o-transition: all 4s; /* Opera */
 }
 .sec13 h5 {
+    position: relative;
     font-size: 0.4em;
     font-weight: 100;
-    text-align: justify;
-    padding-left: 10%;
+    text-align: left;
+    padding: 0 10%;
     margin-top: -100px;
+    z-index: 2;
 }
 .sec13 h4 {
+    position: relative;
     font-size: 0.8em;
     text-align: justify;
-    padding-left: 10%;
+    padding: 0 10%;
+    z-index: 2;
 }
 .sec13 p {
+    position: relative;
     font-size: 0.35em;
     text-align: justify;
-    padding-left: 10%;
+    padding: 0 10%;
     padding-top: 50px;
+    z-index: 2;
 }
 
 /* sec14 */
@@ -482,22 +553,46 @@ nav {
     color: #222222;
 }
 .sec15 h5 {
+    position: relative;
+    z-index: 2;
     font-size: 0.4em;
     font-weight: 100;
-    text-align: justify;
-    padding-left: 10%;
-    margin-top: -100px;
+    text-align: left;
+    padding: 0 10%;
+    margin-top: 100px;
 }
 .sec15 h4 {
+    position: relative;
+    z-index: 2;
     font-size: 0.8em;
     text-align: justify;
-    padding-left: 10%;
+    padding: 0 10%;
 }
 .sec15 p {
+    position: relative;
+    z-index: 2;
     font-size: 0.35em;
     text-align: justify;
-    padding-left: 10%;
+    padding: 0 10%;
     padding-top: 50px;
+}
+.sec15trans {
+    background-image: url("../img/control_img/bg-15-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: all 4s;
+    -moz-transition: all 4s; /* Firefox 4 */
+    -webkit-transition: all 4s; /* Safari 和 Chrome */
+    -o-transition: all 4s; /* Opera */
+}
+.sec15aftertrans {
+    opacity: 0.9!important;
+    transition: all 4s;
+    -moz-transition: all 4s; /* Firefox 4 */
+    -webkit-transition: all 4s; /* Safari 和 Chrome */
+    -o-transition: all 4s; /* Opera */
 }
 
 /* sec16 */
