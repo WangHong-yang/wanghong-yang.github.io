@@ -199,6 +199,7 @@ body a:hover{
 	-ms-transition:.5s all;
 	background:transparent;
 	border:1px solid #fff;
+	border-radius: 5px;
 	color:#fff;
 }
 .more a:hover,.banner-left:hover div.more a{
@@ -213,6 +214,7 @@ body a:hover{
 	font-size: 16px;
 	color: #f60c3e;
 	border: 1px solid #f60c3e;
+	border-radius: 5px;
 	top: 20px; 
 	position: relative;
 	transition:.5s all;
@@ -497,6 +499,40 @@ ul.wmuSliderPagination {
 .banner-wrap{
 	padding:0em 0 4em;
 }
+
+/* call for demos */
+.to_call {
+	width: 100%;
+	padding-bottom: 70px;
+	text-align: center;
+}
+.to_call a {
+	transform: perspective(600px) rotateX(0deg) translateZ(0px);
+	border: 2px solid #f60c3e;
+	border-radius: 6px;
+	display: inline-block;
+	font-family: exolight;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	font-weight: 900;
+	color: #f60c3e;
+	padding: 20px;
+	margin: 0 auto;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-ms-transition:.5s all;
+	-o-transition:.5s all;
+}
+.to_call:hover #tocallbtn {
+	transform: perspective(600px) rotateX(360deg) translateZ(120px);
+	transition:.7s all;
+	-webkit-transition:.7s all;
+	-moz-transition:.7s all;
+	-ms-transition:.7s all;
+	-o-transition:.7s all;
+}
+
 /*-- //wmuslider --*/
 /*-- //traveller --*/
 /*-- what-we-do --*/
@@ -1329,6 +1365,7 @@ p.est {
 }
 .ftr-logo ul li{
 	display:inline-block;
+	opacity: 0.6;
 }
 /*--/footer--*/
 /*-----start-responsive-design------*/
