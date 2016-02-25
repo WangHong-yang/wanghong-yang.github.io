@@ -352,10 +352,12 @@ p.eveniet{
 	color:	#f60c3e;
   margin: .1em 0 0;
   font-size: 2em;
+	text-shadow: 0 0 15px white;
 }
 .captn p {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
+	font-weight: 300;
   margin-top: .3em;
 }
 .banner-bottom-grid a .captn {
@@ -378,10 +380,10 @@ p.eveniet{
 }
 .banner-bottom-grid a:hover .captn {
 	width: 100%;
-	bottom: 0%;
-	padding: 40% 10%;
-    right: 0%;
-	background-color: rgba(0, 0, 0, 0.34);
+	bottom: 0;
+	padding: 20% 10%;
+    right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 .captn h4 i{
 	color:#fff;
@@ -390,8 +392,17 @@ p.eveniet{
 }
 /*-- //hover-effect --*/
 .banner-bottom-grids{
-	margin:2em 0 3em 0;
+	margin: 4em 0 1em 0;
+
 }
+
+.col-md-4.banner-bottom-grid {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+
+
 /*-- //banner-bottom --*/
 /*-- traveller --*/
 .traveller{
@@ -1600,7 +1611,7 @@ p.est {
 		padding: 3em 0;
 	}
 	.banner-bottom-grids {
-		margin: 0 0 2em 0;
+		margin: 2.5em 0 0 0;
 	}
 	.banner-bottom-grid {
 		float: left;

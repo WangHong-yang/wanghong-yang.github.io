@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="researchHighlightsDemos.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="researchHighlightsDemos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/researchHighlightsDemos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33228347" vertical-offset="1309" max-vertical-offset="3060">
-              <caret line="76" column="70" selection-start-line="76" selection-start-column="70" selection-end-line="76" selection-end-column="70" />
+            <state vertical-scroll-proportion="-5.2884617" vertical-offset="1205" max-vertical-offset="3060">
+              <caret line="74" column="56" selection-start-line="73" selection-start-column="23" selection-end-line="74" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="researchHighlightsDemos.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="researchHighlightsDemos.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/researchHighlightsDemos.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.772727" vertical-offset="36306" max-vertical-offset="44060">
-              <caret line="1839" column="29" selection-start-line="1839" selection-start-column="29" selection-end-line="1839" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.7993779" vertical-offset="7186" max-vertical-offset="44280">
+              <caret line="385" column="39" selection-start-line="385" selection-start-column="39" selection-end-line="385" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -267,24 +267,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/researchHighlightsDemos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.772727" vertical-offset="36306" max-vertical-offset="44060">
-          <caret line="1839" column="29" selection-start-line="1839" selection-start-column="29" selection-end-line="1839" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/researchHighlightsDemos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33228347" vertical-offset="1309" max-vertical-offset="3060">
-          <caret line="76" column="70" selection-start-line="76" selection-start-column="70" selection-end-line="76" selection-end-column="70" />
+        <state vertical-scroll-proportion="-5.2884617" vertical-offset="1205" max-vertical-offset="3060">
+          <caret line="74" column="56" selection-start-line="73" selection-start-column="23" selection-end-line="74" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#strong#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/researchHighlightsDemos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7993779" vertical-offset="7186" max-vertical-offset="44280">
+          <caret line="385" column="39" selection-start-line="385" selection-start-column="39" selection-end-line="385" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
