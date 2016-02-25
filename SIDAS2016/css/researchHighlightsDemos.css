@@ -322,8 +322,11 @@ ul li a.in:hover{
 }
 /*-- //banner --*/
 /*-- banner-bottom --*/
+.banner-bottom {
+	border-top:1px solid #eee;
+}
 .banner-bottom,.single,.traveller,.gallery,.feature,.what-we-do,.team,.contact,.typo,.main-services,.services-overview{
-	padding:5em 0;
+	padding:5em 0 5em 0;
 }
 .banner-bottom h3,.traveller h3,.gallery h3,.feature h3,.what-we-do h3,.team h3,.contact h3,h3.title,.main-services h3,.services-overview h3{
 	font-size:2.5em;
@@ -346,7 +349,7 @@ p.eveniet{
 	display: block;
 }
 .captn h4 {
-  color:rgb(217, 182, 240);
+	color:	#f60c3e;
   margin: .1em 0 0;
   font-size: 2em;
 }
@@ -387,7 +390,7 @@ p.eveniet{
 }
 /*-- //hover-effect --*/
 .banner-bottom-grids{
-	margin:3em 0 0;
+	margin:2em 0 3em 0;
 }
 /*-- //banner-bottom --*/
 /*-- traveller --*/
@@ -1597,7 +1600,7 @@ p.est {
 		padding: 3em 0;
 	}
 	.banner-bottom-grids {
-		margin: 2em 0 0;
+		margin: 0 0 2em 0;
 	}
 	.banner-bottom-grid {
 		float: left;
@@ -1834,15 +1837,17 @@ p.est {
 		font-size: 1.8em;
 	}
 	.banner-bottom, .single, .traveller, .gallery, .feature, .what-we-do, .team, .contact, .typo, .main-services, .services-overview {
-		padding: 2em 0;
+		padding: 2em 0 2em 0;
 	}
 	p.eveniet {
 		font-size: 18px;
 	}
 	.banner-bottom-grid {
 		float: none;
-		width: 80%;
+		width: 100%;
 		margin: 0 auto 1em;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.captn h4 {
 		font-size: 1.5em;

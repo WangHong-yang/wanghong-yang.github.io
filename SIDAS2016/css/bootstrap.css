@@ -1576,12 +1576,17 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
+.header .container {
+  padding-left: 0;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
