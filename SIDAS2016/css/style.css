@@ -53,7 +53,7 @@ body a:hover{
 }
 .navbar-brand span{
 	display: block;
-    color: #D1D1D1;
+    color: #777;
     font-size: 15px;
     line-height: 30px;
     text-align: right;
@@ -890,6 +890,9 @@ h2.typoh2{
 	.pagination {
 		margin: 20px 0 0px;
 	}
+	.banner-right1-text p {
+		margin-top: -10px;
+	}
 }
 @media (max-width: 320px){
 	.grid_4 {
@@ -1711,23 +1714,48 @@ p.est {
 }
 @media (max-width:767px){
 	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-		background-color: #f60c3e;
+		/*background-color: #f60c3e;*/
+		background-color: white;
 	}
 	.navbar-default .navbar-toggle {
 		border-color: #f60c3e;
 	}
 	.navbar-default .navbar-toggle {
 		border-color: #f60c3e;
-		background-color: #f60c3e;
+		/*background-color: #f60c3e;*/
 	}
 	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #fff;
+		background-color: #f60c3e;
+	}
+	.navbar-default .navbar-toggle .first-icon-bar {
+		position: absolute;
+		top: 18px;
+	}
+	.navbar-default .navbar-toggle .second-icon-bar {
+		position: absolute;
+		top: 14px;
+		transition: all 0.4s;
+		-moz-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+		transform:rotate(180deg);
+	}
+	.navbar-default .collapsed .second-icon-bar {
+		position: absolute;
+		top: 14px;
+		transition: all 0.4s;
+		-moz-transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+		-o-transform:rotate(90deg);
+		transform:rotate(90deg);
 	}
 	.navbar-toggle {
-		margin-top: 27px;
+		margin-top: 24px;
+		right: 9px;
 		margin-right: 0;
 		margin-bottom: 0;
 	}
+
 	.navbar-nav {
 		float: none;
 		text-align: center;
@@ -1804,7 +1832,7 @@ p.est {
 		font-size: 1.9em;
 	}
 	.banner-left {
-		padding: 2em 0 0 2em;
+		padding: 2em 2em;
 	}
 	.banner-left p {
 		width: 95%;
