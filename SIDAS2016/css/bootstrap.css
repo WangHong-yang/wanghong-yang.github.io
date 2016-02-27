@@ -6605,8 +6605,7 @@ button.close {
   color: #f60c3e;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 30px;
-  font-weight: bolder;
-  line-height: 1.5em;
+  line-height: 1.4em;
   text-align: center;
   width: 40px;
   border-radius: 4px;
@@ -6619,5 +6618,5 @@ button.close {
 }
 .rt_top a {
   color: #f60c3e;
-  font-weight: 100;
+  font-weight: 200;
 }
