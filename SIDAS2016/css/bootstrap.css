@@ -5,6 +5,14 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@font-face {
+  font-family: exolight;
+  src:url('./exolight.otf')
+}
+@font-face {
+  font-family: dosislight;
+  src:url('./dosislight.ttf');
+}
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -4193,6 +4201,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand > img {
   display: block;
 }
+.navbar-brand > i {
+  width: 0;
+}
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
@@ -6589,3 +6600,24 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.rt_top {
+  color: #f60c3e;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 1.5em;
+  text-align: center;
+  width: 40px;
+  border-radius: 4px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #f60c3e;
+  position: fixed;
+  bottom: 23px;
+  right: 24px;
+}
+.rt_top a {
+  color: #f60c3e;
+  font-weight: 100;
+}
