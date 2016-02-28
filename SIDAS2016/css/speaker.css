@@ -322,6 +322,7 @@ ul li a.in:hover{
 }
 /*-- //banner --*/
 /*-- banner-bottom --*/
+
 .banner-bottom {
 	border-top:1px solid #eee;
 }
@@ -382,6 +383,23 @@ p.eveniet{
 	position: relative;
 	display: block;
 }
+
+.simplePL {
+	padding-left: 30%;
+	padding-bottom: 50px;
+}
+.simplePL .perpart {
+	vertical-align: top;
+	padding-top: 10px;
+}
+.simplePL .perpart .pername a {
+	color: #080808;
+}
+.simplePL .perpart:hover a {
+	color: #f60c3e;
+	text-decoration: underline;
+}
+
 .captn h4 {
 	color:	#f60c3e;
 	margin: .1em 0 0;
@@ -1961,6 +1979,19 @@ p.est {
 		margin: 0 auto 1em;
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.simplePL {
+		padding-left: 0;
+	}
+	.simplePL .perpart {
+		width: 49%;
+		display: inline-block;
+	}
+	.simplePL .perpart .perpiccontainer {
+		width: 65%;
+	}
+	.simplePL .perpart h4 {
+		text-decoration: underline;
 	}
 	.captn h4 {
 		font-size: 1.5em;
