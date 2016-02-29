@@ -1463,6 +1463,17 @@ p.est {
 	display:inline-block;
 	opacity: 0.6;
 }
+.title {
+	font-weight: bolder;
+	font-size: 1.5em;
+	text-align: center;
+}
+.perintro a {
+	color: #aaa;
+}
+.perintro a:hover {
+	color:#f60c3e;
+}
 /*--/footer--*/
 /*-----start-responsive-design------*/
 @media (max-width:1921px) {
