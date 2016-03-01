@@ -174,3 +174,92 @@ nav {
 .product_video {
     padding-bottom: 30px;
 }
+
+#footer {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+
+    background-color: #56a9b7;
+}
+.beforeclick {
+    transition: all 1s;
+    -moz-transition: all 1s; /* Firefox 4 */
+    -webkit-transition: all 1s; /* Safari 和 Chrome */
+    -o-transition: all 1s; /* Opera */
+}
+.afterclick {
+    bottom: 0;
+    transition: all 1s;
+    -moz-transition: all 1s; /* Firefox 4 */
+    -webkit-transition: all 1s; /* Safari 和 Chrome */
+    -o-transition: all 1s; /* Opera */
+}
+.forbeauty {
+    position: absolute;
+    max-width: 150px;
+    top: -35px;
+    left: 15px;
+}
+#footer .aboutus {
+    height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 40px;
+
+}
+#footer .top {
+    width: 750px;
+    margin: 0 auto;
+    clear: both;
+}
+.subtop {float: left}
+.first {width: 270px} .second {width: 180px} .third {width: 300px}
+.subtop h4, .subtop p {
+    color: #ffffff;
+    text-align: left;
+}
+.subtop h4 {
+    font-size: 0.3em;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 17px;
+    padding-bottom: 0;
+}
+.subtop p {
+    padding-top: 17px;
+    font-size: 0.2em;
+    line-height: 22px;
+    font-weight: 100;
+}
+#footer .bot {
+    width: 890px;
+    margin: 25px auto 0 auto;
+
+    display: block;
+    clear: both;
+    padding: 0 0 5px 0;
+    border-top: 1px solid #ffffff;
+}
+#footer .bot p {
+    color: #ffffff;
+    display: block;
+    font-size: 0.2em;
+    float: left;
+    line-height: 20px;
+    padding-top: 5px;
+}
+#footer .bot img {
+    height: 20px;
+    padding-top: 5px;
+}
+.left_bot {
+    float: left;
+    padding-right: 50px;
+}
+
+.right_bot {
+    float: right;
+    font-size: 20px;
+}

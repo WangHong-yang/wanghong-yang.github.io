@@ -668,6 +668,47 @@ span.mail a:hover{
 .contact-grids {
 	margin-bottom: 1em;
 }
+
+.serach_banner {
+	font-family: BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+	position: relative;
+	top: 90px;
+	width: 65%;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #9e9e9e;
+	line-height: 50px;
+	font-size: 25px;
+	font-weight: 100;
+}
+.serach_banner span {
+	display: inline-block;
+	color: #8a9298;
+	height: 50px;
+	margin-left: 50px;
+	padding-right: 40px;
+	text-align: center;
+	border-right: 1px solid #9e9e9e;
+}
+.serach_banner input {
+	display: inline-block;
+	padding-left: 40px;
+	font-size: 25px;
+	font-weight: 100;
+	border: none;
+	color: #8a9298;
+}
+.serach_banner a {
+	padding-left: 40px;
+	margin-right: 10px;
+	display: inline-block;
+	border-left: 1px solid #9e9e9e;
+	color: #8a9298;
+	font-size: 25px;
+}
+.serach_banner a:hover {
+	color: darkturquoise;
+}
 /*----//End-contact----*/
 /*---//End-wrap----*/
 /*--media Quries for 1440px-monitors-*/
