@@ -165,6 +165,7 @@ nav {
     color: darkturquoise;
 }
 .product_img img {
+    width: 60%;
     max-width: 100%;
 }
 .product_view, .product_scenario, .product_test {
