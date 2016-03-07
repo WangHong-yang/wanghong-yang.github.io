@@ -150,9 +150,11 @@ nav {
     max-width: 90%;
     padding: 0 5%;
     margin: 0 auto;
+    line-height: 1.8em;
 }
 .product_name {
     padding-top: 100px;
+    line-height: 1.5em;
 }
 .product_edit {
     color: #6B6B6B;
