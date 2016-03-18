@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 博联插座">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+	<title>AUTOINHOME PRODUCT - BROADLINK</title>
+	<!--<link rel="stylesheet" href="../css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/product.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
+
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).resize(function(){
+				responsive();
+			});
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.content').css({'width':'900px'});
+					$('iframe').css('height','250px');
+					$('.product_name').css('padding-top','65px');
+					$('.product_img img').css({'width':'100%'});
+					$('.product_view img').css({'width':'100%'});
+					$('.product_scenario img').css({'width':'100%'});
+					$('.product_test img').css({'width':'100%'});
+					$('#footer .aboutus').css({'display':'none'});
+					$('#footer .top').css({'display':'none'});
+					$('#footer .bot').css({'width':'90%','border-top':'none', 'padding-left':'5%','padding-right':'5%'});
+					$('#footer .right_bot').css({'padding-bottom':'15px'});
+					$('.forbeauty').css({'display':'none'});
+					$('.botbar').css({'width':'90%'});
+				} else {
+
+				}
+			}
+
+			responsive();
+		})
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../index.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../theater.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../safety.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../environment.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../network.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../aboutus.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="../productlist.html"></a></li>
+		<li><a class="panel solution" href="../index.html"></a></li>
+		<li><a class="panel theater" href="../theater.html"></a></li>
+		<li><a class="panel safety" href="../safety.html"></a></li>
+		<li><a class="panel environment" href="../environment.html"></a></li>
+		<li><a class="panel network" href="../network.html"></a></li>
+		<li><a class="panel contact" href="../aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+
+<div class="content">
+	<h1 class="product_name">拒绝费电，实现智能</h1>
+	<div class="product_score">★★★★☆</div>
+	<div class="product_edit"><span class="release_time">March 13, 2016</span><span class="view_times">4</span><span class="author">Sam Cho</span></div>
+	<div class="product_img">
+<!-- 		<img src="./products_img/lock.png" alt=""/>
+		<img src="./products_img/lockcenter.jpg"> -->
+	</div>
+	<div class="product_view">
+		<strong>1．外观篇</strong>
+		<br>
+		SP2个头较大，一只手刚刚能握住，如果插于排插上，旁边的插口被挡一半。在正面有个wifi指示灯。这里需注意的是10A MAX字样，SP2一共有2个版本，一个10A，一个16A，16A的为大三孔，适用于2000W~3000W的大功率电器设备，而此10A版本为标准小五孔，适用于2200W以下的电器设备。插孔内有安全门——儿童防触电保护。
+		<br><br>
+		<img src="./products_img/broadlink/2.jpg">
+		<br>
+	</div>
+	<div class="product_video">
+		<!-- 这一部分需要先上传视频，上传之后生成链接 vimeo 视频 -->
+		<iframe src="https://player.vimeo.com/video/159470839" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+	</div>
+	<div class="product_scenario">
+		<strong>2．测试篇</strong>
+		<br/>
+		下载安装“易控”APP，点击右上角选择添加设备来添加SP2,添加成功后，会在APP主界面多出一个智能插座图标，图形和插座外形一致，很容易区分，当然也可以根据自己需要更换图标（图标上有个小细节，有绿色小圆点代表插座开启状态，无圆点说明关闭中）点击图标进入控制界面，可通过点击中间电源图标来控制SP2插座的开关，绿色表示开启，白色表示关闭，下部有实时功率显示及曲线图。 
+		<br>
+		<img src="./products_img/broadlink/3.jpg">
+		<br><br>
+		SP2还具有自动省电功能，它通过检测电器设备待机时候的功率并加以保存，待下次电器进入待机状态时候，自动切断电源。同时设置里面可以根据不同地区的电价自行设置，保证了能耗统计里电费总计的准确性。
+		<br><br>
+		如果您还拥有博联其他设备，比如RM pro万能遥控器，就可以设置场景，点击APP首页上面设置好的场景大图标，就可以实现一键控制。
+		<br>
+		<img src="./products_img/broadlink/4.jpg">
+	</div>
+	<div class="product_test">
+		
+		<br>
+		标签：智能开关，Broadlink，智能家居，WIFI
+
+		<br>
+		价格: 179元
+
+		<br/>
+
+	</div>
+</div>
+
+<div class="botbar">
+	<div class="botbarleft">
+		<!-- 放微店的链接在 href 的两个引号里面 -->
+		<a href="http://weidian.com/item.html?itemID=1773532964"><img src="./products_img/bot_bar_01.jpg" alt=""/></a>
+	</div>
+	<div class="botbarright">
+		<a href="../productlist.html"><img src="./products_img/bot_bar_02.jpg" alt=""/></a>
+	</div>
+</div>
+
+<div id="footer" class="beforeclick">
+	<img class="forbeauty" src="../img/network_img/footer/forbeauty.png" alt=""/>
+	<div class="aboutus">关于我们</div>
+	<div class="top">
+		<div class="subtop first">
+			<h4>公司简介
+				<br/>
+				AUTOINHOME
+			</h4>
+			<p>企业文化 COMPANY CULTURE
+				<br/>
+				品牌合作 BRAND
+				<br/>
+				合作伙伴 PARTNERS
+				<br/>
+				公司资质 COMPANY QUANTIFICATION
+			</p>
+		</div>
+		<div class="subtop second">
+			<h4>人才招聘
+				<br/>
+				CAREERS
+			</h4>
+			<p>加入我们 JOIN US</p>
+		</div>
+		<div class="subtop third">
+			<h4>联系我们
+				<br/>
+				CONTACT
+			</h4>
+			<p>copyright 2012-15 武汉智在家科技有限公司
+				<br/>
+				QQ： 1951057570	59519434
+				<br/>
+				咨询热线 6538 7897（CHINA）
+				<br/>
+				UPC：13010724
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="bot">
+		<img class="left_bot" src="../img/network_img/logo_white.png" alt=""/>
+		<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+		<div class="right_bot">
+			<a href=""><img src="../img/network_img/footer/wechat.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/QQ.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/weibo.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/facebook.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/twitter.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
