@@ -4,36 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>SIDAS 2016</title>
-		<meta name="description" content="SIDAS 2016 Conference" />
-		<meta name="keywords" content="SIDAS, SIDAS 2016, Wuhan" />
-		<meta name="author" content="SIDAS 2016, H.Y.Wang" />
-        <link href="./css/registration.css" rel="stylesheet" type="text/css" />
-        <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="./css/registration2.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="./css/cm.css" rel="stylesheet" type="text/css" media="all" />
-        <!--<link href="css/normalize.css" rel="stylesheet" type="text/css" media="all" />-->
-        <script src="./js/modernizr.custom.js"></script>
-		<script src="./js/jquery-1.11.1.min.js"></script>
-        <script src="./js/main.js"></script>
-        <script type="text/javascript">
-            //iOS Web APP中点击链接跳转到Safari 浏览器新标签页的问题 devework.com
-            //stanislav.it/how-to-prevent-ios-standalone-mode-web-apps-from-opening-links-in-safari
-            if(("standalone" in window.navigator) && window.navigator.standalone){
-                var noddy, remotes = false;
-                document.addEventListener('click', function(event) {
-                    noddy = event.target;
-                    while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
-                        noddy = noddy.parentNode;
-                    }
-                    if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
-                    {
-                        event.preventDefault();
-                        document.location.href = noddy.href;
-                    }
-                },false);
-            }
-        </script>
+		<title>VALSE 2016</title>
+		<meta name="description" content="VALSE 2016 Conference" />
+		<meta name="keywords" content="VALSE, VALSE 2016, Wuhan" />
+		<meta name="author" content="VALSE 2016, H.Y.Wang" />
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="icon" href="./favicon.ico">
+		<link rel="bookmark" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/registration.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
                 var poster = false;
@@ -81,27 +65,17 @@
                     hotel = false;
                     $('.hotel_time').css({'display':'none'});
                 });
-                $('#ieee_yes').click(function(){
-                    hotel = true;
-                    $('.ieee_num').css({'display':'block'});
-                });
-                $('#ieee_no').click(function(){
-                    hotel = false;
-                    $('.ieee_num').css({'display':'none'});
-                });
                 $('.closeBtn').click(function(){
                     $('.preview').css({'display':'none'});
                 });
                 $('#previewonlybtn').click(function(){
                     // if needed hasn't been filled
-                    if($('#name').val()=='' || $('#unit').val()=='' || $('#email').val()=='' || $('#phone_num').val()==''|| $('#file')[0].files.length <= 0){
+                    if($('#name').val()=='' || $('#unit').val()=='' || $('#email').val()=='' || $('#phone_num').val()==''){
                         $('.hidden_info').css({'display':'block'});
                         if($('#name').val()==''){$('#name').addClass('not_finished')}
                         if($('#unit').val()==''){$('#unit').addClass('not_finished')}
                         if($('#email').val()==''){$('#email').addClass('not_finished')}
                         if($('#phone_num').val()==''){$('#phone_num').addClass('not_finished')}
-                        if($('#file')[0].files.length <= 0){$('#photo').addClass('not_finished')}
-                        if($('#ieee_number').val()==''){$('#ieee_number').addClass('not_finished')}
                         return;
                     } else {
                         $('.hidden_info').css({'display':'none'});
@@ -109,7 +83,6 @@
                         $('#unit').removeClass('not_finished');
                         $('#email').removeClass('not_finished');
                         $('#phone_num').removeClass('not_finished');
-                        $('#ieee_number').removeClass('not_finished');
                     }
 
                     // show preview panel
@@ -183,39 +156,37 @@
         </script>
 	</head>
 	<body>
-    <!-- header -->
-    <div class="header" id="top">
-        <div class="container">
-            <div class="header-nav">
-                <nav class="navbar navbar-default">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar first-icon-bar"></span>
-                            <span class="icon-bar second-icon-bar"></span>
-                        </button>
-                        <div class="logo">
-                            <a class="navbar-brand" href="http://mclab.eic.hust.edu.cn/sidas2016/index.html" style="font-weight: 100!important; letter-spacing:-3px;"><i style="color: transparent" class="glyphicon glyphicon-plane" aria-hidden="true"></i><strong style="letter-spacing: -2px;">SIDAS</strong> 2016<span style="letter-spacing:2px">AN IEEE SPS Forum</span></a>
-                        </div>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <!--<li class="hvr-sweep-to-bottom active"><a href="index.html">Home</a></li>-->
-                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/team.html">Organizing Team</a></li>
-                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/speaker.html">Speakers</a></li>
-                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/researchHighlightsDemos.html">Research Highlights & Demos</a></li>
-                            <li class="hvr-sweep-to-bottom active"><a href="">Registration</a></li>
-                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/venue.html">Venue</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav>
-            </div>
+		<div class="nav htmleaf-content bgcolor-3">
+            <ul>
+                <a href="./index.html"><li>首页</li></a>
+                <a href="./committees.html"><li>组委会</li></a>
+                <a href="./program.html"><li>大会程序</li></a>
+                <a href="./panel.html"><li>论坛</li></a>
+                <a href="./speakers.html"><li>特邀讲者</li></a>
+                <a href="./posters.html"><li>墙报和演示</li></a>
+                <a href="./registration.html"><li id="onpage">会议注册</li></a>
+                <a href="./hotel.html"><li>交通和酒店</li></a>
+                <a href="./sponsors.html"><li>赞助商</li></a>
+                <a href="./download.html"><li>下载</li></a>
+                <li id="slider"></li>
+            </ul>
         </div>
-    </div>
-    <!-- //header -->
+        <div class="white"></div>
+        <div class="phoneNavBtn"></div>
+        <div class="poster">
+        	<div class="underbg" style="background-image: url('./img/pagebg/wallhaven-2.jpg')"></div>
+        	<div class="descrip">
+        		<div class="des_up">
+        			<span class="des_up1">VALSE </span><span class="des_up2">2016</span><span class="showInWide">　REGISTRATION</span>
+        		</div>
+        		<div class="des_down">
+        			<h2>REGISTRATION</h2>
+        		</div>
+        	</div>
+        </div>
+
+
+<!-- 
         <div class="sec sec3">
             <div class="secwraper">
                 <h2 class="panel_title">在线注册<span style="font-size: 0.6em;color: #999999; font-weight:100;"> 带 ☆ 为必填项</span></h2>
@@ -247,9 +218,6 @@
                                     <p>1. 照片用于签到，签到现场的人脸识别系统可以自动识别您，从而获得您到注册台领取资料的编号，大大加快签到过程；<br /><br />
                                         2. 照片要求：近期、免冠、正面、彩色证件照，要求照片不小于宽300x高400像素；<br /><br />
                                         3. 没有正确上传照片者可能需要排长队领取会议资料。</p>
-                                    <div id='preview' style="display: none">
-                                        <img id="previewImg" src="" width="250px" height='auto' style="position: absolute; margin-top: -210px; margin-left: 75px; text-align:center; overflow: hidden;" />
-                                    </div>
                                 </div>
                                 <input style="display: none;" id="file" type="file" name="file" onchange=" handle_files(this.files); ">
                             </fieldset>
@@ -306,14 +274,14 @@
                                 　　会议：ICCV, CVPR, ECCV, NIPS, ICML, IJCAI, AAAI, ACM MM(限长文) <br/>
                                 　　期刊：IEEE T PAMI/IP/NNLS/CSVT/MM, IJCV, JMLR, PR, CVIU, AI <br/>
                                 2. Demo可来自学术界或企业界，展示内容应与计算机视觉或机器学习相关。 <br/>
-                                3. SIDAS 2016 鼓励参会者踊跃报名，以加强学术交流。<br/>
-                                　若Poster和Demo的数量超过场地限制，Poster和Demo的最终选取将由SIDAS组委会决定。 <br/>
+                                3. VALSE 2016 鼓励参会者踊跃报名，以加强学术交流。<br/>
+                                　若Poster和Demo的数量超过场地限制，Poster和Demo的最终选取将由VALSE组委会决定。 <br/>
                             </p>
                         </div>
                         <div class="form-list poster_info" style="display: none">
                             <fieldset class="user_poster">
                                 <label class="list_sub">Poster简短介绍</label>
-                                <input id="poster_author" name="poster_author" style="margin-left: 31px;" type="text" placeholder="全部作者"/>
+                                <input id="poster_author" name="poster_author" type="text" placeholder="全部作者"/>
                                 <input id="poster_unit" name="poster_unit" type="text" placeholder="作者单位" style="margin-left: 168px"/>
                                 <input id="poster_title" name="poster_title" type="text" placeholder="题目" style="margin-left: 168px"/>
                                 <input id="poster_journal" name="poster_journal" type="text" placeholder="会议/期刊名" style="margin-left: 168px"/>
@@ -323,7 +291,7 @@
                         <div class="form-list demo_info" style="display: none">
                             <fieldset class="user_demo">
                                 <label class="list_sub">Demo简短介绍</label>
-                                <input id="demo_author" type="text" style="margin-left: 31px" placeholder="作者"/>
+                                <input id="demo_author" type="text" placeholder="作者"/>
                                 <input id="demo_unit" name="poster_unit" type="text" placeholder="作者单位" style="margin-left: 168px"/>
                                 <input id="demo_title" type="text" placeholder="题目" style="margin-left: 168px"/>
                                 <textarea id="demo_intro" type="text" placeholder="系统简介(3-5句话即可)"/></textarea>
@@ -336,7 +304,7 @@
                                 <input id="hotel_no" name="need_book_hotel" value="no" type="radio" checked="checked"><label for="hotel_no"> 不需要</label>
                                 <br><br>
                             </fieldset>
-                            <p class="message">仅限历届SIDAS大会讲者或Panel嘉宾、历届SIDAS大会主要组织者、SIDAS指导委员会委员、<br>SIDAS在线理事会VODB理事、SIDAS在线组委会VOOC委员填写</p>
+                            <p class="message">仅限历届VALSE大会讲者或Panel嘉宾、历届VALSE大会主要组织者、VALSE指导委员会委员、<br>VALSE在线理事会VODB理事、VALSE在线组委会VOOC委员填写</p>
                         </div>
                         <div class="form-list hotel_time" style="display: none">
                             <fieldset class="user_type">
@@ -420,23 +388,6 @@
                                 </span>
                             </fieldset>
                         </div>
-
-                        <div class="form-list if_ieee">
-                            <fieldset class="user_ieee">
-                                <label class="list_sub">是否为 IEEE MEMBER</label>
-                                <input id="ieee_yes" name="if_ieee" value="yes" type="radio"><label for="ieee_yes"> 是</label>
-                                <input id="ieee_no" name="if_ieee" value="no" type="radio" checked="checked"><label for="ieee_no"> 否</label>
-                                <br><br>
-                            </fieldset>
-                            <p class="message">如果您是 IEEE MEMBER，请选择“是”并在下方填写 IEEE NUMBER</p>
-                        </div>
-                        <div class="form-list ieee_num" style="display: none">
-                            <fieldset class="user_type">
-                                <label class="list_sub">IEEE NUMBER</label>
-                                <input class="list_sub" id="ieee_number" name="ieee_number" type="text"/>
-                            </fieldset>
-                        </div>
-
                         <div class="form-btn">
                             <div id="previewonlybtn" class="previewbtn">预览并提交</div>
                             <div class="hidden_info" style="display: none;">请完成必填项</div>
@@ -472,72 +423,33 @@
                 
                 <input id="submit" class="button previewbtn" value="确认并提交" type="submit">
             </div>
+        </div> -->
+
+        <div class="sec sec1">
+            <p style="text-align:center; font-size:2em; font-weight: 200; line-height:5em; background-color: white;">会议注册已关闭</p>
         </div>
-
-        <!--<div class="sec sec1">-->
-            <!--<div class="secwraper">-->
-                <!--<h2 class="panel_title">SIDAS 2016 参会须知（待定）</h2>-->
-                <!--<div class="panel_all">-->
-                    <!--<p class="panel_list">SIDAS 2016 会议须知请 <a href=""> <i class="icon-book"></i>点击阅读 </a>（暂未发布）</p>-->
-                    <!--<p class="panel_list">SIDAS 2016 注册请 <a href=""> <i class="icon-download-alt"></i>下载会议注册表</a>（暂未发布）并e-mail至邮箱：<a href="mailto:hust.aaa@hust.edu.cn"><i class="icon-mail-forward"></i>XXXX@xxxx.edu.cn</a></p>-->
-                    <!--<p class="panel_list">有任何疑问欢迎致电 <a href="tel:13071234567"> <i class="icon-phone"></i>xxxxxxxxxxx </a> 或e-mail至邮箱：<a href="mailto:questions@hust.edu.cn"><i class="icon-mail-forward"></i>xxxx@xxxx.edu.cn</a></p>-->
-
-                <!--</div>-->
-                <!--<div class="clearfix"></div>-->
-            <!--</div>-->
-        <!--</div>-->
 
         <div class="sec sec2">
             <div class="secwraper">
                 <h2 class="panel_title">注意事项</h2>
                 <div class="panel_all">
-                    <p class="panel_list">1. 如需要修改注册信息，请重新注册。注册信息将以邮箱为唯一注册ID，组委会将筛选最新的注册信息。</p>
-
-                    <p class="panel_list">2. 请参加 SIDAS 2016 的人员在前往开会地点时注意旅途安全。届时，若您准备前往武汉周边旅游，请规划好您的行程，选择安全可靠的出行工具，游玩过程中请注意安全。</p>
-
+                    <p class="panel_list">1. 如需咨询，请发邮件至：<a href="mailto:valse2016@qq.com">valse2016@qq.com</a></p>
+                    <p class="panel_list">2. VALSE 2016 不收取注册费，也不负责安排食宿等。研讨会特邀讲者和指导委员会成员如需要，组委会可代为预定酒店，但费用仍需自理。</p>
+                    <p class="panel_list">3. 请参加 VALSE 2016 的人员在前往开会地点时注意旅途安全。届时，若您准备前往武汉周边旅游，请规划好您的行程，选择安全可靠的出行工具，游玩过程中请注意安全。</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
         </div>
-    <!--footer-->
-    <div class="footer">
-        <div class="container">
-            <div class="col-md-2 ftr_navi ftr">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#" class="scroll">About</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 ftr_navi ftr">
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="#">IEEE Signal Processing Society</a></li>
-                    <li><a href="#">ChinaSIP 2015</a></li>
-                    <li><a href="http://mclab.eic.hust.edu.cn/SIDAS2016">SIDAS2016</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 get_in_touch ftr">
-                <h3>Contact</h3>
-                <p>SHAN Shiguang</p>
-                <p>Wuhan, China</p>
-                <a href="mailto:info@example.com">info@example.com</a>
-            </div>
-            <div class="col-md-4 ftr-logo">
-                <a href="index.html"><h3>SIDAS <span> A CHINASIP EVENT</span></h3></a>
-                <ul>
-                    <li><a href="#" class="facebook"> </a></li>
-                    <li><a href="#" class="twitter"> </a></li>
-                    <li><a href="#" class="g"> </a></li>
-                    <li><a href="#" class="in"> </a></li>
-                </ul>
-                <p>© 2016 SIDAS</p>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-    <a href="#top"><div class="rt_top">^</div></a>
-    <!--footer-->
+
+		<div class="transparent"></div>
+
+		<div class="pagefooter">
+			<div class="footercontent">
+				<p>© VALSE 2016 All rights reserved.</p>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/nav.js"></script>
+		<script type="text/javascript" src="js/poster_parallel_scroll.js"></script>
 	</body>
 </html>

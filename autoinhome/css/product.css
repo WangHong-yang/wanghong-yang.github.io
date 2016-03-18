@@ -167,11 +167,14 @@ nav {
     color: darkturquoise;
 }
 .product_img img {
-    width: 60%;
+    width: auto;
+    max-width: 100%;
+}
+img {
     max-width: 100%;
 }
 .product_view, .product_scenario, .product_test {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 30px;
 }
 .product_video {
