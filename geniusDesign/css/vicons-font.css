@@ -27,6 +27,7 @@
 .icon::before {
 	display: inline-block;
 	width: 100%;
+	height: 20px;
 }
 
 .icon-box:before {

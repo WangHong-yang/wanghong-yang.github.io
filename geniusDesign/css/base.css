@@ -35,7 +35,7 @@ body {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 1.2;
-	font-family: 'Englebert', cursive;
+	font-family:  cursive, 'Englebert';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow: hidden;
