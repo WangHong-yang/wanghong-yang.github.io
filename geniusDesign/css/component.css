@@ -206,9 +206,25 @@ ul.stack__titles {
 }
 
 .demo-3 .morph-shape svg {
-	fill: #A2CD72;
+	fill: #F57C00;
 }
 
 .demo-3.navigate-next .morph-shape svg {
-	fill: #95C264;
+	fill: #EF6C00;
+}
+
+.demo-4 .morph-shape svg {
+	fill: #E64A19;
+}
+
+.demo-4.navigate-next .morph-shape svg {
+	fill: #D84315;
+}
+
+.demo-5 .morph-shape svg {
+	fill: #C2185B;
+}
+
+.demo-5.navigate-next .morph-shape svg {
+	fill: #AD1457;
 }
