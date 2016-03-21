@@ -165,13 +165,37 @@ ul.stack__titles {
 	-webkit-transform: translate3d(0, 0, -600px);
 	transform: translate3d(0, 0, -600px);
 }
-
 .demo-2.navigate-next .container {
+	-webkit-transition-duration: 0.45s;
+	transition-duration: 0.45s;
+	-webkit-transform: translate3d(0, 0, -600px);
+	transform: translate3d(0, 0, -600px);
+}
+.demo-3.navigate-next .container {
+	-webkit-transition-duration: 0.45s;
+	transition-duration: 0.45s;
+	-webkit-transform: translate3d(0, 0, -600px);
+	transform: translate3d(0, 0, -600px);
+}
+.demo-4.navigate-next .container {
+	-webkit-transition-duration: 0.45s;
+	transition-duration: 0.45s;
+	-webkit-transform: translate3d(0, 0, -600px);
+	transform: translate3d(0, 0, -600px);
+}
+.demo-5.navigate-next .container {
+	-webkit-transition-duration: 0.45s;
+	transition-duration: 0.45s;
+	-webkit-transform: translate3d(0, 0, -600px);
+	transform: translate3d(0, 0, -600px);
+}
+
+/*.demo-2.navigate-next .container {
 	-webkit-transition-duration: 0.45s;
 	transition-duration: 0.45s;
 	-webkit-transform: rotate3d(-0.5, 0, 1, -6deg) translate3d(0, 0, -600px);
 	transform: rotate3d(-0.5, 0, 1, -6deg) translate3d(0, 0, -600px);
-}
+}*/
 
 .demo-2 .morph-shape svg {
 	fill: #A2CD72;
