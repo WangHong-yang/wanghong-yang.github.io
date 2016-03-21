@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SIDAS 2016</title>
+        <meta name="description" content="SIDAS 2016 Conference" />
+        <meta name="keywords" content="SIDAS, SIDAS 2016, Wuhan" />
+        <meta name="author" content="SIDAS 2016, H.Y.Wang" />
+        <link rel="stylesheet" type="text/css" href="../static/css/cm.css" />
+        <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" type="text/css" href="../static/css/registration.css" />
+        <link rel="stylesheet" type="text/css" href="../static/css/registration2.css" />
+        <script src="../static/js/modernizr.custom.js"></script>
+        <script src="../static/js/jquery-1.11.1.min.js"></script>
+        <script src="../static/js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+                var poster = false;
+                var demo = false;
+                var hotel = false;
+                $('#register_type').change(function(){
+                    if($("#register_type").find("option:selected").text()=='Ph.D Student' || $("#register_type").find("option:selected").text()=='Master Student' || $("#register_type").find("option:selected").text()=='Undergraduate Student'){
+                        $('.for_tutor').css({'display':'none'});
+                        $('.for_student').css({'display':'block'});
+                    } else {
+                        $('.for_tutor').css({'display':'block'});
+                        $('.for_student').css({'display':'none'});
+                    }
+                    if($("#register_type").find("option:selected").text()=='Invited Speaker' || $("#register_type").find("option:selected").text()=='Enterprise Employee' || $("#register_type").find("option:selected").text()=='Faculty'){
+                        $('.if_invited').css({'display':'block'});
+                        $('.hotel_time').css({'display':'block'});
+                    } else {
+                        $('.if_invited').css({'display':'none'});
+                        $('.hotel_time').css({'display':'none'});
+                    }
+                });
+                $('#has_poster').click(function(){
+                    if($('#has_poster').is(':checked')) {
+                        poster = true;
+                        $('.poster_info').css({'display':'block'});
+                    } else {
+                        poster = false;
+                        $('.poster_info').css({'display':'none'});
+                    }
+                });
+                $('#has_demo').click(function(){
+                    if($('#has_demo').is(':checked')) {
+                        demo = true;
+                        $('.demo_info').css({'display':'block'});
+                    } else {
+                        demo = false;
+                        $('.demo_info').css({'display':'none'});
+                    }
+                });
+                $('#need_book_hotel').click(function(){
+                    hotel = true;
+                    $('.hotel_time').css({'display':'block'});
+                });
+                $('#hotel_no').click(function(){
+                    hotel = false;
+                    $('.hotel_time').css({'display':'none'});
+                });
+                $('#ieee_yes').click(function(){
+                    hotel = true;
+                    $('.ieee_num').css({'display':'block'});
+                });
+                $('#ieee_no').click(function(){
+                    hotel = false;
+                    $('.ieee_num').css({'display':'none'});
+                });
+                $('.closeBtn').click(function(){
+                    $('.preview').css({'display':'none'});
+                });
+                $('#previewonlybtn').click(function(){
+                    // if needed hasn't been filled
+                    if($('#name').val()=='' || $('#unit').val()=='' || $('#email').val()=='' || $('#phone_num').val()=='' ){
+                        $('.hidden_info').css({'display':'block'});
+                        if($('#name').val()==''){$('#name').addClass('not_finished')}
+                        if($('#unit').val()==''){$('#unit').addClass('not_finished')}
+                        if($('#email').val()==''){$('#email').addClass('not_finished')}
+                        if($('#phone_num').val()==''){$('#phone_num').addClass('not_finished')}
+                        
+                        if($('#ieee_number').val()==''){$('#ieee_number').addClass('not_finished')}
+                        return;
+                    } else {
+                        $('.hidden_info').css({'display':'none'});
+                        $('#name').removeClass('not_finished');
+                        $('#unit').removeClass('not_finished');
+                        $('#email').removeClass('not_finished');
+                        $('#phone_num').removeClass('not_finished');
+                        $('#ieee_number').removeClass('not_finished');
+                    }
+                    // show preview panel
+                    $('.preview').css({'display':'block'});
+                    // add info into preview
+                    $('.reg_type').text($('#register_type').find('option:selected').text());
+                    $('.reg_name').text($('#name').val());
+                    $('.reg_org').text($('#unit').val());
+                    $('.reg_email').text($('#email').val());
+                    $('.reg_addr').text($('#address').val());
+                    $('.reg_stat').text($('#academic_title').val());
+                    $('.reg_supervisor').text($('#tutor').val());
+                    $('.reg_phone').text($('#phone_num').val());
+                    $('.reg_poster_author').text($('#poster_author').val());
+                    $('.reg_poster_unit').text($('#poster_org').val());
+                    $('.reg_poster_title').text($('#poster_title').val());
+                    $('.reg_poster_journal').text($('#poster_journal').val());
+                    $('.reg_poster_time').text($('#poster_time').val());
+                    $('.reg_demo_author').text($('#demo_author').val());
+                    $('.reg_demo_unit').text($('#demo_org').val());
+                    $('.reg_demo_title').text($('#demo_title').val());
+                    $('.reg_demo_intro').text($('#demo_intro').val());
+                    $('.reg_arrive_time').text($('#arrival_time').find('option:selected').text());
+                    $('.reg_leave_time').text($('#leaving_time').find('option:selected').text());
+                    // hide info of improper group
+                    if($("#register_type").find("option:selected").text()=='Ph.D Student' || $("#register_type").find("option:selected").text()=='Master Student' || $("#register_type").find("option:selected").text()=='Undergraduate Student'){
+                        $('.reg_info6').css({'display':'none'});
+                        $('.reg_info7').css({'display':'block'});
+                    } else {
+                        $('.reg_info6').css({'display':'block'});
+                        $('.reg_info7').css({'display':'none'});
+                    }
+                    if($("#register_type").find("option:selected").text()=='Invited Speaker' || $("#register_type").find("option:selected").text()=='Enterprise Employee' || $("#register_type").find("option:selected").text()=='Faculty'){
+                        $('.reg_info16').css({'display':'block'});
+                    } else {
+                        $('.reg_info16').css({'display':'none'});
+                    }
+                    // hide info of poster/demo if not chosen
+                    if($('#has_poster').is(':checked')==false) {
+                        $('.reg_info9').css({'display':'none'});
+                        $('.reg_info9_1').css({'display':'none'});
+                        $('.reg_info10').css({'display':'none'});
+                        $('.reg_info11').css({'display':'none'});
+                        $('.reg_info12').css({'display':'none'});
+                    } else {
+                        $('.reg_info9').css({'display':'block'});
+                        $('.reg_info9_1').css({'display':'block'});
+                        $('.reg_info10').css({'display':'block'});
+                        $('.reg_info11').css({'display':'block'});
+                        $('.reg_info12').css({'display':'block'});
+                    }
+                    if($('#has_demo').is(':checked')==false) {
+                        $('.reg_info13').css({'display':'none'});
+                        $('.reg_info13_1').css({'display':'none'});
+                        $('.reg_info14').css({'display':'none'});
+                        $('.reg_info15').css({'display':'none'});
+                    } else {
+                        $('.reg_info13').css({'display':'block'});
+                        $('.reg_info13_1').css({'display':'block'});
+                        $('.reg_info14').css({'display':'block'});
+                        $('.reg_info15').css({'display':'block'});
+                    }
+                    // no need hotel case
+                    if($('#hotel_no').is(':checked')==true) {
+                        $('.reg_info16').css({'display':'none'});
+                    } else {
+                        $('.reg_info16').css({'display':'block'});
+                    }
+                });
+                $('#submit').click(function(){
+                    $('#submitBtn').click();
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <div class="header" id="top">
+        <div class="container">
+            <div class="header-nav">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar first-icon-bar"></span>
+                            <span class="icon-bar second-icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a class="navbar-brand" href="http://mclab.eic.hust.edu.cn/sidas2016/index.html" style="font-weight: 100!important; letter-spacing:-3px;"><i style="color: transparent" class="glyphicon glyphicon-plane" aria-hidden="true"></i><strong style="letter-spacing: -2px;">SIDAS</strong> 2016<span style="letter-spacing:2px">AN IEEE SPS Forum</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <!--<li class="hvr-sweep-to-bottom active"><a href="index.html">Home</a></li>-->
+                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/team.html">Organizing Team</a></li>
+                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/speaker.html">Speakers</a></li>
+                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/researchHighlightsDemos.html">Research Highlights & Demos</a></li>
+                            <li class="hvr-sweep-to-bottom active"><a href="">Registration</a></li>
+                            <li class="hvr-sweep-to-bottom"><a href="http://mclab.eic.hust.edu.cn/sidas2016/venue.html">Venue</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+        <div class="sec sec3">
+            <div class="secwraper">
+                <h2 class="panel_title">New Registration<span style="font-size: 0.6em;color: #FF0000; font-weight:100;"> ☆ = required information</span></h2>
+                
+                <div class="panel_all" id="sign-up-methods">
+                    <form method="post" enctype="multipart/form-data" action="/">
+                        <div class="form-list">
+                            <fieldset class="user_type">
+                                <label class="list_sub">☆ Registration Type</label>
+                                <select class id="register_type" name="register_type">
+                                    <option value="speaker">Invited Speaker</option>
+                                    <option value="teacher">Faculty</option>
+                                    <option value="employee">Enterprise Employee</option>
+                                    <option value="phd">Ph.D Student</option>
+                                    <option value="master">Master Student</option>
+                                    <option value="undergraduate">Undergraduate Student</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_name">
+                                <label class="list_sub">☆ Name</label>
+                                <input class="list_sub" id="name" name="name" type="text"/>
+                            </fieldset>
+                        </div>
+                        <!-- <div class="form-list">
+                            <fieldset class="user_photo">
+                                <label class="list_sub">☆ Photo</label>
+                                <div id="photo" onclick="file.click()">
+                                    <div id="text">
+                                    <p>点击上传登记照片<br/>1）照片用于签到，签到现场的人脸识别系统可以自动识别您，从而获得您到注册台领取资料的编号，从而大大加快签到过程；<br/>2）照片要求：近期、免冠、正面、彩色证件照，要求照片不小于宽300x高400像素；<br/>3）没有正确上传照片者可能需要排长队领取会议资料。</p>
+                                    </div>
+                                    <div id='preview' style="display: none">
+                                        <img id="previewImg" src="" width="250px" height='auto' style="margin-top: 10px; margin-left: 75px; text-align:center; overflow: hidden;" />
+                                    </div>
+                                </div>
+                                <input style="display: none;" id="file" type="file" name="file" onchange=" handle_files(this.files); ">
+                            </fieldset>
+                        </div> -->
+                        <div class="form-list">
+                            <fieldset class="user_org">
+                                <label class="list_sub">☆ Institute</label>
+                                <input class="list_sub" id="unit" name="unit" type="text"/>
+                            </fieldset>
+                            <p class="message">Please fill in the full name of your institute. </p>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_email">
+                                <label class="list_sub">☆ Email</label>
+                                <input class="list_sub" id="email" name="email" type="text"/>
+                            </fieldset>
+                            <p class="message">An email can be registered only once.</p>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_addr">
+                                <label class="list_sub">Address</label>
+                                <input class="list_sub" id="address" name="address" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list for_tutor">
+                            <fieldset class="user_title">
+                                <label class="list_sub">Title</label>
+                                <input class="list_sub" id="academic_title" name="academic_title" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list for_student" style="display: none">
+                            <fieldset class="user_supervisor">
+                                <label class="list_sub">Supervisor</label>
+                                <input class="list_sub" id="tutor" name="tutor" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_mobiphone">
+                                <label class="list_sub">☆ Phone Number</label>
+                                <input class="list_sub" id="phone_num" name="phone_num" type="text"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list">
+                            <fieldset class="user_poster_demo">
+                                <label class="list_sub">Are your presenting Poster and/or Demo?</label>
+                                <input id="has_poster" name="has_poster" type="checkbox"><label for="has_poster"> Poster</label>
+                                <input id="has_demo" name="has_demo" type="checkbox"><label for="has_demo"> Demo</label>
+                            </fieldset>
+                            <p class="message">
+                                1. Papers for posters should be published or accepted after 2014 on journals or conferences about signal processing. <br>
+                                2. Demos may come from the academic or corporate community, presenting contents about signal processing.<br>
+                                Note: in case the number of posters and demos exceeds site constraints, the organizing team of SIDAS 2016 reserves the rights of determining whether to accept a poster / demo.<br>
+                                <!-- 1. Poster所涉论文需为2014年以来发表或录用于以下会议或期刊、且与视觉与学习相关的论文： <br/>
+                                　　会议：ICCV, CVPR, ECCV, NIPS, ICML, IJCAI, AAAI, ACM MM(限长文) <br/>
+                                　　期刊：IEEE T PAMI/IP/NNLS/CSVT/MM, IJCV, JMLR, PR, CVIU, AI <br/>
+                                2. Demo可来自学术界或企业界，展示内容应与计算机视觉或机器学习相关。 <br/>
+                                3. SIDAS 2016 鼓励参会者踊跃报名，以加强学术交流。<br/>
+                                　若Poster和Demo的数量超过场地限制，Poster和Demo的最终选取将由SIDAS组委会决定。 <br/> -->
+                            </p>
+                        </div>
+                        <div class="form-list poster_info" style="display: none">
+                            <fieldset class="user_poster">
+                                <label class="list_sub">Poster Information</label>
+                                <input id="poster_author" name="poster_author" type="text" placeholder="Authors"/>
+                                <input id="poster_title" name="poster_title" type="text" placeholder="Paper Title" style="margin-left: 168px"/>
+                                <input id="poster_journal" name="poster_journal" type="text" placeholder="Conference / Journal" style="margin-left: 168px"/>
+                                <input id="poster_time" name="poster_time" type="text" placeholder="Accepted / Publish Time" style="margin-left: 168px"/>
+                                <input id="poster_org" name="poster_org" type="text" placeholder="Author Institute" style="margin-left: 168px"/>
+                            </fieldset>
+                        </div>
+                        <div class="form-list demo_info" style="display: none">
+                            <fieldset class="user_demo">
+                                <label class="list_sub">Demo Information</label>
+                                <input id="demo_author" name="demo_author" type="text" placeholder="Authors"/>
+                                <input id="demo_title" name="demo_title" type="text" placeholder="Demo Title" style="margin-left: 168px"/>
+                                <input id="demo_org" name="demo_org" type="text" placeholder="Author Institute" style="margin-left: 168px"/>
+                                <textarea id="demo_intro" name="demo_intro" type="text" placeholder="Demo Introduction"/></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="form-list if_invited">
+                            <fieldset class="user_hotel">
+                                <label class="list_sub">Do you need to reserve a hotel room?</label>
+                                
+                                <input id="need_book_hotel" name="need_book_hotel" value="1" type="radio"><label for="need_book_hotel"> Yes</label>
+                                <input id="hotel_no" name="need_book_hotel" value="0" type="radio" checked="checked"><label for="hotel_no"> No</label>
+                                <p  class="message"> 
+                                    Note: We only reserve hotel rooms for invited speakers and SIDAS organizing team.
+                                    <!-- 备注：仅限历届SIDAS大会讲者或Panel嘉宾、历届SIDAS大会主要组织者、历届讲者、SIDAS指导委员会委员、SIDAS在线理事会VODB理事、SIDAS在线组委会VOOC委员填写） -->
+                                </p>
+                            </fieldset>
+                        </div>
+                        <div class="form-list hotel_time" style="display: none">
+                            <fieldset class="user_type">
+                                <label class="list_sub">Arrival Time</label>
+                                <span style="padding: 18px 10px 0 10px">
+                                    April 2016,
+                                    <select id="arrival_time" name="arrival_time">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                    
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="form-list hotel_time" style="display: none">
+                            <fieldset class="user_type">
+                                <label class="list_sub">Leaving Time</label>
+                                <span style="padding: 18px 10px 0 10px">
+                                    April 2016, 
+                                    <select id="leaving_time" name="leaving_time">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                    
+                                </span>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-list if_ieee_member">
+                            <fieldset class="user_ieee">
+                                <label class="list_sub">Are you an IEEE MEMBER?</label>
+                                <input id="ieee_yes" name="if_ieee" value="yes" type="radio"><label for="ieee_yes"> Yes</label>
+                                <input id="ieee_no" name="if_ieee" value="no" type="radio" checked="checked"><label for="ieee_no"> No</label>
+                                <br><br>
+                            </fieldset>
+                            <p class="message">If you are an IEEE MEMBER, please select Yes and fill your IEEE NUMBER below.</p>
+                        </div>
+                        <div class="form-list ieee_num" style="display: none">
+                            <fieldset class="user_type">
+                                <label class="list_sub">IEEE NUMBER</label>
+                                <input class="list_sub" id="ieee_number" name="ieee_number" type="text"/>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-btn">
+                            <div id="previewonlybtn" class="previewbtn">Overview</div>
+                            <div class="hidden_info" style="display: none;">Please fill all required information.</div>
+                            <input id="submitBtn" name="submit" class="button" value="注 册" type="submit" style="display: none;">
+                        </div>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="preview">
+            <div class="closeBtn">✕</div>
+            <div class="previewwraper">
+                <h4>Registration Information Overview</h4>
+                <p class="reg_info1">Registration Type: <span class="reg_type"></span></p>
+                <p class="reg_info2">Name: <span class="reg_name"></span></p>
+                <p class="reg_info3">Institute: <span class="reg_org"></span></p>
+                <p class="reg_info4">Email：<span class="reg_email"></span></p>
+                <p class="reg_info5">Address：<span class="reg_addr"></span></p>
+                <p class="reg_info6">Title：<span class="reg_stat"></span></p>
+                <p class="reg_info7">Supervisor：<span class="reg_supervisor"></span></p>
+                <p class="reg_info8">Phone Number：<span class="reg_phone"></span></p>
+                <p class="reg_info9">Poster Author：<span class="reg_poster_author"></span></p>
+                <p class="reg_info9_1">Poster Institute：<span class="reg_poster_org"></span></p>
+                <p class="reg_info10">Poster Title：<span class="reg_poster_title"></span></p>
+                <p class="reg_info11">Poster Conference / Journal：<span class="reg_poster_journal"></span></p>
+                <p class="reg_info12">Poster accepeted / published time：<span class="reg_poster_time"></span></p>
+                <p class="reg_info13">Demo Author：<span class="reg_demo_author"></span></p>
+                <p class="reg_info13_1">Demo Institute：<span class="reg_demo_org"></span></p>
+                <p class="reg_info14">Demo Title：<span class="reg_demo_title"></span></p>
+                <p class="reg_info15">Demo Introduction<span class="reg_demo_intro"></span></p>
+                <p class="reg_info16">Hotel room will be reserved from2016.4.<span class="reg_arrive_time"></span> ~ 2016.4.<span class="reg_leave_time"></span></p>
+                
+                <input id="submit" class="button previewbtn" value="Confirmed and Submit" type="submit">
+            </div>
+        </div>
+        <!--<div class="sec sec1">-->
+        <!--<div class="secwraper">-->
+        <!--<h2 class="panel_title">SIDAS 2016 参会须知（待定）</h2>-->
+        <!--<div class="panel_all">-->
+        <!--<p class="panel_list">SIDAS 2016 会议须知请 <a href=""> <i class="icon-book"></i>点击阅读 </a>（暂未发布）</p>-->
+        <!--<p class="panel_list">SIDAS 2016 注册请 <a href=""> <i class="icon-download-alt"></i>下载会议注册表</a>（暂未发布）并e-mail至邮箱：<a href="mailto:hust.aaa@hust.edu.cn"><i class="icon-mail-forward"></i>XXXX@xxxx.edu.cn</a></p>-->
+        <!--<p class="panel_list">有任何疑问欢迎致电 <a href="tel:13071234567"> <i class="icon-phone"></i>xxxxxxxxxxx </a> 或e-mail至邮箱：<a href="mailto:questions@hust.edu.cn"><i class="icon-mail-forward"></i>xxxx@xxxx.edu.cn</a></p>-->
+        <!--</div>-->
+        <!--<div class="clearfix"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="sec sec2">
+            <div class="secwraper">
+                <h2 class="panel_title">Additional Information</h2>
+                <div class="panel_all">
+                    <p class="panel_list">
+                        1. Disclaimer: <br>
+                        By registering for SIDAS 2016, I agree to abide by any decision of the organizers and event hosts as to any aspect of my participation in this event, including their decision to suspend my participation for any reason whatsoever. 
+                    </p>
+                    <p class="panel_list">
+                        <!-- 1. 如需要修改注册信息，请重新注册。注册信息将以邮箱为唯一注册ID，组委会将筛选最新的注册信息。 -->
+                        2. Information Update: <br>
+                        To revise your information, please to register again. The SIDAS 2016 organizing team will only consider the latest registration information according to the email address.
+                    </p>
+                    <p class="panel_list">
+                        <!-- 2. SIDAS 2016 不收取注册费，也不负责安排食宿等。研讨会Invited Speaker和指导委员会成员如需要，组委会可代为预定酒店，但费用仍需自理。 -->
+                        3. Fee: <br>
+                        SIDAS 2016 is <strong>free</strong> of charge. We offer hotel room reserving service only for invited speakers and SIDAS 2016 organizing team at their own expense.
+                    </p>
+                    <!-- <p class="panel_list">
+                       
+                        4. Safety:<br>
+                        If you are ready to go travel to Wuhan, please plan your itinerary, choose safe and reliable travel tools, and pay attention to safety all the time.
+                    </p> -->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+
+    </div>
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-2 ftr_navi ftr">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="scroll">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr_navi ftr">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">IEEE Signal Processing Society</a></li>
+                    <li><a href="#">ChinaSIP 2015</a></li>
+                    <li><a href="http://mclab.eic.hust.edu.cn/SIDAS2016">SIDAS2016</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 get_in_touch ftr">
+                <h3>Contact</h3>
+                <p>SHAN Shiguang</p>
+                <p>Wuhan, China</p>
+                <a href="mailto:info@example.com">info@example.com</a>
+            </div>
+            <div class="col-md-4 ftr-logo">
+                <a href="index.html"><h3>SIDAS <span> A CHINASIP EVENT</span></h3></a>
+                <ul>
+                    <li><a href="#" class="facebook"> </a></li>
+                    <li><a href="#" class="twitter"> </a></li>
+                    <li><a href="#" class="g"> </a></li>
+                    <li><a href="#" class="in"> </a></li>
+                </ul>
+                <p>© 2016 SIDAS</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <a href="#top"><div class="rt_top">^</div></a>
+    <!--footer-->
+</body>
+</html>
