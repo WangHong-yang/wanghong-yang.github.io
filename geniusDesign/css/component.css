@@ -204,3 +204,11 @@ ul.stack__titles {
 .demo-2.navigate-next .morph-shape svg {
 	fill: #95C264;
 }
+
+.demo-3 .morph-shape svg {
+	fill: #A2CD72;
+}
+
+.demo-3.navigate-next .morph-shape svg {
+	fill: #95C264;
+}
