@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IEEE SPS SIDAS 2016 EVENT</title>
+<!-- for-mobile-apps -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="SIDAS 2016, SIDAS2016, CHINASIP, SPS" />
+<meta name="author" content="Hongyang Wang">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript">
+		//iOS Web APP中点击链接跳转到Safari 浏览器新标签页的问题 devework.com
+		//stanislav.it/how-to-prevent-ios-standalone-mode-web-apps-from-opening-links-in-safari
+		if(("standalone" in window.navigator) && window.navigator.standalone){
+			var noddy, remotes = false;
+			document.addEventListener('click', function(event) {
+				noddy = event.target;
+				while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+					noddy = noddy.parentNode;
+				}
+				if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+				{
+					event.preventDefault();
+					document.location.href = noddy.href;
+				}
+			},false);
+		}
+	</script>
+	<script type="text/javascript" language="javascript">   
+		// function iFrameHeight() {   
+		// var ifm= document.getElementById("iframepage");   
+		// var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;   
+		// if(ifm != null && subWeb != null) {
+		//    ifm.height = subWeb.body.scrollHeight;
+		//    ifm.width = subWeb.body.scrollWidth;
+		// }   
+		// }   
+	</script>
+</head>
+	
+<body>
+	<iframe src="http://122.205.5.5:8231/" id="iframepage" scrolling="yes" width="100%" height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" onLoad="iFrameHeight()"></iframe>
+</body>
+</html>

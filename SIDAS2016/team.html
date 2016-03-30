@@ -14,6 +14,21 @@
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/team.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <link rel="stylesheet" type="text/css" href="css/normalize2.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/linkstyles.css" /> -->
+<style> /* Firefox seems to have issues loading the clip path from inside the CSS */
+	.link--urpi::before {
+		-webkit-clip-path: url(#cp_up); 
+		clip-path: url(#cp_up);
+	}
+
+	.link--urpi::after {
+		-webkit-clip-path: url(#cp_down); 
+		clip-path: url(#cp_down);
+	}
+</style>
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -74,260 +89,83 @@
 		</div>
 	</div>
 <!-- //header -->
-<!-- banner -->
-	<div class="banner">
-		<div class="banner-left">
-			<h1>IEEE SIGNAL AND DATA SCIENCE FORUM</h1>
-			<p>24-26 April 2016<br>Wuhan, China</p>
-			<div class="more">
-				<a href="#intro">MORE INFO</a>
-			</div>
-		</div>
-		<div class="banner-right">
-			<div class="banner-right1">
-				<img src="images/bg2.jpg" alt=" " class="img-responsive" />
-				<div class="banner-right-hov">
-					<h2>News</h2>
-					<!-- <form>
-						<input type="text" placeholder="Email Address" required=" ">
-						<input type="submit" value="Subscribe" >
-					</form> -->
-					<div class="news_content">
-						<p><span style="">2016.2.22</span> Online registration to be opened soon</p>
-						<p><span style="">2016.2.15</span> 20+ invited speakers confirmed</p>
-						<p><span style="">2016.1.30</span> Website Online</p>
+<!-- organizing team -->
+<!-- <div class="grid__item">
+	<a class="link link--takiri" href="#">BAI Xiang <i style="font-size:0.3em"> HUST</i><span>Click and Visit Homepage!</span></a>
+</div> -->
+<div class="banner-bottom" id="intro">
+	<div class="container">
+		<h3>Organizing Team</h3>
+		<br>
+		<div class="eveniet">
+			<ul>
+				<li><span>General Chairs</span></li>
+				<div class="simplePL">
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://www.jdl.ac.cn/user/sgshan/index_en.htm"><img class="perpic" src="./images/personnel/shiguang.jpeg" alt=""></a></div>
+						<h4 class="pername"><a href="http://www.jdl.ac.cn/user/sgshan/index_en.htm">Shiguang SHAN</a></h4>
+						<p class="perinsti">CAS</p>
+					</div>
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://lena.tamu.edu/"><img class="perpic" src="./images/personnel/zixiang.jpeg" alt=""></a></div>
+						<h4 class="pername"><a href="http://lena.tamu.edu/">Zixiang XIONG</a></h4>
+						<p class="perinsti">Texas A&M U.& Guest Prof. @ HUST</p>
+					</div>
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="https://www.researchgate.net/profile/Jingdong_Chen"><img class="perpic" src="./images/personnel/jingdong.jpg" alt=""></a></div>
+						<h4 class="pername"><a href="https://www.researchgate.net/profile/Jingdong_Chen">Jingdong CHEN</a></h4>
+						<p class="perinsti">NWPU, formerly with Bell Lab</p>
+					</div>
+				</div>
 
+				<li><span>Technical Chairs</span></li>
+				<div class="simplePL">
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://mclab.eic.hust.edu.cn/~xbai/"><img class="perpic" src="./images/personnel/baixiang.jpg" alt=""></a></div>
+						<h4 class="pername"><a href="http://mclab.eic.hust.edu.cn/~xbai/">Xiang BAI</a></h4>
+						<p class="perinsti">HUST</p>
+					</div>
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://sydney.edu.au/engineering/electrical/people/dong.xu/index.html"><img class="perpic" src="./images/personnel/dongxu.jpg" alt=""></a></div>
+						<h4 class="pername"><a href="http://sydney.edu.au/engineering/electrical/people/dong.xu/index.html">Dong XU</a></h4>
+						<p class="perinsti">Univ. Sydney</p>
+					</div>
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://www.tsinghua.edu.cn/publish/auen/1713/2011/20110520164624642817281/20110520164624642817281_.html"><img class="perpic" src="./images/personnel/feifeigao.jpg" alt=""></a></div>
+						<h4 class="pername"><a href="http://www.tsinghua.edu.cn/publish/auen/1713/2011/20110520164624642817281/20110520164624642817281_.html">Feifei GAO</a></h4>
+						<p class="perinsti">Tsinghua Univ.</p>
+					</div>
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://iip.whu.edu.cn/about/"><img class="perpic" src="./images/personnel/zhenzhongchen.jpg" alt="http://iip.whu.edu.cn/about/"></a></div>
+						<h4 class="pername"><a href="">Zhenzhong CHEN</a></h4>
+						<p class="perinsti">Wuhan Univ.</p>
 					</div>
 				</div>
-			</div>
-			<div class="banner-right1">
-				<img src="images/bg3.jpg" alt=" " class="img-responsive" />
-				<div class="banner-right1-text">
-					<p>NEW! Co-Location and Collaboration with VALSE 2016 – Come to attend both events!</p>
-					<!-- <ul>
-						<li><a href="#" class="facebook"> </a></li>
-						<li><a href="#" class="twitter"> </a></li>
-						<li><a href="#" class="g"> </a></li>
-						<li><a href="#" class="in"> </a></li>
-					</ul> -->
-					<a href="http://mclab.eic.hust.edu.cn/valse2016">GOTO VALSE 2016</a>
-				</div>	
-			</div>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-<!-- //banner -->
-<!-- banner-bottom -->
-	<div class="banner-bottom" id="intro">
-		<div class="container">
-			<h3>SIGNAL & DATA SCIENCE – Powering Our Digital Life</h3>
-			<br>
-			<p class="eveniet">
-				Since 2013, the IEEE Signal Processing Society (SPS) has held an annual event of ChinaSIP in China for domestic and international scientists, researchers, and practitioners to network and discuss the latest progress in theoretical, technological, and educational aspects of signal and information processing.  Complementing the SPS flagship conference ICASSP being held for the first time in Mainland China, SPS is holding a special 2016 forum being co-located and in collaboration with the VALSE 2016, a well received symposia series by the computer vision and learning community in China.  The IEEE SPS 2016 Forum to be held in Wuhan, China, will engage a broad community under the theme of “Signal and Data Science – Powering Our Digital Life”.
-				<br/><br/>
-				The IEEE SPS 2016 SIDAS Forum will feature keynote and invited talks, panel discussions for professional development, tutorials, R&D demos, and highlight poster presentations of recent work published in highly selective journals and conferences.  Presenters will have the opportunity to upload PDF files of their slides or poster material to the SPS’ new SigPort online repository to raise global visibility of their work.  Leveraging the format of VALSE, there will be no submissions or reviews of original technical papers at the Forum.
 
-			</p>
-			<!-- <div class="banner-bottom-grids">
-				<div class="col-md-4 banner-bottom-grid">
-					<a href="#">
-						<img class="img-responsive" src="images/4.jpg" alt="">
-						<div class="captn">
-							<h4><i class="glyphicon glyphicon-cog" aria-hidden="true"></i>Tincidun</h4>
-							<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
-						</div>
-					</a>
+				<li><span>Publicity Chair</span></li>
+				<div class="simplePL">
+					<div class="perpart perleft">
+						<div class="perpiccontainer"><a href="http://www.fst.umac.mo/en/staff/fstycz.html"><img class="perpic" src="./images/personnel/yicongzhou.jpg" alt=""></a></div>
+						<h4 class="pername"><a href="http://www.fst.umac.mo/en/staff/fstycz.html">Yicong ZHOU</a></h4>
+						<p class="perinsti">Univ. Macau</p>
+					</div>
 				</div>
-				<div class="col-md-4 banner-bottom-grid">
-					<a href="#">
-						<img class="img-responsive" src="images/5.jpg" alt="">
-						<div class="captn">
-							<h4><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i>Aenean</h4>
-							<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
-						</div>
-					</a>
+
+				<li><span>Finance Chair</span></li>
+				<div class="simplePL">
+					<div class="perpart perleft">
+						<!-- <div class="perpiccontainer"><a href="#guyuantao"><img class="perpic" src="./images/personnel/guyuantao.jpg" alt=""></a></div> -->
+						<h4 class="pername"><a href="">Ms. ZHOU</a></h4>
+						<p class="perinsti">HUST</p>
+					</div>
 				</div>
-				<div class="col-md-4 banner-bottom-grid">
-					<a href="#">
-						<img class="img-responsive" src="images/6.jpg" alt="">
-						<div class="captn">
-							<h4><i class="glyphicon glyphicon-lock" aria-hidden="true"></i>Posuere</h4>
-							<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
-						</div>
-					</a>
-				</div>
-				<div class="clearfix"> </div>
-			</div> -->
+			</ul>
 		</div>
+		
 	</div>
-<!-- //banner-bottom -->
-	<div class="to_call">
-		<a id="tocallbtn" href="./researchHighlightsDemos.html">CALL FOR RESEARCH HIGHLIGHTS AND DEMOS</a>
-	</div>
-<!-- traveller -->
-	<div class="traveller">
-		<div class="container">
-			<!-- <h3>Traveller Says</h3>
-			<p class="velit">Pulvinar ac enimet posuere suscipit laboriosam ac 
-				enimet posuere tincidunt velit utin tincidunt tincidunt velit utin tincidunt</p> -->
-			<div class="wmuSlider example1">
-			   <div class="wmuSliderWrapper">
-					<article style="position: absolute; width: 100%; opacity: 0;"> 
-						<div class="banner-wrap">
-							<div class="traveller-info">
-								<div class="traveller-info-left">
-									<h4>Technical Tracks</h4>
-									<!-- <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam
-										corporis suscipit laboriosam ac enimet posuere tincidunt velit utin tincidunt.</p> -->
-									<ul>
-										<li>Theory and Methods of Signal and Data Science</li>
-										<li>Speech, Audio, and Language Processing </li>
-										<li>Image, Video, and Multimedia Processing</li>
-										<li>Pattern Recognition and Machine Learning in Signal and Data Science </li>
-										<li>Information Forensics & Security (including Biometrics)</li>
-										<li>Communications and Networking</li>
-										<li>Signal and Data Science for Bioinformatics and Bio/Medicine </li>
-										<li>Multi-channel Signal Processing, Remote Sensing and Data Processing </li>
-										<li>Emerging Cross-cutting Topics:  Internet of the Things</li>
-										<li>Emerging Cross-cutting Topics:  Big Data Analytics</li>
-									</ul>
-								</div>
-								<div class="traveller-info-right">
-									<i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i>
-									<!-- <img src="images/2.png" alt=" " class="img-responsive" /> -->
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</article>
-					<article style="position: absolute; width: 100%; opacity: 0;"> 
-						<div class="banner-wrap">
-							<div class="traveller-info">
-								<div class="traveller-info-left">
-									<h4>Features</h4>
-									<!-- <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam
-										corporis suscipit laboriosam ac enimet posuere tincidunt velit utin tincidunt.</p> -->
-									<ul>
-										<li>Keynote, invited talks, and tutorials by renowned experts and rising stars</li>
-										<li>Panel discussions on professional development, research and education</li>
-										<li>Showcase of recent articles in highly selective journals and conferences</li>
-										<li>Demos/Exhibits of academic and industry R&D</li>
-										<li>Low registration fee for research highlight presenters; FREE for general participants</li>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-									</ul>
-								</div>
-								<div class="traveller-info-right">
-									<i class="glyphicon glyphicon-flag" aria-hidden="true"></i>
-									<!-- <img src="images/3.png" alt=" " class="img-responsive" /> -->
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</article>
-					<article style="position: absolute; width: 100%; opacity: 0;"> 
-						<div class="banner-wrap">
-							<div class="traveller-info">
-								<div class="traveller-info-left">
-									<h4>Organizing Team</h4>
-									<!-- <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam
-										corporis suscipit laboriosam ac enimet posuere tincidunt velit utin tincidunt.</p> -->
-									<ul>
-										<li>General Chairs:  SHAN Shiguang (CAS), XIONG Zixiang (Texas A&M U.& Guest Prof. @ HUST), CHEN Jingdong (NWPU, formerly with Bell Lab)</li>
-										<li>Technical Chairs: BAI Xiang (HUST), XU Dong (Univ. Sydney), GAO Feifei (Tsinghua Univ.), CHEN Zhenzhong (Wuhan Univ.)</li>
-										<li>Publicity Chair: ZHOU Yicong (Univ. Macau)</li>
-										<li>Finance Chair:  Ms. Zhou (HUST)</li>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-										<br/>
-										<!--<li>Panel Chair:</li>-->
-										<!--<li>Registration Chair: </li>-->
-										<!--<li>Local Arrangement Chair:</li>-->
-									</ul>
-								</div>
-								<div class="traveller-info-right">
-									<i class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></i>
-									<!-- <img src="images/1.png" alt=" " class="img-responsive" /> -->
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-					<script src="js/jquery.wmuSlider.js"></script> 
-					<script>
-						$('.example1').wmuSlider();         
-					</script> 	
-		</div>
-	</div>
-<!-- //traveller -->
-<!-- what-we-do -->
-	<div class="what-we-do" id="about">
-		<div class="container">
-			<h3>important dates</h3>
-			<!-- <p class="eveniet">Temporibus autem quibusdam et aut officiis debitis aut 
-				rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint 
-				et molestiae non recusandae.</p> -->
-			<div class="what-we-do-grids">
-				<div class="what-we-do-grid-left">
-					<div class="what-we-do-grid-left1">
-						<img src="images/8.jpg" alt=" " class="img-responsive" />
-					</div>
-					<div class="what-we-do-grid-right1">
-						<h4>20 March 2016</h4>
-						<p>Request for demo or highlight poster presentation</p>
-						<h4>31 March 2016</h4>
-						<p>Notification of demo/poster acceptance</p>
-						<!--<h4>Not decided</h4>-->
-						<!--<p>Advanced Registration due</p>-->
-						<!-- <ul>
-							<li><a href="#" class="facebook"> </a></li>
-							<li><a href="#" class="twitter"> </a></li>
-							<li><a href="#" class="g"> </a></li>
-							<li><a href="#" class="in"> </a></li>
-						</ul>
-						<div class="more m1">
-							<a href="single.html">More Info</a>
-						</div> -->
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="what-we-do-grid-right">
-					<div class="what-we-do-right-grid">
-						<div class="what-we-do-grid-left1">
-							<img src="images/9.jpg" alt=" " class="img-responsive" />
-						</div>
-						<div class="what-we-do-grid-right1 text">
-							<h4>24 April 2016</h4>
-							<p>Panel Discussions and Tutorials (shared with VALSE 2016)</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="what-we-do-right-grid">
-						<div class="what-we-do-grid-right1 grid2 text">
-							<h4>25-26 April 2016</h4>
-							<p>Main Forum Activities</p>
-						</div>
-						<div class="what-we-do-grid-left1 grid21">
-							<img src="images/10.jpg" alt=" " class="img-responsive" />
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //what-we-do -->
+</div>
+
+<!-- //organizing team -->
 <!--footer-->
 	<div class="footer">
 		<div class="container">				 	
@@ -354,7 +192,7 @@
 				<a href="mailto:info@example.com">info@example.com</a>
 			</div>
 			<div class="col-md-4 ftr-logo">
-				<a href="index.html"><h3>SIDAS <span> A CHINASIP EVENT</span></h3></a>
+				<a href="index.html"><h3>SIDAS <span> </span></h3></a>
 				<ul>
 					<li><a href="#" class="facebook"> </a></li>
 					<li><a href="#" class="twitter"> </a></li>

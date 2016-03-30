@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 车位锁">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+	<title>AUTOINHOME PRODUCT - KEJIXIA CAR LOCK</title>
+	<!--<link rel="stylesheet" href="../css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/product.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
+
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).resize(function(){
+				responsive();
+			});
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.content').css({'width':'900px'});
+					$('iframe').css('height','250px');
+					$('.product_name').css('padding-top','65px');
+					$('.product_img img').css({'width':'100%'});
+					$('.product_view img').css({'width':'100%'});
+					$('.product_scenario img').css({'width':'100%'});
+					$('.product_test img').css({'width':'100%'});
+					$('#footer .aboutus').css({'display':'none'});
+					$('#footer .top').css({'display':'none'});
+					$('#footer .bot').css({'width':'90%','border-top':'none', 'padding-left':'5%','padding-right':'5%'});
+					$('#footer .right_bot').css({'padding-bottom':'15px'});
+					$('.forbeauty').css({'display':'none'});
+					$('.botbar').css({'width':'90%'});
+				} else {
+
+				}
+			}
+
+			responsive();
+		})
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../index.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../theater.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../safety.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../environment.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../network.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../aboutus.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="../productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="../productlist.html"></a></li>
+		<li><a class="panel solution" href="../index.html"></a></li>
+		<li><a class="panel theater" href="../theater.html"></a></li>
+		<li><a class="panel safety" href="../safety.html"></a></li>
+		<li><a class="panel environment" href="../environment.html"></a></li>
+		<li><a class="panel network" href="../network.html"></a></li>
+		<li><a class="panel contact" href="../aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+
+<div class="content">
+	<h1 class="product_name">一台能分享的神奇车位锁</h1>
+	<div class="product_score">★★★★☆</div>
+	<div class="product_edit"><span class="release_time">March 13, 2016</span><span class="view_times">210visits</span><span class="author">Sam Cho</span></div>
+	<div class="product_img">
+<!-- 		<img src="./products_img/carlock/2.jpg" alt=""/>
+		<img src="./products_img/carlock/3.jpg"> -->
+	</div>
+	<div class="product_view">
+		<strong>1．功能篇</strong>
+		<br><br>
+		<img src="./products_img/carlock/1.jpg">
+		<br>
+		<p>
+			硕大的锂电池是长时间续航的保证，毕竟没有谁愿意给一把锁频繁的更换电池，或者在进入车位时因为没电闹出自己锁住自己的乌龙。
+			<br>
+			密封箱体中包含了这个智能车位锁的所有主要组件：传动轴承、变速箱、电机、 PCB 板、蓝牙芯片等等。官方说明书中密封等级为 IP65 ，常用三防手机的用户会很熟悉这个参数，数字5说明机器可以“用水冲洗无任何伤害”。
+			<br>
+			蓝牙天线外露，也是受限于密封+金属外罩带来的信号衰减问题，不过我仍然认为从设计角度上来说应该有更好的解决方法，虽然这样并不影响实际使用，且如果你把它当成一个工程类的产品，那么也没有什么问题。
+			<br>
+			蜂鸣器兼顾了操作提醒和警报两个功能，随之而来的是一个不大不小的问题，当用户自行购买自行安装的时候，随着接入锂电，绑定手机，不可调的超高分贝的高频提示音准保能把人吓坏。
+			<br>
+			<img src="./products_img/carlock/2.jpg">
+		</p>
+	</div>
+	<div class="product_video">
+		<!-- 这一部分需要先上传视频，上传之后生成链接 vimeo 视频 -->
+		<!-- <iframe src="https://player.vimeo.com/video/157823837" width="100%" height="600px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+	</div>
+	<div class="product_scenario">
+		<strong>2．使用篇</strong>
+		<br/><br/>
+		日常使用：
+		<br>
+		智能和非智能车位锁之间最大的区别，就是减少了步骤，消除了不必要的麻烦，少一点烦心事，也许真的就能开心上一整天。
+		<br>
+		传统机械锁的 one day ：车出库→停车拉刹车→下车拉起车位锁→找出钥匙→上锁→回到车内放好钥匙→系安全带→驶离→返回车位→刹车→解开安全带→找钥匙开锁→放下车位锁→回到车上放好钥匙→放下刹车→入库。
+		<br>
+		遥控机械锁的 one day ：车出库系好安全带→找遥控器→按下遥控器→放好遥控器→驶离→返回车位→找出遥控器→放下车位锁→放好遥控器→入库。
+		科技侠智能车位锁的 one day ：车出库→点击手机→驶离→返回车位点击手机→入库。
+		<br>
+		实体钥匙容易遗失，遥控器不便随身携带，而手机基本解决了这两个问题，人和手机在生活中越来越紧密，相对来说整合钥匙和遥控器的功能也是必然。现代人出门也许会忘拿钥匙，嫌遥控器累赘，但一般绝对不会拿掉手机。而且你可以通过手机APP将您的车位锁分享给您的朋友。
+		<br><br>
+
+		重压测试：
+		<br>
+		官方说明书中此产品可承受5000公斤的碾压而不损坏。没有重型设备，日常情况下车位锁最多的情况也大概就是被车轮碾压了吧。碾压后没有任何变形，漆面也基本无损伤，通过了考验。
+
+		<br>
+		<img src="./products_img/carlock/3.jpg">
+
+		<br><br>
+		户外使用：
+		<br>
+		并不是所有用户的车位都在室内，厂家标注的防护等级想必也考虑到了这一点。当然，测试一下就成了必然。正好赶上雨天，提着车位锁就丢进了积水 3mm 的水洼。淋了一会儿中雨，操作一切正常。这就是户外用户会经常遇到的积水场景。从结构来看，浅积水和雨滴完全不会影响车位锁的使用。
+		<br>
+		<img src="./products_img/carlock/4.jpg">
+		<br><br>
+
+		标签：车位锁，蓝牙，分享，智能
+		<br>
+		价格：568元
+
+	</div>
+	<div class="product_test">
+		<!-- <strong>3．我们的亲身测评</strong>
+		<br/><br/>
+		第一段
+		<br><br>
+		第二段
+		<br>
+		
+		<br>
+		价格: 4798元
+
+		<br/> -->
+
+	</div>
+</div>
+
+<div class="botbar">
+	<div class="botbarleft">
+		<!-- 放微店的链接在 href 的两个引号里面 -->
+		<a href=""><img src="./products_img/bot_bar_01.jpg" alt=""/></a>
+	</div>
+	<div class="botbarright">
+		<a href="../productlist.html"><img src="./products_img/bot_bar_02.jpg" alt=""/></a>
+	</div>
+</div>
+
+<div id="footer" class="beforeclick">
+	<img class="forbeauty" src="../img/network_img/footer/forbeauty.png" alt=""/>
+	<div class="aboutus">关于我们</div>
+	<div class="top">
+		<div class="subtop first">
+			<h4>公司简介
+				<br/>
+				AUTOINHOME
+			</h4>
+			<p>企业文化 COMPANY CULTURE
+				<br/>
+				品牌合作 BRAND
+				<br/>
+				合作伙伴 PARTNERS
+				<br/>
+				公司资质 COMPANY QUANTIFICATION
+			</p>
+		</div>
+		<div class="subtop second">
+			<h4>人才招聘
+				<br/>
+				CAREERS
+			</h4>
+			<p>加入我们 JOIN US</p>
+		</div>
+		<div class="subtop third">
+			<h4>联系我们
+				<br/>
+				CONTACT
+			</h4>
+			<p>copyright 2012-15 武汉智在家科技有限公司
+				<br/>
+				QQ： 1951057570	59519434
+				<br/>
+				咨询热线 6538 7897（CHINA）
+				<br/>
+				UPC：13010724
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="bot">
+		<img class="left_bot" src="../img/network_img/logo_white.png" alt=""/>
+		<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+		<div class="right_bot">
+			<a href=""><img src="../img/network_img/footer/wechat.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/QQ.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/weibo.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/facebook.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/twitter.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
