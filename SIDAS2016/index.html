@@ -14,6 +14,24 @@
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css">
+	@media (max-width: 480px){
+		.banner-left, .banner-left:hover {
+			padding: 2em 0 2em 2em!important;
+		}
+		.ad_sp {
+			font-size: 0.8em!important;
+		}
+		.ad_img {
+			position: relative!important;
+			top: 0!important;
+			left: 0!important;
+		}
+		.banner3img {
+			height: 176px!important;
+		}
+	}
+</style>
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -65,7 +83,7 @@
 						<li class="hvr-sweep-to-bottom"><a href="./team.html">Organizing Team</a></li>
 						<li class="hvr-sweep-to-bottom"><a href="./speaker.html">Speakers</a></li>
 						<li class="hvr-sweep-to-bottom"><a href="./researchHighlightsDemos.html">Research Highlights & Demos</a></li>
-						<li class="hvr-sweep-to-bottom"><a href="./registration.html">Registration</a></li>
+						<li class="hvr-sweep-to-bottom"><a href="http://122.205.5.5:8231/">Registration</a></li>
 						 <li class="hvr-sweep-to-bottom"><a href="./venue.html">Venue</a></li>
 					  </ul>
 					</div><!-- /.navbar-collapse -->
@@ -76,12 +94,22 @@
 <!-- //header -->
 <!-- banner -->
 	<div class="banner">
-		<div class="banner-left">
+		<div style="padding: 3.2em 0 0 2.5em;" class="banner-left">
 			<h1>IEEE SIGNAL AND DATA SCIENCE FORUM</h1>
-			<p>24-26 April 2016<br>Wuhan, China</p>
+			<p style="margin-bottom:1em">24-26 April 2016<br>Wuhan, China</p>
 			<div class="more">
-				<a href="#intro">MORE INFO</a>
+				<a href="http://mclab.eic.hust.edu.cn/valse2016/hotel.html">ADDRESS INFO</a>
 			</div>
+			<h2 style="color: #f60c3e; padding:20px 0 0 0;">Co-sponsor</h2>
+			<p class="ad_sp"><strong>IEEE Signal Processing Society (IEEE SPS)</strong> 
+				<br>
+				Vision And Learning SEminar (VALSE)
+				<br>
+				Asia-Pacific Signal and Information Processing Association (APSIPA)
+				<br>
+				中国图象图形学学会图象视频处理与通信专业委员会
+			</p>
+			<img class="ad_img" style="position: absolute; top:250px;; left: 30%; width:300px; max-width:100%;" src="./alllogo.png">
 		</div>
 		<div class="banner-right">
 			<div class="banner-right1">
@@ -93,6 +121,8 @@
 						<input type="submit" value="Subscribe" >
 					</form> -->
 					<div class="news_content">
+                        <p><span style="">2016.3.27</span> <a href="http://www.sensetime.com/en">SenseTime </a> becomes the platinum sponsor of SIDAS 2016.</p>
+                        <p><span style="">2016.3.22</span> Online registration is opening! </p>
 						<p><span style="">2016.2.22</span> Online registration to be opened soon</p>
 						<p><span style="">2016.2.15</span> 20+ invited speakers confirmed</p>
 						<p><span style="">2016.1.30</span> Website Online</p>
@@ -101,9 +131,9 @@
 				</div>
 			</div>
 			<div class="banner-right1">
-				<img src="images/bg3.jpg" alt=" " class="img-responsive" />
+				<img class="banner3img" src="images/bg3.jpg" alt=" " class="img-responsive" />
 				<div class="banner-right1-text">
-					<p>NEW! Co-Location and Collaboration with VALSE 2016 – Come to attend both events!</p>
+					<p>NEW! <a style="padding:0; border:0; top:0; " href="http://mclab.eic.hust.edu.cn/valse2016/hotel.html">Co-Location(Click to view)</a> and Collaboration(24-26 April 2016) with VALSE 2016 – Come to attend both events!</p>
 					<!-- <ul>
 						<li><a href="#" class="facebook"> </a></li>
 						<li><a href="#" class="twitter"> </a></li>
@@ -241,7 +271,7 @@
 										<li>General Chairs:  SHAN Shiguang (CAS), XIONG Zixiang (Texas A&M U.& Guest Prof. @ HUST), CHEN Jingdong (NWPU, formerly with Bell Lab)</li>
 										<li>Technical Chairs: BAI Xiang (HUST), XU Dong (Univ. Sydney), GAO Feifei (Tsinghua Univ.), CHEN Zhenzhong (Wuhan Univ.)</li>
 										<li>Publicity Chair: ZHOU Yicong (Univ. Macau)</li>
-										<li>Finance Chair:  Ms. Zhou (HUST)</li>
+										<li>Finance Chair:  Niansheng Zhou (HUST)</li>
 										<br/>
 										<br/>
 										<br/>
@@ -327,6 +357,13 @@
 			</div>
 		</div>
 	</div>
+    <div class="what-we-do sponsors" id="about">
+		<div class="container">
+			<h3>Platinum Sponsors</h3>
+            <br><br>
+            <a href="http://www.sensetime.com/en"><img src="./images/sponsors/sensetime.png"></a>
+        </div>
+    </div>
 <!-- //what-we-do -->
 <!--footer-->
 	<div class="footer">
@@ -357,7 +394,7 @@
 				<a href="mailto:info@example.com">info@example.com</a>
 			</div>
 			<div class="col-md-4 ftr-logo">
-				<a href="index.html"><h3>SIDAS <span> A CHINASIP EVENT</span></h3></a>
+				<a href="index.html"><h3>SIDAS <span></span></h3></a>
 				<ul>
 					<li><a href="#" class="facebook"> </a></li>
 					<li><a href="#" class="twitter"> </a></li>
