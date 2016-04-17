@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 科技侠智能门锁">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+	<title>AUTOINHOME PRODUCT - KEJIXIA LOCK</title>
+	<!--<link rel="stylesheet" href="../css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/product.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
+
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).resize(function(){
+				responsive();
+			});
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.content').css({'width':'900px'});
+					$('iframe').css('height','250px');
+					$('.product_name').css('padding-top','65px');
+					$('.product_img img').css({'width':'100%'});
+					$('.product_view img').css({'width':'100%'});
+					$('.product_scenario img').css({'width':'100%'});
+					$('.product_test img').css({'width':'100%'});
+					$('#footer .aboutus').css({'display':'none'});
+					$('#footer .top').css({'display':'none'});
+					$('#footer .bot').css({'width':'90%','border-top':'none', 'padding-left':'5%','padding-right':'5%'});
+					$('#footer .right_bot').css({'padding-bottom':'15px'});
+					$('.forbeauty').css({'display':'none'});
+					$('.botbar').css({'width':'90%'});
+				} else {
+
+				}
+			}
+
+			responsive();
+		})
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../index.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../theater.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../safety.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../environment.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../network.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../aboutus.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="../productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="../productlist.html"></a></li>
+		<li><a class="panel solution" href="../index.html"></a></li>
+		<li><a class="panel theater" href="../theater.html"></a></li>
+		<li><a class="panel safety" href="../safety.html"></a></li>
+		<li><a class="panel environment" href="../environment.html"></a></li>
+		<li><a class="panel network" href="../network.html"></a></li>
+		<li><a class="panel contact" href="../aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+
+<div class="content">
+	<h1 class="product_name">一把锁，改变生活，更将颠覆你的想象</h1>
+	<div class="product_score">★★★★☆</div>
+	<div class="product_edit"><span class="release_time">March 13, 2016</span><span class="view_times">111 visits</span><span class="author">Sam Cho</span></div>
+	<div class="product_img">
+<!-- 		<img src="./products_img/lock.png" alt=""/>
+		<img src="./products_img/lockcenter.jpg"> -->
+	</div>
+	<div class="product_view">
+		<strong>1．功能篇</strong>
+		<br>
+		<p>在外观上，科技侠智能锁与传统的门锁并没有本质的差异。无论是从锁体、锁芯还是门把上都和传统门锁的设计方式一致。不过，在开锁的方式上科技侠却有着和传统门锁的本质不同。区别于每天需要通过钥匙打开各种门锁的情况来说，科技侠则是借助手机App与蓝牙4.0模块之间的连接对门锁进行控制。此外J1系列还支持指纹开锁，也有着不错的体验。</p> <br>
+		<img src="./products_img/J101/2.jpg">
+		<img src="./products_img/J101/5.jpg">
+		<br>
+	</div>
+	<div class="product_video">
+		<!-- 这一部分需要先上传视频，上传之后生成链接 vimeo 视频 -->
+		<!-- <iframe src="https://player.vimeo.com/video/157823837" width="100%" height="600px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+	</div>
+	<div class="product_scenario">
+		<strong>2．使用篇</strong>
+		<br><br>
+		配对成功之后，便可以开锁了。科技侠智能锁有四种开锁方式：	<br>
+		1）App 中设置手动开锁，具体的操作就是：走到门前，打开App，按一下锁上面的开锁按钮，之后听到“科技侠来了，开门喽！”（可以自己设定）的语音提示（这时锁芯会自动弹回去），然后压下门把手，便可以打开门了。 <br>
+		2）App 中设置自动开锁（可设置开锁距离，0.5m-5m），具体操作是：走到门前，按一下锁上门的开锁按钮，然后听到声音，压下门把就开了。这种和上一种比的好处是，不用掏出手机打开App，只要手机蓝牙开着，就可以到门前自动开门。 <br>
+		3）是密码开锁：当你在App 中设置了一个至少六位数的密码之后，如果没带手机，也可以直接开锁。 <br>
+		4）钥匙直接开锁。 <br>
+		5）指纹开锁。 <br><br>
+		手机APP上还可以随时查看开锁记录、实时监控进出的人员。如果手机丢失，在另外一个手机登录账号或者进入锁里面删除原来的手机即可取消丢失手机的开锁权限，设置好一键密码，手机没电也可以在1分钟内进门。您还可以发送具有指定期限的“电子钥匙”给您的朋友、租客等，让他们在指定的期限内开门，过期自动失效。使用4节5号电池正常可以使用1年以上，而且不需要网络，断网、断电无任何影响。同时为了照顾所有人，还保留了机械钥匙。
+		<br><br>
+		<br>标签：智能锁，蓝牙，指纹，分享
+		<br>价格: 2288元
+	</div>
+	<div class="product_test">
+		<!-- <strong>3．我们的亲身测评</strong>
+		<br/><br/>
+		第一段
+		<br><br>
+		第二段
+		<br>
+		
+
+		<br/>
+ -->
+	</div>
+</div>
+
+<div class="botbar">
+	<div class="botbarleft">
+		<!-- 放微店的链接在 href 的两个引号里面 -->
+		<a href="http://weidian.com/item.html?itemID=1773501449"><img src="./products_img/bot_bar_01.jpg" alt=""/></a>
+	</div>
+	<div class="botbarright">
+		<a href="../productlist.html"><img src="./products_img/bot_bar_02.jpg" alt=""/></a>
+	</div>
+</div>
+
+<div id="footer" class="beforeclick">
+	<img class="forbeauty" src="../img/network_img/footer/forbeauty.png" alt=""/>
+	<div class="aboutus">关于我们</div>
+	<div class="top">
+		<div class="subtop first">
+			<h4>公司简介
+				<br/>
+				AUTOINHOME
+			</h4>
+			<p>企业文化 COMPANY CULTURE
+				<br/>
+				品牌合作 BRAND
+				<br/>
+				合作伙伴 PARTNERS
+				<br/>
+				公司资质 COMPANY QUANTIFICATION
+			</p>
+		</div>
+		<div class="subtop second">
+			<h4>人才招聘
+				<br/>
+				CAREERS
+			</h4>
+			<p>加入我们 JOIN US</p>
+		</div>
+		<div class="subtop third">
+			<h4>联系我们
+				<br/>
+				CONTACT
+			</h4>
+			<p>copyright 2012-15 武汉智在家科技有限公司
+				<br/>
+				QQ： 1951057570	59519434
+				<br/>
+				咨询热线 6538 7897（CHINA）
+				<br/>
+				UPC：13010724
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="bot">
+		<img class="left_bot" src="../img/network_img/logo_white.png" alt=""/>
+		<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+		<div class="right_bot">
+			<a href=""><img src="../img/network_img/footer/wechat.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/QQ.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/weibo.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/facebook.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/twitter.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

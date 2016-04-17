@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 智能控制">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+
+	<title>AUTOINHOME 智在家</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/aboutus.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="./img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="./img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="./img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="./img/network_img/favicon.png">
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script>
+		$(function(){
+			$('#slides').fullpage({
+				navigation: !0,
+				sectionsColor: ['#ffffff', '#ffffff', '#f0f4f7'],
+				normalScrollElements: '',
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10','page11','page12','page13','page14','page15','page16','page17'],
+				afterLoad: function(anchorLink, index){
+					if(index == 7){
+						$('.sec7').find('.sec7mengban').delay(0).animate({
+							left: '0'
+						}, 500, 'easeOutExpo');
+					}
+				},
+				onLeave: function(index, direction){
+					if(index == '7'){
+						$('.sec7').find('.sec7mengban').delay(0).animate({
+							left: '-65%'
+						}, 500, 'easeOutExpo');
+					}
+				}
+			});
+
+			$(window).resize(function(){
+				responsive();
+			});
+
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.section').css('font-size', 100);
+					$('.sec3 .contactinfo').css({'width':'31%'});
+					$('.sec3 p').css({'overflow':'scroll'});
+					$('.sec3 .contactinfo img').css({'max-height':'300px'});
+					$('.sec3 .companies').css({'width':'40%'});
+					$('.comtop img').css('max-height','680px');
+					$('.sec3 .combot img').css('max-height','680px');
+					$('.sec3 h4').css({'margin-top':'100px'});
+				} else {
+
+				}
+			}
+
+			responsive();
+		});
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+
+			//jquery and easing.js for footer easing
+			var tag = 1;
+			var footer = $('#footer');
+			$('.aboutus').click(function(){
+				if (tag==1) {
+					tag = 0;
+					footer.removeClass('beforeclick');
+					footer.addClass('afterclick');
+				} else {
+					tag = 1;
+					footer.addClass('beforeclick');
+					footer.removeClass('afterclick');
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="./index.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="./theater.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="./safety.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="./environment.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="./network.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="./aboutus.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="./productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="./productlist.html"></a></li>
+		<li><a class="panel solution" href="./index.html"></a></li>
+		<li><a class="panel theater" href="./theater.html"></a></li>
+		<li><a class="panel safety" href="./safety.html"></a></li>
+		<li><a class="panel environment" href="./environment.html"></a></li>
+		<li><a class="panel network" href="./network.html"></a></li>
+		<li><a class="panel contact" href="./aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+<div id="slides">
+	<div class="section sec1">
+		<img src="./img/abtus_img/1-1.png" alt="autoinhome logo"/>
+		<h3>设计你想要的智慧家庭生活</h3>
+		<p><span>每个人心里都有个家。这个家是人与人的联系，是我们的记忆，是一种生活习惯。这个家应该是稳定、舒适、安静、娱乐的。不同的客户的整体需求也许相同，可是在细节上会有很大的差异。所以我们通过定制化的系列产品，来回应每个客户心里对家的期待。</span></p>
+	</div>
+	<div class="section sec2">
+		<h4>我们的服务</h4>
+		<p>我们提供的不仅是产品，更是贴心的服务，智能家居整体解决方案与智能私人影院设计和安装等服务。我们，首创智能家居4S服务理念，用最高的诚意，最个性化的解决方案，最贴心的设计，给您最满意的服务！</p>
+		<a href="">了解我们的服务</a>
+	</div>
+	<div class="section sec3">
+		<h4>联系我们</h4>
+		<div class="contact1">
+			<div class="contactinfo">
+				<img src="./img/abtus_img/3-1-1.png" alt=""/>
+				<p>公司地址：
+					<br/>
+					武汉市东湖高新技术开发区
+					<br/>
+					珞瑜路关山口华工科技企业孵化器1210
+				</p>
+			</div>
+			<div class="contactinfo">
+				<img src="./img/abtus_img/3-1-2.png" alt=""/>
+				<p>联系我们
+					<br/>
+					电话：027-65387897
+					<br/>
+					E-mail：<a href="mailto:service@autoinhome.com">service@autoinhome.com</a>
+				</p>
+			</div>
+			<div class="contactinfo">
+				<img src="./img/abtus_img/3-1-3.png" alt=""/>
+				<p>商务合作
+					<br/>
+					联系人：黄先生
+					<br/>
+					电话：18908659817
+					<br/>
+					E-mail：<a href="mailto:huangzhou@autoinhome.com">huangzhou@autoinhome.com</a>
+				</p>
+			</div>
+			<h4>合作伙伴</h4>
+		</div>
+
+		<div class="comp">
+			<div class="companies comtop"><img src="./img/abtus_img/3-2-1.png" alt=""/></div>
+			<div class="companies comtop"><img src="./img/abtus_img/3-2-2.png" alt=""/></div>
+			<div class="companies comtop"><img src="./img/abtus_img/3-2-3.png" alt=""/></div>
+			<div class="companies combot"><img src="./img/abtus_img/3-2-4.png" alt=""/></div>
+			<div class="companies combot"><img src="./img/abtus_img/3-2-5.png" alt=""/></div>
+			<div class="companies combot"><img src="./img/abtus_img/3-2-6.png" alt=""/></div>
+		</div>
+	</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+/* navigation style sheet */
+.nav_mobile_place_holder {
+    display: none;
+    width: 100%;
+    height: 100px;
+    background-color: #56a9b7;
+    position: fixed;
+    z-index: 998;
+}
+.nav_mobile {
+//width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: transparent;
+}
+.nav_mobile_btn {
+    width: 100%;
+    height: 100px;
+    background-image: url('../img/network_img/navpic/Untitled-1_0001.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #56a9b7;
+}
+.nav_mobile_class_wraper {
+    width: 600px;
+}
+.nav_mobile_class{
+    display: none;
+    width: 600px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.9);
+}
+
+nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 70px;
+    background-image: url("../img/network_img/navpic/navpic_11.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+.nav_part {
+    width: 100%;
+}
+.nav_top {
+    height: 45px;
+    background-color: #ffffff;
+}
+.nav_bottom {
+    height: 25px;
+    background-color: #56a9b7;
+}
+/* Adjusting the margins, paddings and no list styles */
+.navigation  {
+    width: 810px;
+    margin:0 auto;
+    padding:0;
+    list-style:none;
+}
+
+/* Little tricking with positions */
+.navigation  li {
+    float:left;			/* Show list items inline */
+    width:110px;
+    position:relative;
+}
+
+/* Playing with Main Categories */
+.navigation  li a {
+
+    height: 70px;
+    display:block;  	/* Making sure a element covers whole li area */
+    text-decoration:none; /* No underline */
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.navigation  li a:hover {
+    color:#56a9b7;
+}
+
+/* Sub Cat Menu stuff*/
+.navigation  ul {
+    position:absolute;
+    left:0;
+    display:none; /* Hide it by default */
+    margin:0 0 0 -1px;
+    padding:0;
+    list-style:none;
+    border-bottom:3px solid #56a9b7;
+}
+
+.navigation  ul li {
+    width:110px;
+    float:left;
+    border-top:none;
+}
+
+/* Sub Cat menu link properties */
+.navigation  ul a {
+    display:block;    	/* Making sure a element covers whole li area */
+    height:15px;
+    padding:8px 7px 13px 0px;
+    color:#fff;
+    text-decoration:none;
+    border-top:none;
+    border-bottom:1px dashed #6B6B6B;
+}
+
+.navigation  ul a:hover {
+    color:#56a9b7;
+}
+
+.panel {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#logo_list {
+    width: 150px;
+}
+.logo {
+    background-image: url("../img/network_img/navpic/navpic_01.png");
+}
+.solution {
+    background-image: url("../img/network_img/navpic/navpic_03.png");
+}
+.theater {
+    background-image: url("../img/network_img/navpic/navpic_05.png");
+}
+.safety {
+    background-image: url("../img/network_img/navpic/navpic_07.png");
+}
+.environment {
+    background-image: url("../img/network_img/navpic/navpic_09.png");
+}
+.network {
+    background-image: url("../img/network_img/navpic/navpic_10.png");
+}
+.contact {
+    background-image: url("../img/network_img/navpic/navpic_12.png");
+}
+
+/* section1 style sheet */
+.sec1 {
+    background-image: url("../img/abtus_img/bg-1.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec1 img {
+    position: relative;
+    display: inline-block;
+    top: -100px;
+}
+.sec1 h3 {
+    position: relative;
+    color: #222222;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-top: 20px;
+    top: -100px;
+}
+.sec1 p {
+    position: relative;
+    color: #222222;
+    font-size: 0.35em;
+    font-weight: 500;
+    max-width: 636px;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    top: -100px;
+}
+
+/* section2 style sheet */
+.sec2 {
+    background-image: url("../img/abtus_img/bg-2.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec2 h4 {
+    color: #222222;
+    font-size: 0.6em;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 65px;
+}
+.sec2 p {
+    color: #222222;
+    font-size: 0.35em;
+    font-weight: 500;
+    max-width: 400px;
+    margin: 20px 65px 0 auto;
+    text-align: right;
+}
+.sec2 a {
+    color: #0097d9;
+    position: absolute;
+    font-size: 0.28em;
+    right: 65px;
+    bottom: 40px;
+    text-decoration: none;
+}
+
+/* section3 style sheet */
+.sec3 {
+    background-color: #f0f4f7;
+}
+.sec3 h4 {
+    position: relative;
+    text-align: left;
+    color: #222222;
+    font-size: 0.6em;
+    font-weight: 500;
+    margin-left: 7.2%;
+    margin-top: 50px;
+}
+.sec3 p {
+    font-size: 0.3em;
+    color: #222222;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+.sec3 p a {
+    color: #0097d9;
+    text-decoration: none;
+}
+
+.sec3 .contactinfo {
+    width: 32%;
+    display: inline-block;
+    margin-top: 30px;
+    vertical-align: top;
+}
+.sec3 .companies {
+    width: 32%;
+    display: inline-block;
+    margin-top: 30px;
+}
+.sec3 .contactinfo img {
+    max-height: 50px;
+}
+.comtop img {
+    max-height: 80px;
+}
+.sec3 .combot img {
+    max-height: 50px;
+}
+
+.contact1 .comp {
+    position: relative;
+}
+
+body::selection {
+    color: white;
+    background-color: #00a1e9;
+}

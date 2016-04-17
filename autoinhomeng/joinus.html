@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 加入我们">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+
+	<title>AUTOINHOME 智在家</title>
+	<!--<link rel="stylesheet" href="css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/joinus.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="./img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="./img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="./img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="./img/network_img/favicon.png">
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<!--<script src="js/jquery.fullPage.min.js"></script>-->
+	<script src="js/jquery.easing.min.js"></script>
+	<script>
+		$(function(){
+			$(window).resize(function(){
+				responsive();
+			});
+
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.sub_nav').css({'height':'100px'});
+					$('.sub_nav_inner').css({'height':'100px'});
+					$('.sub_nav_inner a').css({'font-size':'40px','line-height':'100px'});
+					$('.zhanweizhi').css({'height':'100px'});
+					$('.job_row').css({'padding-top':'200px'});
+					$('.jobs').css({'margin-top':'-80px'});
+					$('.left_row').css({'width':'25%'});
+					$('.right_row').css({'width':'74%'});
+					$('.right_row h4').css({'font-size':'40px'});
+					$('.right_row p').css({'font-size':'40px'});
+					$('.left_row img').css({'margin-left':'20%'});
+					$('.sendcv').css({'font-size':'40px'});
+					$('#footer').css({'font-size':'100px','height':'370px'});
+					$('.aboutus').css({'font-size':'32px','padding-top':'20px'});
+					$('.forbeauty').css({'z-index':'-1'});
+				} else {
+
+				}
+			}
+
+			responsive();
+
+			$(window).scroll(function () {
+				if ($(window).width()<1024) {
+					if ($(window).scrollTop() > $('.intro_img').height()-100) {
+						$('.zhanweizhi').css({'display':'block'});
+						$('.sub_nav').css({'position':'fixed','top':'100px','box-shadow':'0 10px 8px -8px #ccc'});
+					} else {
+						$('.zhanweizhi').css({'display':'none'});
+						$('.sub_nav').css({'position':'relative','top':'0','box-shadow':'none'});
+					}
+				} else {
+					if ($(window).scrollTop() > $('.intro_img').height()-70) {
+						$('.zhanweizhi').css({'display':'block'});
+						$('.sub_nav').css({'position':'fixed','top':'70px','box-shadow':'0 10px 8px -8px #ccc'});
+					} else {
+						$('.zhanweizhi').css({'display':'none'});
+						$('.sub_nav').css({'position':'relative','top':'0','box-shadow':'none'});
+					}
+				}
+
+			});
+		});
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+
+			//jquery and easing.js for footer easing
+			var tag = 1;
+			var footer = $('#footer');
+			$('.aboutus').click(function(){
+				if (tag==1) {
+					tag = 0;
+					footer.removeClass('beforeclick');
+					footer.addClass('afterclick');
+				} else {
+					tag = 1;
+					footer.addClass('beforeclick');
+					footer.removeClass('afterclick');
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="./index.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="./theater.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="./safety.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="./environment.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="./network.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="./joinus.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="./productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="#"></a></li>
+		<li><a class="panel solution" href="./index.html"></a></li>
+		<li><a class="panel theater" href="./theater.html"></a></li>
+		<li><a class="panel safety" href="./safety.html"></a></li>
+		<li><a class="panel environment" href="./environment.html"></a></li>
+		<li><a class="panel network" href="./network.html"></a></li>
+		<li><a class="panel contact" href="./joinus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+<img id="intro_img" class="intro_img" src="./img/joinus_img/job.png" alt=""/>
+<div class="sub_nav">
+	<div class="sub_nav_inner">
+		<a href="#intro_img" class="back-top">回到顶部</a>
+		<a href="#yanfa" class="to-yanfa">研发</a>
+		<a href="#sheji" class="to-sheji">设计</a>
+		<a href="#xiaoshou" class="to-xiaoshou">销售</a>
+		<a href="#xingzheng" class="to-xingzheng">行政</a>
+	</div>
+</div>
+<div class="zhanweizhi"></div>
+<div class="jobs">
+	<div id="yanfa" class="job_row">
+		<div class="left_row sub_row"><img src="./img/joinus_img/yanfa_1.png" alt=""/></div>
+		<div class="right_row sub_row">
+			<h4>无线通信工程师</h4>
+			<p>
+				职责：开发维护测试802.11驱动及协议栈 <br/>
+				<br/>
+				要求：<br/>
+				1.  硕士优先<br/>
+				2.  熟悉802.11协议<br/>
+				3.  熟悉Linux内核开发<br/>
+				4.  熟悉网络<br/>
+				5.  了解射频相关的基本知识</p>
+		</div>
+	</div>
+	<div id="sheji" class="job_row">
+		<div class="left_row sub_row"><img src="./img/joinus_img/sheji_1.png" alt=""/></div>
+		<div class="right_row sub_row">
+			<h4>平面设计师</h4>
+			<p>岗位职责描述：<br/>
+				1.  负责公司新产品的包装、说明书、广告宣传页设计<br/>
+				2.  负责公司产品的手机UI界面设计、编辑、美化等工作<br/>
+				3.  对公司的宣传产品进行美工设计<br/>
+				4.  其它与美术设计相关的工作<br/>
+				<br/>
+				技能要求：<br/>
+				1.  具有设计专业的教育背景，大专以上学历；包装设计、艺
+				术设计、视觉传达相关专业<br/>
+				2.  熟练掌握平面设计软件：Illsutrator,Photoshop,
+				CorelDRAW等；对产品包装造型、结构、材质、工艺、印
+				刷技术及包装后期了解，并有一定经验<br/>
+				3.  对手机APP界面及网页设计有一定经验，有良好的视觉效
+				果认识及创新能力<br/>
+				4.  有团队精神与责任心，能与同事协同工作，良好配合、和
+				谐相处。与客户良好沟通能力</p>
+		</div>
+	</div>
+	<div id="xiaoshou" class="job_row">
+		<div class="left_row sub_row"><img src="./img/joinus_img/xiaoshou_1.png" alt=""/></div>
+		<div class="right_row sub_row">
+			<h4>销售助理</h4>
+			<p>主要职责：<br/>
+				1.  协助公司销售人员销售工作<br/>
+				2.  负责公司相关产品在各自区域的行业客户的销售拓展工作<br/>
+				3.  提高公司产品在行业客户中的影响力及品牌知名度<br/>
+				4.  负责公司相关产品的收发工作<br/>
+				5.  协调公司内部资源为客户提供技术，商务等服务，确保所负责项目的顺利实施<br/>
+				6.  完成公司下达的年度任务指标<br/>
+				7.  制定所负责区域内的市场和销售计划<br/>
+				<br/>
+				职位要求：<br/>
+				1.  具有团队意识，易于沟通、协作<br/>
+				2.  工作积极主动，认真敬业，做事有条理和计划性<br/>
+				3.  较强地解决问题的能力，学习能力强，熟悉电商销售模式优先考虑<br/>
+				4.  人品端正，性格成熟稳重<br/>
+				5.  能够在压力下开展工作</p>
+		</div>
+	</div>
+	<div id="xingzheng" class="job_row">
+		<div class="left_row sub_row"><img src="./img/joinus_img/xingzheng_1.png" alt=""/></div>
+		<div class="right_row sub_row">
+			<h4>前台接待兼行政助理</h4>
+			<p>主要职责：<br/>
+				1.  接待访客、电话转接、文档复印、扫描和传真收发<br/>
+				2.  快递收发及费用结算<br/>
+				3.  公司票务管理<br/>
+				4.  饮用水登记、统计<br/>
+				5.  管理维护打印机、传真机、复印机等办公器材<br/>
+				6.  制作考勤统计表，员工出差管理登记<br/>
+				7.  更新和管理公司通讯录<br/>
+				8.  文档排版、装订<br/>
+				9.  完成上司交代的其它工作<br/>
+				<br/>
+				职位要求：<br/>
+				1.  中专以上学历，一年以上公司文员工作经验，仪表端庄，声音甜美<br/>
+				2.  熟练使用Word、Excel等办公软件，会借助互联网查找资料<br/>
+				3.  具有良好的沟通能力、协调能力，及较强的保密意识<br/>
+				4.  熟练使用各种办公自动化设备<br/>
+				5.  能吃苦耐劳，有良好的沟通、协调能力，较高的工作热情及良好的团队合作精神</p>
+		</div>
+	</div>
+</div>
+<div class="sendcv">
+	简历请发送至：<a href="mailto:hr@autoinhome.com">hr@autoinhome.com</a>
+</div>
+<div id="footer" class="beforeclick">
+	<img class="forbeauty" src="./img/network_img/footer/forbeauty.png" alt=""/>
+	<div class="aboutus">关于我们</div>
+	<div class="top">
+		<div class="subtop first">
+			<h4>公司简介
+				<br/>
+				AUTOINHOME
+			</h4>
+			<p>企业文化 COMPANY CULTURE
+				<br/>
+				品牌合作 BRAND
+				<br/>
+				合作伙伴 PARTNERS
+				<br/>
+				公司资质 COMPANY QUANTIFICATION
+			</p>
+		</div>
+		<div class="subtop second">
+			<h4>人才招聘
+				<br/>
+				CAREERS
+			</h4>
+			<p>加入我们 JOIN US</p>
+		</div>
+		<div class="subtop third">
+			<h4>联系我们
+				<br/>
+				CONTACT
+			</h4>
+			<p>copyright 2012-15 武汉智在家科技有限公司
+				<br/>
+				QQ： 1951057570	59519434
+				<br/>
+				咨询热线 6538 7897（CHINA）
+				<br/>
+				UPC：13010724
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="bot">
+		<img class="left_bot" src="./img/network_img/logo_white.png" alt=""/>
+		<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+		<div class="right_bot">
+			<a href=""><img src="./img/network_img/footer/wechat.png" alt=""/></a>
+			<a href=""><img src="./img/network_img/footer/QQ.png" alt=""/></a>
+			<a href=""><img src="./img/network_img/footer/weibo.png" alt=""/></a>
+			<a href=""><img src="./img/network_img/footer/facebook.png" alt=""/></a>
+			<a href=""><img src="./img/network_img/footer/twitter.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. 产品">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+	<title>AUTOINHOME PRODUCT</title>
+	<!--<link rel="stylesheet" href="../css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/product.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
+
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).resize(function(){
+				responsive();
+			});
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.content').css({'width':'900px'});
+					$('iframe').css('height','250px');
+					$('.product_name').css('padding-top','65px');
+					$('.product_img img').css({'width':'100%'});
+					$('#footer .aboutus').css({'display':'none'});
+					$('#footer .top').css({'display':'none'});
+					$('#footer .bot').css({'width':'90%','border-top':'none', 'padding-left':'5%','padding-right':'5%'});
+					$('#footer .right_bot').css({'padding-bottom':'15px'});
+					$('.forbeauty').css({'display':'none'});
+					$('.botbar').css({'width':'90%'});
+				} else {
+
+				}
+			}
+
+			responsive();
+		})
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../index.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../theater.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../safety.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../environment.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../network.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../aboutus.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="../productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="../productlist.html"></a></li>
+		<li><a class="panel solution" href="../index.html"></a></li>
+		<li><a class="panel theater" href="../theater.html"></a></li>
+		<li><a class="panel safety" href="../safety.html"></a></li>
+		<li><a class="panel environment" href="../environment.html"></a></li>
+		<li><a class="panel network" href="../network.html"></a></li>
+		<li><a class="panel contact" href="../aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+
+<div class="content">
+	<h1 class="product_name">比鼠标还小的电脑  RICI Sparo Mini PC详测</h1>
+	<div class="product_score">★★★★☆</div>
+	<div class="product_edit"><span class="release_time">March 2, 2015</span><span class="view_times">223 visits</span><span class="author">Sam Cho</span></div>
+	<div class="product_img">
+		<img src="./products_img/sparo/IMG_5574.jpg" alt=""/>
+	</div>
+	<div class="product_view">
+		<strong>一．Sparo机身外观及工艺赏析</strong>
+		<br/><br/>
+		Sparo一直号称是一台“比鼠标还小的电脑”，体积仅有62X62X62mm，体积就跟一个魔方差不多大小。而且市面上大多数的Mini PC都是长方体、长椭圆体等，Sparo这种正方体的形状还是比较少见的。
+		<br/><br/>
+		Sparo其实就是取义“sparrow”，中文名叫“麻雀”，所以机身上有一个麻雀的图案，看起来很精致好看。
+		<br><br>
+		Sparo由富士康代工，采用CNC一体化加工的顶级水准处理工艺，精密度达到微米单位，另外，它的表面进行了喷砂效果处理，所以实际到手体验，手感舒适，观感精致。
+		<br/><br/>
+	</div>
+	<div class="product_video">
+		<iframe src="https://player.vimeo.com/video/157001149" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<div class="product_scenario">
+		<strong>二．Sparo多场景使用评测</strong>
+		<br/><br/>
+		Sparo搭配完整的Windows 10系统，硬件方面，Sparo搭载四核处理器，采用2GB RAM+32GB ROM(可选64GB)，主机支持5V电压2A电流，可通过移动电源连接USB直接供电，内置蓝牙4.0与WiFi 802.11b/g/n模块，轻松连接网络。
+		<br/><br/>
+		拥有以上配置，Sparo应该是可以应用在多种情景的，以下我们将从商务办公、电影娱乐、玩游戏三个方面来评测一下Sparo在实际应用中的表现。
+		<br/><br/>
+		很多人都反映说不知道这类的Mini PC要怎么用，其实很简单，Mini PC虽然迷你，但其实就是一台PC，电脑主机怎么用，Mini PC就怎么用。比如这台Sparo，用HDMI线连接显示屏或者投影仪，再连接一个鼠标和键盘，按下背面的开关键，就可以使用了。
+		<br/><br/>
+		值得一提的是，Sparo支持5V电压2A电流，就是说通过一个移动电源就能支持它运作了，耗电量还不到普通PC的1/20，非常节能环保。
+		<br><br>
+		Sparo开机速度还是相当快的，测试版主机只需要11.3秒。开机之后，我们首先看到的是Win10的界面。Sparo搭载Win10使用起来是非常流畅的。
+		<br><br>
+		说到办公，其实大多数人经常使用的办公软件就是OfficeWord、Excel、PowerPoint这三种，外加Photoshop，已经可以满足很多人的办公需求了。Sparo可以免费下载应用商店的Word、Excel、PowerPoint，还能免费试用Office365一个月。而且，Sparo还能免费使用WPS正版软件。那用Sparo来运行Photoshop怎样呢？我们试着用Photoshop打开5张超过20M的图片，发现使用还是十分流畅的。Sparo用来轻办公是没有问题的，但很多男性消费者也会关心能不能用来玩游戏呢？接下来就用热门3D游戏《狂野飙车8：极速凌云》来做测试，看Sparo是否能支持这类大型游戏的流畅运行。
+		<br><br>
+		Sparo运行《狂野飙车8：极速凌云》基本没有压力，载入速度快，画面也保证了流畅度，几乎没有任何卡顿。
+		<br><br>
+		Sparo在办公和游戏方面都没有问题，那接下来就看一下在娱乐方面的表现，我们用观看视频的方式来试验一下。在测试过程中，Sparo选择了软解播放，软解播放也即是通过CPU来实现视频播放，软解播放对CPU性能考验较大，从实测也可以看出Sparo视频播放流畅，可见其性能不错。
+		<br><br>
+		综合应用下来，可见Sparo的性能还是不错的，对于Mini PC来说已经足够惊喜。前文说到散热问题，笔者在评测的1个小时里，玩游戏、看视频等，Sparo几乎是没有发热情况的，说明RICI已经完美解决了Sparo的散热问题。
+		<br><br>
+		此次的评测告一段落，最后总结一下，Sparo有几个让人印象深刻的地方：首先在外观设计方面，62mm正方体一体成型的迪拜金色铝合金机身搭配精致的做工，让人惊艳；Windows 10的操作系统流畅；轻办公、玩游戏、影音娱乐全都搞定，试用效果让人惊喜。综上几点，Sparo的确是值得入手，因为体积小，所以带着它去上班、出差都是非常方便的，也可以放在客厅娱乐使用。这台高颜值小体积的Mini PC还可以当礼品去送给追求科技潮品和追求颜值的朋友。
+		<br><br>
+		<p style="color: #ccc; font-size:0.8em; font-weight: 100; width:100%; text-align:right">以上是来自<a href="http://www.veryol.com/51809.html" style="color:#56a9b7">网页</a>的评测</p>
+		<br><br>
+	</div>
+	<div class="product_test">
+		<strong>三、我们的亲身测评 @sam</strong>
+		<br/><br/>
+		1.观点综述 <br>
+这款产品外观设计精美简约。是一个很适合年轻人群的礼物，把它送给朋友或者恋人都是不错的选择。我们认为它有能力与苹果TV及小米的同款产品媲美。
+<br><br>
+生产商阐明这款迷你主机可以支持一般的娱乐和工作，但是经过我们的测试，因为CPU不够大，在玩大型游戏或同时开启多个办公软件时是有点卡顿的。
+<br><br>
+2.可应用的场景 <br>
+很适合作为家庭影院的主机，为家庭营造浪漫温馨的电影氛围。
+我们建议这款产品最好还是用于较为简单的娱乐或者工作需求。
+个人而言，Sparo不能支持3D打印软件或者游戏的流畅运行。
+<br><br>
+3.测评 <br>
+我们使用这款主机运行了一个叫做CURA的3D打印软件，发现它能支持此款软件的操作，这一点还是能说明sparo具备一定的能力支持一般的工作娱乐，甚至是较为复杂的操作。
+<br><br>
+标签：
+windows 10，个人电脑主机，家庭影院，轻办公，轻娱乐
+价格：
+1499 元
+		
+		<br/>
+
+	</div>
+</div>
+
+<div class="botbar">
+	<div class="botbarleft">
+		<a href="http://weidian.com/p5/shop/pages/item-new.php?itemID=1757453106&code=02184477fd955464a77229aa2be5671M&state=H5WXshare"><img src="./products_img/bot_bar_01.jpg" alt=""/></a>
+	</div>
+	<div class="botbarright">
+		<a href="../productlist.html"><img src="./products_img/bot_bar_02.jpg" alt=""/></a>
+	</div>
+</div>
+
+<div id="footer" class="beforeclick">
+	<img class="forbeauty" src="../img/network_img/footer/forbeauty.png" alt=""/>
+	<div class="aboutus">关于我们</div>
+	<div class="top">
+		<div class="subtop first">
+			<h4>公司简介
+				<br/>
+				AUTOINHOME
+			</h4>
+			<p>企业文化 COMPANY CULTURE
+				<br/>
+				品牌合作 BRAND
+				<br/>
+				合作伙伴 PARTNERS
+				<br/>
+				公司资质 COMPANY QUANTIFICATION
+			</p>
+		</div>
+		<div class="subtop second">
+			<h4>人才招聘
+				<br/>
+				CAREERS
+			</h4>
+			<p>加入我们 JOIN US</p>
+		</div>
+		<div class="subtop third">
+			<h4>联系我们
+				<br/>
+				CONTACT
+			</h4>
+			<p>copyright 2012-15 武汉智在家科技有限公司
+				<br/>
+				QQ： 1951057570	59519434
+				<br/>
+				咨询热线 6538 7897（CHINA）
+				<br/>
+				UPC：13010724
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="bot">
+		<img class="left_bot" src="../img/network_img/logo_white.png" alt=""/>
+		<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+		<div class="right_bot">
+			<a href=""><img src="../img/network_img/footer/wechat.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/QQ.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/weibo.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/facebook.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/twitter.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

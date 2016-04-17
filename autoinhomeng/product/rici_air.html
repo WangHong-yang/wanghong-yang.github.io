@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- iOS add to homescreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="智在家. RICI空气小精灵">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+	<title>AUTOINHOME PRODUCT - RICI AIR MONITOR</title>
+	<!--<link rel="stylesheet" href="../css/jquery.fullPage.css">-->
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/product.css"/>
+
+	<!-- icon -->
+	<link rel="icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="../img/network_img/favicon.png">
+	<link rel="apple-touch-startup-image" href="../img/network_img/favicon.png">
+
+	<script src="../js/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).resize(function(){
+				responsive();
+			});
+			function responsive(){
+				var $ww = $(window).width();
+				if($ww < 1024){
+					$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+					$('.nav_mobile_place_holder').css('display', 'block');
+					$('.nav_mobile').css('display', 'block');
+					$('nav').css('display', 'none');
+					$('.content').css({'width':'900px'});
+					$('iframe').css('height','250px');
+					$('.product_name').css('padding-top','65px');
+					$('.product_img img').css({'width':'100%'});
+					$('.product_view img').css({'width':'100%'});
+					$('.product_scenario img').css({'width':'100%'});
+					$('.product_test img').css({'width':'100%'});
+					$('#footer .aboutus').css({'display':'none'});
+					$('#footer .top').css({'display':'none'});
+					$('#footer .bot').css({'width':'90%','border-top':'none', 'padding-left':'5%','padding-right':'5%'});
+					$('#footer .right_bot').css({'padding-bottom':'15px'});
+					$('.forbeauty').css({'display':'none'});
+					$('.botbar').css({'width':'90%'});
+				} else {
+
+				}
+			}
+
+			responsive();
+		})
+	</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="../index.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="../theater.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="../safety.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="../environment.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="../network.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="../aboutus.html"><div class="nav_mobile_class" style="background-image: url('../img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="../productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="../productlist.html"></a></li>
+		<li><a class="panel solution" href="../index.html"></a></li>
+		<li><a class="panel theater" href="../theater.html"></a></li>
+		<li><a class="panel safety" href="../safety.html"></a></li>
+		<li><a class="panel environment" href="../environment.html"></a></li>
+		<li><a class="panel network" href="../network.html"></a></li>
+		<li><a class="panel contact" href="../aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+
+<div class="content">
+	<h1 class="product_name">RICI空气小精灵，敏锐嗅觉且智能</h1>
+	<div class="product_score">★★★★☆</div>
+	<div class="product_edit"><span class="release_time">March 6, 2016</span><span class="view_times">4</span><span class="author">Sam Cho</span></div>
+	<div class="product_img">
+		<img src="./products_img/rici_air/3.png" alt=""/>
+		<img src="./products_img/rici_air/4.png">
+	</div>
+	<div class="product_view">
+		<strong>1．外观and设计篇</strong>
+		<br><br>
+		<p>RICI空气小精灵在外观上像一个智能插座，外壳部分采用铝合金材质，轻巧又坚固，边角经过CNC处理后圆滑不扎手。RICI SUNG智能空气小精灵采用铝合金CNC阳极氧化工艺，做工比较精致，机身小巧。RICI空气小精灵与其他的检测空气设备最大的不同在于RICI空气小精灵是内嵌在墙面，直接通过接线通电运行，也就是说RICI空气小精灵无需进行充电。</p>
+		<br>
+		<img src="./products_img/rici_air/2.png">
+		<br><br>
+		<p>拆开拆开探测组件后可以看到其内部做工非常好，电路板上异常的干净整洁，完全没有飞线和手工点焊现象。 RICI空气小精灵采用了高度集成的模块化设计，结构简单但功能齐全。空气小精灵的内部由传感控制系统和进气系统两大部分组成。传感控制系统中集成了一块由RICI自主研发的ZigBee芯片和一个来自德州仪器的检测传感器。</p>
+		<img src="./products_img/rici_air/7.jpg">
+	</div>
+	<div class="product_video">
+		<!-- 这一部分需要先上传视频，上传之后生成链接 vimeo 视频 -->
+		<iframe src="https://player.vimeo.com/video/159466916" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<div class="product_scenario">
+		<strong>2．功能篇</strong>
+		<br/><br/>
+		RICI空气小精灵能够时刻对空气进行监测，还采用了ZigBee标准协议，内置NFC,可以方便地实现智能家居设备的配对。空气小精灵内置的ZigBee芯片还能与网关进行实时的数据交互，将检测报告推送至手机APP客户端。
+		<br><br>
+		圆型设计的监测器，结构紧凑简单，通过磁力吸附在底座上。空气小精灵侧面安装有0.8mm烟雾针孔探测器，可检测空气中的多重有害成分，包括煤气泄漏、甲醛、酒精、油烟、一氧化碳、甲苯、苯等。
+		<br><br>
+		空气小精灵以不同颜色的光圈来指示空气质量，绿、蓝、橙、红分别对应指示空气质量优、良、中、差。值得一提的是，RICI空气小精灵的监测功能非常灵敏，能准确地监测空气质量的变化。当空气恶化时，空气小精灵还能与通风系统智能联动，自动换气净化室内空气。
+		<img src="./products_img/rici_air/6.png">
+		<br><br>
+	</div>
+	<div class="product_test">
+		<strong>3．测试篇</strong>
+		<br/><br/>
+		通过点燃香烟来测试这款小精灵是否可以马上感应并且报警。我们在我们的办公室（约15平米）做实验，来考验空气小精灵的灵敏性是否能及时报警蜂鸣。如果时间超过5秒钟则视为无效，从实验来看，空气小精灵的灵敏度相当不错，只要在室内点燃香烟，小精灵都都能在5秒之内报警，特别是靠小精灵最近的时候马上就蜂鸣报警，并且会根据质量的指标通过颜色光圈来表现告诉用户。对于新装修房子的用户来说此等设备更是必不可少。通过开窗以及开启空气净化器一个小时之后，室内空气才转换成优。整体来看空气小精灵的时效性非常准，无论是在密集场所还是空气不流通空间，该空气检测设备均会实时监测结果，无论您是出门在外还是在您休息时，一旦监测到室内空气差时，它都会通过手机自动推送消息给您。
+		<br><br>
+		价格: 1500元
+
+		<br/>
+
+	</div>
+</div>
+
+<div class="botbar">
+	<div class="botbarleft">
+		<!-- 放微店的链接在 href 的两个引号里面 -->
+		<a href="http://weidian.com/item.html?itemID=1773518913"><img src="./products_img/bot_bar_01.jpg" alt=""/></a>
+	</div>
+	<div class="botbarright">
+		<a href="../productlist.html"><img src="./products_img/bot_bar_02.jpg" alt=""/></a>
+	</div>
+</div>
+
+<div id="footer" class="beforeclick">
+	<img class="forbeauty" src="../img/network_img/footer/forbeauty.png" alt=""/>
+	<div class="aboutus">关于我们</div>
+	<div class="top">
+		<div class="subtop first">
+			<h4>公司简介
+				<br/>
+				AUTOINHOME
+			</h4>
+			<p>企业文化 COMPANY CULTURE
+				<br/>
+				品牌合作 BRAND
+				<br/>
+				合作伙伴 PARTNERS
+				<br/>
+				公司资质 COMPANY QUANTIFICATION
+			</p>
+		</div>
+		<div class="subtop second">
+			<h4>人才招聘
+				<br/>
+				CAREERS
+			</h4>
+			<p>加入我们 JOIN US</p>
+		</div>
+		<div class="subtop third">
+			<h4>联系我们
+				<br/>
+				CONTACT
+			</h4>
+			<p>copyright 2012-15 武汉智在家科技有限公司
+				<br/>
+				QQ： 1951057570	59519434
+				<br/>
+				咨询热线 6538 7897（CHINA）
+				<br/>
+				UPC：13010724
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="bot">
+		<img class="left_bot" src="../img/network_img/logo_white.png" alt=""/>
+		<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+		<div class="right_bot">
+			<a href=""><img src="../img/network_img/footer/wechat.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/QQ.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/weibo.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/facebook.png" alt=""/></a>
+			<a href=""><img src="../img/network_img/footer/twitter.png" alt=""/></a>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

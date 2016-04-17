@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<!-- iOS add to homescreen -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="智在家. 环境管理">
+<meta name="apple-mobile-web-app-status-bar-style" content="#56a9b7">
+
+<title>AUTOINHOME 智在家</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/environment.css"/>
+
+<!-- icon -->
+<link rel="icon" sizes="128x128" href="./img/network_img/favicon.png">
+<link rel="apple-touch-icon" sizes="128x128" href="./img/network_img/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="./img/network_img/favicon.png">
+<link rel="apple-touch-startup-image" href="./img/network_img/favicon.png">
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script>
+$(function(){
+	$('#slides').fullpage({
+		navigation: !0,
+		sectionsColor: ['#ffffff', '#eeeeee', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#fff000', '#b6d34a', '#ffffff'],
+		normalScrollElements: '.higher_sec',
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+		afterLoad: function(anchorLink, index){
+			if(index == 7){
+				$('.sec7').find('.sec7mengban').delay(0).animate({
+					left: '0'
+				}, 500, 'easeOutExpo');
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '7'){
+				$('.sec7').find('.sec7mengban').delay(0).animate({
+					left: '-65%'
+				}, 500, 'easeOutExpo');
+			}
+		}
+	});
+
+	$(window).resize(function(){
+        responsive();
+    });
+
+    function responsive(){
+        var $ww = $(window).width();
+        if($ww < 1024){
+			$('.fb').css({'width':'150px','height':'150px','top':'130px'});
+			$('.nav_mobile_place_holder').css('display', 'block');
+        	$('.nav_mobile').css('display', 'block');
+        	$('nav').css('display', 'none');
+            $('.section').css('font-size', 100);
+            $('.sec1 img').css('width', '30%');
+			$('.sec1bot img').css({'width':'90%','margin-top':'25px'});
+			$('.sec1logo').css({'width':'20%'});
+            $('.row').css({'height': 150, 'width': 790});
+            $('.row_right').css('width', 305);
+			$('.row_pic').css({'height':'100','width':'100','margin-top':'30px'});
+			$('.sec2_types_features').css({'margin-left':'-60px'});
+            $('.sec2_types_title').css({'margin-bottom':'80px','width':'50%','padding-left':'98px'});
+            $('.sec2t1').css({'width':'40%'});
+			$('.sec2t2').css({'width':'60%'});
+			$('.intro').css({'width': '80%', 'margin': '20px auto', 'font-size': '0.3em'});
+            $('.sec3 h3').css('font-size', '0.9em');
+            $('.sec3 img').css('width', '30%');
+            $('.sec3 p').css('font-size', '0.3em');
+			$('.sec3 .intro').css({'width':'50%'});
+			$('.sec3intro').css({'width':'61%'});
+			$('.sec4inlineblock').css({'line-height':'60px','display':'block'});
+			$('.sec4intro').css({'width':'65%','margin-left':'-32.5%','bottom':'70px'});
+            $('.sec4pic').css({'margin':'70px auto','width':'40%'});
+			$('.sec5png').css({'width':'60%','bottom':'20%'});
+			$('.sec5 p').css({'width':'60%','bottom':'70px','right':'70px'});
+			$('.sec6').css({'background-position':'left top','background-size':'cover'});
+			$('.sec6pic').css({'position':'relative','left':'0','width':'200px'});
+			$('.sec6p').css({'margin':'70px auto 0 auto','width':'60%'});
+			$('.sub_bg_cover').css('width', 188);
+            $('.sub_bg_cover>h4').css('font-size', '0.8em');
+            $('.bg_content_wraper').css('width', 840);
+            $('.features').css('width', '95%');
+            $('.bg_cover_left').css({'width': '55%', 'font-size': '0.9em'});
+            $('.bg_cover_right').css({'bottom': '10%', 'width': '75%'});
+            $('.bg_cover_right>p').css({'width': '90%', 'padding': '20px'});
+            $('#smaller_font').css({'width': '65%', 'margin-bottom': 90, 'font-size':'0.3em'});
+            $('.sec7logo').css({'max-width': '20%', 'top': '20%'});
+            $('.sec71TB').css({'max-width': '15%', 'top': '30%'});
+            $('.sec72TB').css({'max-width': '20%', 'top': '40%', 'left': '15%'});
+            $('.sec7luyou').css({'width': '60%', 'top': '70%'});
+            $('.sec7mengban').css({'height':'15%','top':'50%','padding':'20px 50px 0 50px'});
+			$('.sec8banner').css({'width':'55%','padding':'105% 50px 0 50px'});
+			$('.sec8 img').css({'width':'80%','position':'relative','z-index':'2'});
+            $('.sec7mengban>p').css({'font-size':'0.3em', 'margin':'10% 1% 5% 6%'});
+            $('.sec8 p').css({'font-size':'0.3em'});
+            $('.sec8panel').css({'width':'800px'});
+            $('.sec8right').css({'width':'425px'});
+			$('.sec9img').css({'display':'none'});
+			$('.sec9mobimg').css({'display':'block','width':'90%','margin':'0 auto'});
+			$('.sec9 p').css({'display':'block','font-size':'0.4em','font-weight':'100','width':'65%','margin':'90px auto 0 auto'});
+            $('.higher_sec>img').css('margin-top', '25%');
+			$('.sec10sec').css({'margin-top':'0'});
+            $('.top_part').css('margin-top', '200%');
+            $('.lower_sec').css('width', '90%');
+            $('.sec10 p').css({'line-height':'1.5em', 'font-size':'0.24em'});
+            $('.sec10_sec').css({'width':'33%'});
+			$('.sec10_1').css({'margin-top':'0'});
+			$('.sec10_2').css({'margin-top':'30px'});
+			$('.sec10_3').css({'margin-top':'35px'});
+			$('.sec10_4').css({'margin-top':'40px'});
+			$('.sec10_5').css({'margin-top':'60px'});
+			$('.sec10_6').css({'margin-top':'50px'});
+			$('.sec10_7').css({'margin-top':'100px'});
+			$('.sec10_8').css({'margin-top':'30px'});
+
+        } else {
+            
+        }
+    }
+
+    responsive();
+});
+</script>
+	<script>
+		// Executes the function when DOM will be loaded fully
+		$(document).ready(function () {
+			// hover property will help us set the events for mouse enter and mouse leave
+			$('.navigation li').hover(
+					// When mouse enters the .navigation element
+					function () {
+						//Fade in the navigation submenu
+						$('ul', this).fadeIn(); 	// fadeIn will show the sub cat menu
+					},
+					// When mouse leaves the .navigation element
+					function () {
+						//Fade out the navigation submenu
+						$('ul', this).fadeOut();	 // fadeOut will hide the sub cat menu
+					}
+			);
+
+			//jquery for mobile navigator
+			var nav_tag = 1; //not shown
+			$('.nav_mobile_btn').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('.nav_mobile_place_holder').click(function(){
+				if (nav_tag==1) {
+					nav_tag = 0;
+					$('.nav_mobile_class').css('display', 'block');
+				} else {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				}
+			});
+			$('#slides').click(function(){
+				if(nav_tag==0) {
+					nav_tag = 1;
+					$('.nav_mobile_class').css('display', 'none');
+				} else {
+					//do nothing
+				}
+			});
+
+			//jquery and easing.js for footer easing
+			var tag = 1;
+			var footer = $('#footer');
+			$('.aboutus').click(function(){
+				if (tag==1) {
+					tag = 0;
+					footer.removeClass('beforeclick');
+					footer.addClass('afterclick');
+				} else {
+					tag = 1;
+					footer.addClass('beforeclick');
+					footer.removeClass('afterclick');
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="nav_mobile_place_holder"></div>
+<div class="nav_mobile" style="display:none">
+	<div class="nav_mobile_btn"></div>
+	<div class="nav_mobile_class_wraper">
+		<a href="./index.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0002.PNG')"></div></a>
+		<a href="./theater.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0003.PNG')"></div></a>
+		<a href="./safety.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0004.PNG')"></div></a>
+		<a href="./environment.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0005.PNG')"></div></a>
+		<a href="./network.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0006.PNG')"></div></a>
+		<a href="./aboutus.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0007.PNG')"></div></a>
+		<a href="./productlist.html"><div class="nav_mobile_class" style="background-image: url('./img/network_img/navpic/Untitled-1_0008.PNG')"></div></a>
+	</div>
+</div>
+<nav>
+	<ul class="navigation">
+		<li id="logo_list"><a class="panel logo" href="./productlist.html"></a></li>
+		<li><a class="panel solution" href="./index.html"></a></li>
+		<li><a class="panel theater" href="./theater.html"></a></li>
+		<li><a class="panel safety" href="./safety.html"></a></li>
+		<li><a class="panel environment" href="./environment.html"></a></li>
+		<li><a class="panel network" href="./network.html"></a></li>
+		<li><a class="panel contact" href="./aboutus.html"></a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+<div id="slides">
+	<div class="section sec1">
+		<img class="sec1logo" src="./img/environment_img/1-1.png" alt=""/>
+		<h3>环境管理. 节能 环保 健康</h3>
+		<div class="sec1bot"><img src="./img/environment_img/1-2.png" alt=""/></div>
+	</div>
+	<div class="section sec2">
+		<h4>智在家环境管理方案优势</h4>
+		<img class="sec2_top_pic" src="./img/environment_img/smart_environment.png" alt=""/>
+		<div class="sec2_types_title"><h4 class="sec2t1">普通环境管理</h4><h4 class="sec2t2">智在家环境管理系统</h4><div class="clear"></div></div>
+		<div class="sec2_types_features">
+			<div class="row">
+				<p class="row_pic"><img src="./img/environment_img/2-1_01.png" alt=""/></p>
+				<p class="row_left">普通空调、净化器、加湿器只能由人开关、调节参数</p>
+				<p class="row_right">智在家环境管理系统采用智能主动控制系统，通过判断有人无人、环境参数、变化趋势等因素主动开启或关闭空调、净化器、加湿器等设备</p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/environment_img/2-1_02.png" alt=""/></p>
+				<p class="row_left">环境管理在于健康，当温度过低或过高时对人体都是有害的，普通空调、加湿器只能简单运行在一种模式，无法应对微观的环境变化，常期运行可能使人患上空调病或感冒</p>
+				<p class="row_right"><span>智在家环境管理系统，通过实时检测内外环境变量，智能保持环境参数在适宜状态，当外部环境优于内部环境时，主动打开门窗，关闭设备，既省电，又健康</span></p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/environment_img/2-1_03.png" alt=""/></p>
+				<p class="row_left">任何局部环境的调节都需要多种设备的协调工作，传统的空调、净化器、加湿器各自为政，无法联动工作，调节好环境参数</p>
+				<p class="row_right">智在家环境管理系统，综合了温湿度、光照、PM2.5等参数，协调空调、净化器、加湿器、门窗的工作，主动维持家中环境在人体最舒适的状态</p>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<p class="row_pic"><img src="./img/environment_img/2-1_04.png" alt=""/></p>
+				<p class="row_left">家电环境设备无法主动开关，也无法主动根据环境调整功率，能耗大、不环保、也不健康</p>
+				<p class="row_right">智在家环境管理系统，只在需要的时候让相关设备运行，并且实时根据相应环境参数调整设备功率，达到环保节能的目的</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="section sec3">
+		<h3>深度监控环境PM2.5参数</h3>
+		<p class="intro">智在家环境管理，及时自生环境处理，还您一个绿色健康的家庭。</p>
+		<img src="./img/environment_img/3-1.png" alt="PM2.5"/>
+		<p class="sec3intro">PM2.5对人体危害极大，10μm直径的颗粒物通常沉积在上呼吸道，2μm以下的可深入到细支气管和肺泡，细颗粒进入人体到肺泡后，直接影响肺的通气功能，使机体容易处在缺氧状态。</p>
+	</div>
+	<div class="section sec4">
+		<img class="sec4inlineblock sec4pic" src="./img/environment_img/4-1.png" alt=""/>
+		<p class="sec4inlineblock"><span style="color:rgb(211,230,69);font-size:2.5em;">30</span>℃最佳环境
+			<br/><br/><br/>
+			<span style="color:rgb(205,101,52);font-size:2.5em;">41</span>℃老人和体弱多病者容易休克
+			<br/><br/>
+			相对湿度<span style="color:rgb(222,90,35)">></span><span style="color:rgb(222,90,35);font-size:2.5em;">65%</span>或者<span style="color:rgb(223,161,33)"><</span><span style="color:rgb(223,161,33);font-size:2.5em;">40%</span>病菌繁殖滋生最快
+			<br/>
+			相对湿度<span style="color:rgb(193,230,30);font-size:2.5em;">45-55%</span>病菌死亡较快
+		</p>
+		<p class="sec4intro">智在家环境管理系统，采用DHT高精度温湿度传感器，精准检测睡眠高度的温湿度值，能够有效管理房间局部温湿度。</p>
+	</div>
+	<div class="section sec5">
+		<img class="sec5png" src="./img/environment_img/5-1.png" alt=""/>
+		<p>智在家环境管理系统，采集内外光强，主动管理灯光，环保节能。</p>
+	</div>
+	<div class="section sec6">
+		<img class="sec6pic" src="./img/environment_img/6-1.png" alt=""/>
+		<p class="sec6p">智在家环境管理系统，主动比对室内外环境差别及天气趋势，再也不必担心晚上空调过冷，湿度过大，关于环境的一切，交由我们处理。</p>
+	</div>
+	<div class="section sec7">
+		<img class="sec7luyou" src="./img/environment_img/7-1.png" alt="luyou"/>
+		<div class="bg_cover_set sec7mengban">
+			<p>智在家环境管理系统，采用无线控制技术，电动窗帘和窗户都能自动开启关闭，再也不担心下雨忘了关窗。</p>
+		</div>
+	</div>
+	<div class="section sec8">
+		<img src="./img/environment_img/8-1.png" alt=""/>
+		<div class="sec8banner">智在家环境管理系统，集联了WIFI/Zigbee/射频等信息技术，所有设备集成在一个系统网络中运行，空调、净化器、加湿器会依据室内外环境参数的变化，人员状态，以及门窗状态等变量联合协调工作，主动维持家中环境。</div>
+	</div>
+	<div class="section sec9">
+		<img class="sec9img" src="./img/environment_img/9-1.png" alt=""/>
+		<img class="sec9mobimg" style="display: none" src="./img/environment_img/9-2.png" alt=""/>
+		<p style="display: none">只在需要的时候让相关设备运行，并且实时根据相应环境参数调整设备功率，达到环保节能的目的</p>
+	</div>
+	<div class="section sec10">
+
+		<div class="higher_sec">
+
+			<h4>智能家装 服务流程
+				<br/><br/>
+				专业的服务专业的流程。
+			</h4>
+			<img class="sec10sec" src="img/environment_img/10-1.png" alt=""/>
+			<div class="sec10sec">
+				<h5 class="sec10_1" style="margin-top: 10px">1. 询问阶段</h5>
+				<p class="sec10_2" style="margin-top: 80px;">中国第一网络供应商连通
+					<br/>
+					跨界合作，完美搭配出
+					<br/>
+					智能体验馆
+					<br/>
+					楚汉路万达御湖世家
+					<br/>
+					顶尖的设计师团队
+				</p>
+				<h5 class="sec10_3" style="margin-top: 105px;">2. 方案阶段</h5>
+				<p class="sec10_4" style="margin-top: 80px">
+					你的智能需求大声说出来。<br/>
+					简单而且快捷的方法。<br/>
+					把你的需求变成专业的智能方案。
+				</p>
+				<h5 class="sec10_5" style="margin-top: 145px;">3. 施工阶段</h5>
+				<p class="sec10_6" style="margin-top: 80px">
+					不费心。<br/>
+					专业的施工团队 <br/>
+					设定你要的智能生活。<br/>
+				</p>
+				<h5 class="sec10_7" style="margin-top: 150px;">4. 4S服务</h5>
+				<p class="sec10_8" style="margin-top: 20px">
+					方案（Solution）<br/>
+					个性（Special） <br/>
+					服务（Service）<br/>
+					满足（Satisfaction）
+				</p>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+
+
+		<div id="footer" class="beforeclick">
+			<img class="forbeauty" src="./img/network_img/footer/forbeauty.png" alt=""/>
+			<div class="aboutus">关于我们</div>
+			<div class="top">
+				<div class="subtop first">
+					<h4>公司简介
+						<br/>
+						AUTOINHOME
+					</h4>
+					<p>企业文化 COMPANY CULTURE
+						<br/>
+						品牌合作 BRAND
+						<br/>
+						合作伙伴 PARTNERS
+						<br/>
+						公司资质 COMPANY QUANTIFICATION
+					</p>
+				</div>
+				<div class="subtop second">
+					<h4>人才招聘
+						<br/>
+						CAREERS
+					</h4>
+					<p>加入我们 JOIN US</p>
+				</div>
+				<div class="subtop third">
+					<h4>联系我们
+						<br/>
+						CONTACT
+					</h4>
+					<p>copyright 2012-15 武汉智在家科技有限公司
+						<br/>
+						QQ： 1951057570	59519434
+						<br/>
+						咨询热线 6538 7897（CHINA）
+						<br/>
+						UPC：13010724
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+			<div class="bot">
+				<img class="left_bot" src="./img/network_img/logo_white.png" alt=""/>
+				<p>ALL DESIGN AND PRODUCT ARE COLLABORATED WITH AUTOINHOME</p>
+				<div class="right_bot">
+					<a href=""><img src="./img/network_img/footer/wechat.png" alt=""/></a>
+					<a href=""><img src="./img/network_img/footer/QQ.png" alt=""/></a>
+					<a href=""><img src="./img/network_img/footer/weibo.png" alt=""/></a>
+					<a href=""><img src="./img/network_img/footer/facebook.png" alt=""/></a>
+					<a href=""><img src="./img/network_img/footer/twitter.png" alt=""/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<div><a href="http://wanghong-yang.github.io/quetionare/environment/index1.html"><img class="fb" src="./img/control_img/question-icon2.png"></a></div>
+
+
+
+
+
+</body>
+
+</html>
