@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('store', ['modules']);
+	var app = angular.module('store', []);
 
 	app.controller('StoreController', function(){
 		this.products = smart;
