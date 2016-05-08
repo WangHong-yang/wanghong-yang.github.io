@@ -1,0 +1,141 @@
+/* CSS controls page style */
+/* 2016.5.7 by Hao Pan */
+
+/* Mainpart */
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.list-group-item {
+    border: 5px solid #dff8f5;
+    border-top: none;
+    transition: 0.3s;
+}
+.list-group .list-group-item:hover {
+    background-color: #00a7ae;
+    color: white!important;
+    transition: 0.3s;
+}
+.list-group .list-group-item:hover .compName, .list-group .list-group-item:hover .jobTitle, .list-group .list-group-item:hover .postTime {
+    color: white!important;
+    transition: 0.3s;
+}
+
+
+/* Search Part Style */
+job-search {
+    border-top: 5px solid #dff8f5!important;
+    margin-top: 50px;
+    height: 110px;
+    padding-top: 28px!important;
+}
+job-search h1, job-search input {
+    display: inline-block;
+    vertical-align: middle;
+}
+job-search h1 {
+    width: 20%;
+    color: #00646b;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 10px;
+}
+.keyword-search, .position-search {
+    height: 34px;
+    border: 2px solid #dedede;
+    padding-left: 7px;
+}
+.keyword-search {
+    width: 40%;
+    font-size: 1.1em;
+}
+.position-search {
+    margin-left: 1%;
+    width: 20%;
+    font-size: 1.1em;
+}
+.Go-btn {
+    margin-left: 2%;
+    width: 10%;
+    font-size: 1.3em;
+    font-weight: 700;
+    border-radius: 17px;
+    background-color: #ffc955;
+    color: black;
+}
+
+/* Job Introduction Part Style */
+job-intro span {
+    display: inline-block;
+    vertical-align: middle;
+}
+job-intro img {
+    display: block;
+    max-height: 50px;
+    margin: 0 auto;
+}
+job-intro .compLogo {
+    width: 20%;
+}
+.compName, .jobTitle {
+    width: 13%;
+    color: #00a6ae;
+    font-size: 1.1em;
+}
+.jobPosit {
+    width: 13%;
+    font-size: 1.1em;
+}
+.postTime {
+    width: 33%;
+    text-align: right;
+    font-size: 0.3em;
+    color: #aaa;
+}
+
+
+/* Responsive */
+@media (max-width:640px) {
+    /*search part responsive*/
+    job-search{
+        padding-top: 10px!important;
+        margin-top: 0;
+        height: 220px;
+    }
+    job-search h1 {
+        display: block;
+        width: 100%;
+    }
+    .keyword-search {
+        width: 100%;
+    }
+    .position-search {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .Go-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* intro part responsive */
+    .compName {
+        width: 47%;
+        padding-left: 2%;
+        text-align: center;
+    }
+    .jobTitle {
+        width: 30%;
+    }
+    .jobPosit {
+        width: 67%;
+        padding-left: 23%;
+        text-align: center;
+    }
+    .postTime {
+        width: 31%;
+    }
+
+}
