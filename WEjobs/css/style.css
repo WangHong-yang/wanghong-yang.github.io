@@ -137,5 +137,12 @@ job-intro .compLogo {
     .postTime {
         width: 31%;
     }
-
+}
+@media (max-width:1024px) {
+    job-search{
+        margin-top: 0;
+    }
+    .postTime {
+        font-size: 0.8em;
+    }
 }
