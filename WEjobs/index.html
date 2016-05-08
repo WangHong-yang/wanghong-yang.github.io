@@ -21,7 +21,7 @@
 		<job-search class="list-group-item"></job-search>
 
 		<div class="list-group">
-			<div class="list-group-item" ng-repeat="job in jc.jobs">
+			<div class="list-group-item" ng-repeat="job in jc.jobs" ng-click="job.ifShow=!job.ifShow">
 				<!-- Product Info Part  -->
 				<job-intro></job-intro>
 			</div>
