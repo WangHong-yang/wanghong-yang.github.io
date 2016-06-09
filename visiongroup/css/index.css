@@ -117,7 +117,7 @@
 @media screen and (max-width: 768px) {
     .nav h1 {
         font-family: Roboto-Regular;
-        font-size: 1.2em;
+        font-size: 1.13em;
         display: block;
         text-align: center;
     }
@@ -135,7 +135,7 @@
         padding: 45px 0;
     }
     .people .left-pic {
-        width: 38%;
+        width: 48%;
         padding: 0;
         margin: auto;
         display: block;
