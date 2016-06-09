@@ -1,0 +1,155 @@
+.nav {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+}
+.nav span {
+    display: inline-block;
+    width: 16%;
+    text-align: right;
+}
+
+.nav h1 {
+    /*font-family: Roboto-Regular;*/
+    display: inline-block;
+    color: white;
+}
+
+.nav .nav-right {
+    display: inline-block;
+    float: right;
+}
+
+.navHover {
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.9);
+}
+.navHover h1 {
+    transition: all 0.2s;
+    color: black;
+}
+
+.intro {
+    width: 100%;
+    background-color: #000000;
+}
+
+.intro img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding-top: 170px;
+}
+.intro h2, .intro p {
+    color: white;
+}
+
+.intro p {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.news, .people, .publication {
+    width: 100%;
+    padding: 100px 0 0 0;
+}
+
+.news h2, .people h2, .publication h2 {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 30px;
+}
+.news p, .publication p {
+    padding-top: 15px;
+}
+.news .thigh, .people .thigh, .publication .thigh {
+    padding-right: 15px;
+}
+
+.people .teacher {
+    padding: 30px 0;
+}
+
+.people .sec {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.people .left-pic {
+    width: 20%;
+    padding: 0 15px 0 0;
+}
+.people .left-pic img {
+    width: 100%;
+    border-radius: 0;
+}
+.people .right-info {
+    width: 78%;
+}
+
+.people .student .st-list {
+    display: inline-block;
+    width: 15%;
+    padding: 20px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.people .student .st-list img {
+    display: block;
+    transition: all 0.3s;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.people .student .st-list img:hover {
+    transition: all 0.3s;
+    border-radius: 0;
+}
+
+.publication {
+    padding-bottom: 300px;
+    /* This property is just for test */
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav h1 {
+        font-size: 1.3em;
+        display: block;
+        text-align: center;
+    }
+    .nav span {
+        width: 31%;
+        text-align: center;
+        vertical-align: middle;
+        padding-bottom: 15px;
+    }
+    .intro img {
+        width: 100%;
+        padding-top: 120px;
+    }
+    .intro p {
+        padding: 45px 0;
+    }
+    .people .left-pic {
+        width: 66%;
+        padding: 0;
+        margin: auto;
+        display: block;
+    }
+    .people .right-info {
+        text-align: left;
+        width: 100%;
+    }
+    .people .right-info h3, .people .right-info .title {
+        text-align: center;
+    }
+    .people .right-info h3 {padding-top: 10px;}
+    .people .right-info .title {padding-bottom: 10px;}
+    .people .student .st-list {
+        width: 49%;
+        padding: 20px 0;
+    }
+}
