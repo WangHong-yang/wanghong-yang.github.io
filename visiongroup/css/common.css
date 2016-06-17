@@ -28,3 +28,44 @@ a:hover {text-decoration: underline; color: #01579B;}
 .thigh {
     color: #F57F17;
 }
+
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer .sec {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+.footer h3 {
+    font-size: 1.2em;
+    font-family: Roboto;
+    font-weight: 100;
+    margin: 30px 0;
+    border-left: 2px solid #F57F17;
+    padding-left: 10px;
+}
+.footer .left a {
+    display: block;
+    padding-bottom: 10px;
+}
+.footer h2 {
+    font-size: 0.7em;
+    text-align: right;
+    color: #F57F17;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 40px 0 60px 0;
+    }
+    .footer .sec {
+        display: block;
+        width: 100%;
+    }
+}

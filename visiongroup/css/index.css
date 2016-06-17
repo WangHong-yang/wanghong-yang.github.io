@@ -108,7 +108,8 @@
 }
 
 .publication {
-    padding-bottom: 300px;
+    /*padding-bottom: 300px;*/
+    padding-bottom: 80px;
     /* This property is just for test */
 }
 
