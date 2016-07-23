@@ -28,6 +28,15 @@ a:hover {text-decoration: underline; color: #01579B;}
 .thigh {
     color: #F57F17;
 }
+.r-font {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bold {
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
 
 .footer {
     width: 100%;

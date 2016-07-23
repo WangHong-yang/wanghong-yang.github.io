@@ -5,14 +5,14 @@
 }
 .nav span {
     display: inline-block;
-    width: 16%;
+    width: 14%;
     text-align: right;
 }
 
 .nav h1 {
     /*font-family: Roboto-Regular;*/
     display: inline-block;
-    color: white;
+    color: #F57F17;
 }
 
 .nav .nav-right {
