@@ -39,7 +39,7 @@
     border-left: 5px solid #F57F17;
     padding-left: 10px;
 }
-.right-contents ul li {
+.right-contents ol li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 20px 20px;
 }
@@ -81,6 +81,21 @@
     color: #01579B;
 }
 
+.right-contents .photo-block {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+    margin: 0 0 30px 0;
+}
+.right-contents .photo-block img {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+.right-contents .photo-block p {
+    text-align: center;
+}
+
 /* button4Mob */
 .button4Mob {
     position: fixed;
@@ -111,11 +126,14 @@
     .right-contents {
         margin: 0;
     }
-    .right-info, .self-intro, .open-position, .call-for-papers, .recent-news, .selected-recent-pub, .services, .awards-and-honors, .students {
+    .right-info, .photos, .self-intro, .open-position, .call-for-papers, .recent-news, .pub, .services, .awards-and-honors, .students {
         margin: 0 20px;
     }
     .right-contents .left-pic img {
         width: 100%;
+    }
+    .right-contents .photo-block {
+        width: 98%;
     }
 
 }

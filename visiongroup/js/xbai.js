@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    
+
     var tag = 0;
     $(".button4Mob").click(function(){
         if (tag==0) {

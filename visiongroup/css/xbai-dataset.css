@@ -39,7 +39,7 @@
     border-left: 5px solid #F57F17;
     padding-left: 10px;
 }
-.right-contents ul li {
+.right-contents ol li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 20px 20px;
 }
@@ -111,7 +111,7 @@
     .right-contents {
         margin: 0;
     }
-    .right-info, .self-intro, .open-position, .call-for-papers, .recent-news, .selected-recent-pub, .services, .awards-and-honors, .students {
+    .right-info, .self-intro, .open-position, .call-for-papers, .recent-news, .pub, .services, .awards-and-honors, .students {
         margin: 0 20px;
     }
     .right-contents .left-pic img {

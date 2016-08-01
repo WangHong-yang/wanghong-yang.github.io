@@ -69,6 +69,30 @@ a:hover {text-decoration: underline; color: #01579B;}
     padding-top: 20px;
 }
 
+.pfooter {
+    background-color: rgba(0,0,0,0.9);
+    padding: 30px 20px 30px 350px;
+}
+.pfooter a {
+    display: inline-block;
+    width: 15%;
+    color: #428bca;
+    font-size: 0.9em;
+}
+.pfooter a:hover {
+    color: #01579B;
+}
+.pfooter h3 {
+    border-left: 2px solid #F57F17;
+    color: white;
+    padding-left: 10px;
+}
+.pfooter p {
+    color: #F57F17;
+    font-size: 0.5em;
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     .footer {
         padding: 40px 0 60px 0;
@@ -77,4 +101,16 @@ a:hover {text-decoration: underline; color: #01579B;}
         display: block;
         width: 100%;
     }
+    .pfooter {
+        padding: 30px 20px;
+    }
+    .pfooter a {
+        width: 48%;
+        text-align: center;
+    }
+    .pfooter p {
+        width: 85%;
+        margin: 0 auto;
+    }
+
 }

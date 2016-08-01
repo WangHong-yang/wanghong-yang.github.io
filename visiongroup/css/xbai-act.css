@@ -80,6 +80,9 @@
     text-decoration: underline;
     color: #01579B;
 }
+.right-contents .act .thigh {
+    padding-right: 15px;
+}
 
 /* button4Mob */
 .button4Mob {
@@ -111,7 +114,7 @@
     .right-contents {
         margin: 0;
     }
-    .right-info, .self-intro, .open-position, .call-for-papers, .recent-news, .selected-recent-pub, .services, .awards-and-honors, .students {
+    .right-info, .self-intro, .open-position, .call-for-papers, .recent-news, .act, .services, .awards-and-honors, .students {
         margin: 0 20px;
     }
     .right-contents .left-pic img {
