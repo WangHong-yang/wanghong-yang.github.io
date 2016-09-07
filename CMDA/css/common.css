@@ -1,0 +1,68 @@
+body {
+  padding-top: 50px;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-brand {
+  color: #449d44;
+}
+.navbar-right li a {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 0;
+}
+.navbar-right img {
+  max-height: 33px;
+}
+
+.container .main-content h2 {
+  padding-left: 10px;
+  border-left: 5px solid #F50057;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.container .main-content h3 {
+  color: #F50057;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.container .main-content a {
+  text-decoration: none;
+  color: #1e6bb8;
+}
+.container .main-content a:hover {
+  text-decoration: underline;
+}
+.container .main-content p {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 20px;
+}
+.container .main-content ul li {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 0;
+}
+.container .main-content .thigh {
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  padding: 30px 0;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Responsive */
+/* Nav */
+@media screen and (max-width:425px) {
+  /* Phone */
+  .nav>li>a {
+    padding: 10px 15px;
+  }
+}
