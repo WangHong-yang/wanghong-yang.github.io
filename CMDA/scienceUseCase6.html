@@ -8,7 +8,7 @@
     <meta name="author" content="Hongyang Wang, hongyang.wang@sv.cmu.edu">
     <link rel="icon" href="../favicon.ico">
 
-    <title>CMDA - Apache Project</title>
+    <title>Use Cases Overview - CMDA Apache Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,13 @@
 
     <!-- Custom styles for this page -->
     <link href="./css/common.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet"/>
+    <style>
+      @media screen and (max-width:769px) {
+        .container .main-content img {
+          width: 100%;
+        }
+      }
+    </style>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -89,29 +95,22 @@
     </div>
   </nav>
 
-    <div class="page-header">
-      <div class="container">
-        <h1>Climate Model Diagnostic Analyzer</h1>
-        <p>The CMDA project aims to call for community efforts to develop a repository comprising a collection of web services for multi-aspect physics-based and
-          phenomenon-oriented climate model performance evaluation and diagnosis through the comprehensive and synergistic use of
-          multiple observational data, reanalysis data, and model outputs. The repository will feature a set of tools and algorithms that
-        will help users find appropriate services in the repository, as well as how to use the services properly based on their usage history.</p>
-        <a class="btn btn-lg btn-primary" href="http://einstein.sv.cmu.edu:9033/FAQs" role="button">Quick Start</a>
-      </div>
-    </div>
 
     <div class="container">
       <div class="main-content">
-        <h2>Climate Model Diagnostic Analyzer Overview</h2>
-        <h3>Running the Examples</h3>
-        <p>We provide some use cases for you to have a feeling about what CMDA services can do and how to use them for scientific research. </p>
-        <p>Here is the link:
-          <a href="./useCaseOverview.html">Use Cases Overview</a></p>
+        <h2>Science Use Cases Example 6: Evaluation of NCAR CAM5 model with MODIS total cloud fraction</h2>
 
-        <h3>Existing CMDA Stories</h3>
-        <p>CMDA team successfully launched 2016 JPL Climate Sciences Summer School. Go to the site <a href="http://einstein.sv.cmu.edu:9033/">here</a>.</p>
+        <p>Services Used: Difference Plot of Two Variables</p>
 
+        <p>Datasets used: NCAR CAM Total Cloud Fraction and MODIS Total Cloud Fraction</p>
 
+        <p>Scientific Highlights: The CAM5 model overall does a fairly decent job at simulating total cloud cover, though simulates too few clouds especially near and offshore of the eastern ocean basins (Atlantic, Pacific, and Australian) where low clouds are dominant, and also further away in the trade cumulus/shallow cumulus regimes. Some of these differences were documented in Kubar et al. (2015), and also tend to represent some biases found in climate models.</p>
+
+        <p>Reference: Kubar, T. L., G. L. Stephens, M. Lebsock, and V. E. Larson, 2015: Regional assessments of low clouds against large-scale stability in CAM5 and CAM-CLUBB using MODIS and ERA-Interim reanalysis data. Journal of Climate, 28, 1685-1706.</p>
+
+        <p>Top: MODIS Total Cloud Fraction; Middle: NCAR-CAM5 Total Cloud Fraction; Lower: CAM5 MODIS (difference)</p>
+
+        <img src="./img/scienceUsecase9.png" alt=""/>
       </div>
     </div>
 
