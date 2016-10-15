@@ -8,7 +8,7 @@
     <meta name="author" content="Hongyang Wang, hongyang.wang@sv.cmu.edu">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Use Cases Overview - CMDA Apache Project</title>
+    <title>Educational Use Cases - CMDA Apache Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -18,8 +18,9 @@
 
     <!-- Custom styles for this page -->
     <link href="./css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
     <style>
-      @media screen and (max-width:769px) {
+      @media screen and (max-width:425px) {
         .container .main-content img {
           width: 100%;
         }
@@ -109,24 +110,39 @@
 
     <div class="container">
       <div class="main-content">
-        <h2>Science Use Cases Example 3: Climate-Scale Features of Total Cloud Fraction and Pressure Vertical Velocity</h2>
+        <h2>Topic #6: Sensitivity of equilibrium climate on physical parameterizations</h2>
+        <h3>Background</h3>
+        <p>A large part of the physical uncertainty when simulating the Earth’s atmosphere and future climate change stems from the uncertainties in physical parameterizations. Knowing which parameterization is responsible for largest part of uncertainty will help focus efforts into future model improvements. The role of parameterizations on climate can be studied in idealized, Earth-like aqua-planet simulations with prescribed zonally symmetric sea surface temperature.</p>
 
-        <p>Services Used: 2D variable Map and 3D variable 2D slice</p>
+        <h3>Datasets</h3>
+        <ul>
+          <li>8 WRF aqua-planet simulation results; horizontal and vertical velocity, cloud cover, water vapor and temperature profiles, precipitation and top of the atmosphere radiative fluxes</li>
+        </ul>
 
-        <p>Datasets used: MODIS total cloud fraction and ECMWF pressure vertical velocity</p>
+        <h3>Geographic foci</h3>
+        <ul>
+          <li>global, tropics and subtropics (30S-30N), mid-latitudes and polar regions (45N-90N; 45S-90S)</li>
+        </ul>
 
-        <p>Scientific Merit: Total Cloud Fraction from MODIS from Oct-2002 until Sep-2011, indicating large amounts of clouds over the global oceans, except westward away from the strong subsidence, predominantly low-cloud regions.</p>
+        <h3>Questions</h3>
+        <ol>
+          <li>Which parameters and Earth’s regions are most sensitive to physical parameterizations?</li>
+          <li>To which parameterizations are model results most sensitive?</li>
+          <li>How different is Hadley cell in different experiments?</li>
+          <li>How different are mid-latitude and polar clouds? </li>
+        </ol>
 
-        <img src="./img/scienceUsecase5.png" alt=""/>
+        <h3>Approach</h3>
+        <p>Compare zonally averaged vertical velocity, cloudiness, water vapor, temperature, velocity profiles, surface precipitation and fluxes at the top of the atmosphere. Investigate differences of conditionally sampled clouds and top of the atmosphere radiative fluxes. </p>
 
-        <p>Services Used: 3-D Variable 2-D Slice</p>
+        <h3>List of numerical experiments and physical parameterizations</h3>
+        <img style="max-width: 100%;" src="./img/educationUseCase6.png" alt="">
 
-        <p>Datasets used: MODIS total cloud fraction and ECMWF pressure vertical velocity</p>
-
-        <p>Scientific Merit: Pressure vertical velocity (ω) at 500 hPa from ECMWF-Interim during the same time period depict the ITCZ across the near-equatorial North Pacific, the northwest-to-southeast oriented SPCZ, the main subsidence bands off the northeast ocean basins extending westward, and the mean storm track, especially in the north Pacific and Atlantic Ocean basins.</p>
-
-        <img src="./img/scienceUsecase6.png" alt=""/>
-
+        <h3>Contact Scientist</h3>
+        <p>
+          <a href="mailto:kay.suselj@jpl.nasa.gov">Dr. Kay Suselj </a>
+        </p>
+        
       </div>
     </div>
 
