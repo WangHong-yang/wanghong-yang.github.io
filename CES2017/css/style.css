@@ -30,15 +30,15 @@ job-search {
     padding-top: 28px!important;
 }
 job-search img {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 25%;
 }
 job-search h1, job-search input {
     display: inline-block;
     vertical-align: middle;
 }
 job-search h1 {
-    width: 20%;
+    width: 47%;
     color: #00646b;
     font-size: 1.8em;
     text-align: center;
@@ -50,7 +50,7 @@ job-search h1 {
     padding-left: 7px;
 }
 .keyword-search {
-    width: 40%;
+    width: 26%;
     font-size: 1.1em;
 }
 .position-search {
@@ -109,7 +109,11 @@ job-intro .compLogo {
     job-search{
         padding-top: 10px!important;
         margin-top: 0;
-        height: 220px;
+        height: 235px;
+    }
+    job-search img {
+        display: inline-block;
+        width: 100%;
     }
     job-search h1 {
         display: block;
