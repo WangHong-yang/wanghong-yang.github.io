@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>JSON schema for query</title>
+	<!-- bootstrap minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Customized style sheet -->
+	<link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+	<div class="sec-container">
+		<form>
+			<div class="form-group">
+				<label for="inputTableName">Table Name*</label>
+				<input type="text" class="form-control" id="inputTableName" placeholder="Table Name used for query">
+			</div>
+			<div class="form-group">
+				<label for="inputStartTime" class="col-2 col-form-label">Start Time*</label>
+				<input type="datetime-local" class="form-control" id="inputStartTime">
+			</div>
+			<div class="form-group">
+				<label for="inputEndTime" class="col-2 col-form-label">End Time*</label>
+				<input type="datetime-local" class="form-control" id="inputEndTime">
+			</div>
+			<div class="form-group">
+				<label for="selectFields">Select Fields*</label>
+				<select multiple class="form-control" id="selectFields" aria-describedby="selectHelp">
+				<option>time</option>
+				<option>traffic</option>
+				<option>source_vn</option>
+				<option>source_port</option>
+				<option>destination_vn</option>
+				<option>destination_port</option>
+				</select>
+				<small id="selectHelp" class="form-text text-muted">Hold command or ctrl to multi-select</small>
+			</div>
+			<div class="form-group">
+				<label for="">Source*</label>
+				<div class="form-inline">
+					<label for="selectSourceVnOp" class="mr-sm-2 col-form-label" style="font-weight: normal">Source-vn</label>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectSourceVnOp">
+						<option value="" selected>Operation...</option>
+						<option value="=">=</option>
+						<option value="!=">!=</option>
+					</select>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectSourceVnName">
+						<option value="" selected>Type...</option>
+						<option value="frontend-vn">frontend-vn</option>
+						<option value="backend-vn">backend-vn</option>
+					</select>
+				</div>
+				<div class="form-inline">
+					<label for="selectSourcePortOp" class="mr-sm-2 col-form-label" style="font-weight: normal">Source-port</label>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectSourcePortOp">
+						<option value="" selected>Operation...</option>
+						<option value="=">=</option>
+						<option value="!=">!=</option>
+					</select>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectSourcePortName">
+						<option value="" selected>Port...</option>
+						<option value="9000">9000</option>
+						<option value="9001">9001</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="">Destination*</label>
+				<div class="form-inline">
+					<label for="selectDestinationVnOp" class="mr-sm-2 col-form-label" style="font-weight: normal">Destination-vn</label>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectDestinationVnOp">
+						<option value="" selected>Operation...</option>
+						<option value="=">=</option>
+						<option value="!=">!=</option>
+					</select>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectDestinationVnName">
+						<option value="" selected>Type...</option>
+						<option value="frontend-vn">frontend-vn</option>
+						<option value="backend-vn">backend-vn</option>
+					</select>
+				</div>
+				<div class="form-inline">
+					<label for="selectDestinationPortOp" class="mr-sm-2 col-form-label" style="font-weight: normal">Destination-port</label>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectDestinationPortOp">
+						<option value="" selected>Operation...</option>
+						<option value="=">=</option>
+						<option value="!=">!=</option>
+					</select>
+					<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectDestinationPortName">
+						<option value="" selected>Port...</option>
+						<option value="9000">9000</option>
+						<option value="9001">9001</option>
+					</select>
+				</div>
+			</div>
+			<button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+		</form>
+	</div><div class="sec-container">
+		<label>JSON</label>
+		<textarea class="form-control" rows="13"></textarea>
+	</div>
+
+	<script src="./scripts/index.js"></script>
+</body>
+</html>
