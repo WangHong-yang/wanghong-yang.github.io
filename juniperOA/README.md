@@ -11,6 +11,7 @@ Write unit tests to test the validation of the above form.
 
 ##Online Demo:
 Webpage: [http://wanghong-yang.github.io/juniperOA/](http://wanghong-yang.github.io/juniperOA/)
+
 Code: [https://github.com/WangHong-yang/wanghong-yang.github.io/tree/master/juniperOA](https://github.com/WangHong-yang/wanghong-yang.github.io/tree/master/juniperOA)
 
 ##File Structure:
@@ -31,11 +32,16 @@ Test: [Selenium - Fire Fox IDE & Java Web Driver](http://www.seleniumhq.org/)
 
 ##Run the Project:
 
-For running webpage:
-Simply click open `index.html` in browser or view online edition here: [http://wanghong-yang.github.io/juniperOA/](http://wanghong-yang.github.io/juniperOA/)
+**For running webpage:**
 
-For running ui unit test:
+Simply click open `index.html` in browser 
+
+Or view online edition here: [http://wanghong-yang.github.io/juniperOA/](http://wanghong-yang.github.io/juniperOA/)
+
+**For running ui unit test:**
+
 Use `JuniperOA-Selenium-TestSuit-FF` with [Fire Fox Addon Selenium IDE](https://addons.mozilla.org/en-us/firefox/addon/selenium-ide/)
+
 Or use `JuniperOA-Selenium-Java-for-Web-driver.java` with [Selenium WebDriver](http://www.seleniumhq.org/docs/03_webdriver.jsp) (Java IDE & environment required)
 
 ##Other:
