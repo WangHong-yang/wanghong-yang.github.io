@@ -1,6 +1,6 @@
 # Juniper OA Answer
 
-![](./readmePic.png)
+![](./readmePicture.png)
 
 ##Problem Statement:
 Given a JSON schema for a query, design and implement a UI to display a form that can be used to create this query. On submit of this form show the final Query JSON on the HTML page below the form.
