@@ -58,7 +58,7 @@ submitBtn.addEventListener('click', function(e) {
 		}
 	}
 	if(!ifAllFilled) {
-		alert("Please fill all fields in red. :)");
+		alert("Please fill all required fields. :)");
 		return;
 	}
 
