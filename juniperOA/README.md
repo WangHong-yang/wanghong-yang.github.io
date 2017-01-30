@@ -34,7 +34,7 @@ Test: [Selenium - Fire Fox IDE & Java Web Driver](http://www.seleniumhq.org/)
 
 **For running webpage:**
 
-Simply click open `index.html` in browser 
+Simply download and open `index.html` in browser 
 
 Or view online edition here: [http://wanghong-yang.github.io/juniperOA/](http://wanghong-yang.github.io/juniperOA/)
 
