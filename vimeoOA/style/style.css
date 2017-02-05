@@ -8,11 +8,12 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: black;
 }
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
-	background: #fff;
+	/*background: #fff;*/
 	/* Center slide text vertically */
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -253,9 +254,6 @@ section {
 		width: 100%;
 		text-align: center;
 	}
-	.swiper-pagination {
-		visibility: hidden;
-	}
 	.slide-img {
 		width: 250px;
 	}
@@ -269,4 +267,11 @@ section {
 	.section-content {
 		padding: 1.5rem 0.5rem;
 	}
+	.beams-section-content{
+	padding-bottom: 0;
+	} 
+	.move-section-content {
+		padding-top: 0;
+	} 
+
 }
