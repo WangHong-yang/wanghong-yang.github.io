@@ -13,7 +13,6 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
-	/*background: #fff;*/
 	/* Center slide text vertically */
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -27,6 +26,7 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 	-ms-flex-align: center;
 	-webkit-align-items: center;
 	align-items: center;
+	overflow: hidden;
 }
 .swiper-button-prev, .swiper-button-next {
 	background-image: none;
@@ -88,6 +88,24 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 .btn-trailer {
 	background-color: transparent;
 	border: 1px solid rgba(255, 255, 255, 0.3);
+	-webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.btn-trailer:hover {
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	-webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.btn-buy {
+	border: 1px solid transparent;
+	-webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.btn-buy:hover {
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+	-webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
 }
 .slide-part {
 	box-sizing: border-box;
@@ -107,11 +125,10 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 .icon-font:before {
 	display: inline-block;
 	font-size: 1.5rem;
-    font-family: thevimeo;
     font-weight: 400;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
-	content: "\e023";
+	content: "\f144";
 	vertical-align: middle;
 	padding-right: 0.3rem;
 }
@@ -128,6 +145,7 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 	-o-filter: blur(10px);
 	-ms-filter: blur(10px);
 	filter: blur(10px);
+	transform: scale(1.03);
 }
 .slide-layer {
     position: absolute;
@@ -135,26 +153,6 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
     left: 0;
     width: 100%;
     height: 100%;
-}
-.slide-nichts-bg {
-	background-image: url("../assets/NICHTS.jpg");
-}
-.slide-nichts-layer {
-	background-color: rgba(71, 109, 122, 0.7);
-}
-.btn-buy-nichts {
-	background-color: #1fb8e7;
-	border: 1px solid #1fb8e7;
-}
-.slide-hunt-bg {
-	background-image: url("../assets/hunt.jpg");
-}
-.slide-hunt-layer {
-	background-color: rgba(67, 99, 123, 0.7);
-}
-.btn-buy-hunt {
-	background-color: #3598D4;
-	border: 1px solid #3598D4;
 }
 
 /* MONSOON & BEAMS section */
@@ -175,12 +173,9 @@ section {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-.beams-section-content{
-	padding-bottom: 0;
-} 
-.move-section-content {
-	padding-top: 0;
-} 
+.flex-row-reverse {
+	flex-direction: row-reverse;
+}
 .half-section {
 	width: 50%;
 	box-sizing: border-box;
@@ -229,7 +224,7 @@ section {
 		padding-left: 7rem;
 		padding-right: 7rem;
 	}
-	.flex-reverse {
+	.flex-column-reverse {
 		flex-direction: column-reverse;
 	}
 	.half-section {
@@ -245,7 +240,7 @@ section {
 @media screen and (max-width: 47em) {
 	/* slide */
 	.swiper-container {
-		height: 600px;
+		height: 550px;
 	}
 	.slide-content {
 		padding: 0 .5rem;
@@ -259,9 +254,11 @@ section {
 	}
 	.slide-content h2 {
 		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
 	}
 	.slide-content p {
-		font-size: 1rem;
+		/*font-size: 1rem;*/
+		display: none;
 	}
 
 	.section-content {
