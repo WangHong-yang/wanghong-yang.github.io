@@ -8,7 +8,6 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: black;
 }
 .swiper-slide {
 	text-align: center;
@@ -132,6 +131,11 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 	vertical-align: middle;
 	padding-right: 0.3rem;
 }
+/* avoid webkit flicker on Safari, 3D, use GPU to render */
+.swiper-slide {
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+}
 .slide-bg {
 	position: absolute;
     top: 0;
@@ -146,6 +150,7 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
 	-ms-filter: blur(10px);
 	filter: blur(10px);
 	transform: scale(1.03);
+	
 }
 .slide-layer {
     position: absolute;
