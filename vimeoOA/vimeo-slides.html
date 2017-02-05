@@ -1,0 +1,16 @@
+<div class="swiper-slide" ng-repeat="slide in vc.slides" >
+    <div class="slide-bg" ng-style="{'background-image':'url('+slide.imageURL+')'}"></div>
+    <div class="slide-layer" ng-style="{'background-color':'rgba('+slide.layerColor[0]+','+slide.layerColor[1]+','+slide.layerColor[2]+',0.7)'}"></div>
+    <div class="slide-content">
+        <div class="slide-part left-slide">
+            <img class="slide-img" ng-src="{{slide.imageURL}}" alt="{{slide.h2}} picture" />
+        </div>
+        <div class="slide-part right-slide">
+            <h2>{{slide.h2}}</h2>
+            <p>{{slide.p}}</p>
+            <button class="slide-btn" ng-style="{'background-color':slide.btnColor,'border':'none'}"><i class="icon-font"></i>Buy Now</button>
+            <button class="slide-btn btn-trailer">Watch Trailer</button>
+        </div>
+    </div>
+</div>
+
