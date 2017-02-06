@@ -36,6 +36,7 @@
 		};
 	});
 
+	// detect Carousel ready and initialize swiper
 	app.directive('slidesReady', function(){
 		return {
 			priority: -1000, // a low number so this directive loads after all other directives have loaded. 

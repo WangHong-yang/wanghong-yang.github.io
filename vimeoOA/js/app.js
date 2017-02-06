@@ -1,22 +1,17 @@
 (function() {
     var app = angular.module('vimeoCC', ['vimeoModules']);
     
+    // Carousel controller
     app.controller('VimeoCarouselController', function(){
 		this.slides = slideList;
 	});
+
+    // Text + Image layout controller
     app.controller('VimeoTextImageController', function(){
         this.textImages = textImageList;
     });
-    // app.controller('VimeoMonsoonController', function(){
-    //     this.monsoon = textImageList[0];
-    // });
-    // app.controller('VimeoBeamsController', function(){
-    //     this.beams = textImageList[1];
-    // });
-    // app.controller('VimeoMoveController', function(){
-    //     this.move = textImageList[2];
-    // });
 
+    // Carousel slides list, fetch from backend in real project
 	var slideList = [
         {
             imageURL: './img/hunt.jpg',
@@ -47,6 +42,8 @@
             btnColor: '#9a989a'
         }
     ];
+
+    // Text + image list, fetch from backend in real project
     var textImageList = [
         {
             imageURL: 'https://i.vimeocdn.com/video/595198868_505x160.jpg',

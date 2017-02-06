@@ -8,7 +8,7 @@
 
 ## Online Demo:
 
-+ Online demo: [wanghong-yang.github.io/vimeoOA/](wanghong-yang.github.io/vimeoOA/)
++ Online demo: [http://wanghong-yang.github.io/vimeoOA/](http://wanghong-yang.github.io/vimeoOA/)
 + Code Repo: [https://github.com/WangHong-yang/wanghong-yang.github.io/tree/master/vimeoOA](https://github.com/WangHong-yang/wanghong-yang.github.io/tree/master/vimeoOA)
 
 ## Framewrok:

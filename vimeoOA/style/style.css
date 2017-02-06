@@ -2,7 +2,7 @@
 html {font-size: 16px;}
 body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, sans-serif;}
 
-/* swiper */
+/* Carousel Style */
 .swiper-container {
 	width: 100%;
 	height: 500px;
@@ -160,7 +160,7 @@ body {font-family: -apple-system, BlinkMacSystemFont, 'Pingfang SC', 'Hiragino S
     height: 100%;
 }
 
-/* MONSOON & BEAMS section */
+/* Texts and Images section */
 section {
 	width: 100%;
 }
@@ -203,7 +203,7 @@ section {
 	color: #eee;
 }
 
-/* Pad view */
+/* Pad view media query, to avoid bug in Safari, use em rather than rem in query */
 @media screen and (max-width: 64em) {
 	/* slide */
 	.slide-content {
@@ -241,7 +241,7 @@ section {
 	}
 }
 
-/* Phone view */
+/* Phone view media query */
 @media screen and (max-width: 47em) {
 	/* slide */
 	.swiper-container {
@@ -262,7 +262,6 @@ section {
 		margin-bottom: 1.5rem;
 	}
 	.slide-content p {
-		/*font-size: 1rem;*/
 		display: none;
 	}
 
