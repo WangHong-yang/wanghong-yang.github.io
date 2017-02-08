@@ -46,5 +46,5 @@ Or use `JuniperOA-Selenium-Java-for-Web-driver.java` with [Selenium WebDriver](h
 
 ##Other:
 + Responsive
-+ IE8+ compatible
++ IE10+ compatible
 + Form information check: cannot submit without filling required fields
